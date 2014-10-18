@@ -17,7 +17,7 @@ function getBuildingPoint(keys)
   
   if PlayerS[pid][1]>=gc then
   
-    PlayerS[pid][1]=PlayerS[pid][1]-gc
+    
     
     for _,thing in pairs(Entities:FindAllInSphere(GetGroundPosition(keys.target_points[1], nil), CHECKINGRADIUS) )  do
  
@@ -30,7 +30,8 @@ function getBuildingPoint(keys)
         if (inTrigger == true) then
          	if point ~= -1 then
          	  PlayerS[12]=PlayerS[12]+1;  --玩家操控单位数量+1
-         	  
+         	  PlayerS[pid][1]=PlayerS[pid][1]-gc  --扣除金钱
+         	  sendinfotoui();                     --更新面板
             PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, nil, caster, keys.caster:GetTeam())
             
 		        BuildingHelper:AddBuilding(PlayerS[13][PlayerS[12]])
@@ -70,6 +71,7 @@ function change_little(keys)
   
   local newcaster = keys.NewUnit
 
+  local gc=keys.GoldCost
   
   
   local axb = 1
@@ -78,15 +80,25 @@ function change_little(keys)
       local axb=i
       break
     end
+  end                              --axb是pid
+  
+  axb=axb-1
+  
+  if PlayerS[axb][1]>=gc then
+   
+    PlayerS[axb][1]=PlayerS[axb][1]-gc  --扣除金钱
+    PlayerS[13][axb] = CreateUnitByName(newcaster, point, false, nil, nil, keys.caster:GetTeam())
+    PlayerS[16][axb] = newcaster
+    sendinfotoui();                     --更新面板
+    caster:ForceKill(true)
+    local pid=PlayerS[14][axb]
+  
+    PlayerS[13][axb]:SetControllableByPlayer(pid,true)
+  else
+  
+    Say(nil,"not enough gold", false)
+  
   end
-  
-  PlayerS[13][axb] = CreateUnitByName(newcaster, point, false, nil, nil, keys.caster:GetTeam())
-  PlayerS[16][axb] = newcaster
-  
-  caster:ForceKill(true)
-  local pid=PlayerS[14][axb]
-  
-  PlayerS[13][axb]:SetControllableByPlayer(pid,true)
 
 end
 
@@ -105,7 +117,7 @@ function purchase_worker(keys)  --农民激活
 
 end
 
-function hire(keys)
+function hire(keys)                --购买佣兵
 
   math.randomseed(os.time())       --随机种子
   

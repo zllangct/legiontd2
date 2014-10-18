@@ -20,6 +20,7 @@
 				"Function"				"getBuildingPoint"
 				"UName"           "npc_orc_little_wolvrine"
 				"GoldCost"        "100"
+				"RenKou"          "1"
       }
     }
   }
@@ -40,6 +41,7 @@
 				"Function"				"change_little"
 				"NewUnit"         "npc_orc_medium_wolvrine"
 				"GoldCost"        "100"
+				"RenKou"          "1"
       }
     }
   }
@@ -61,6 +63,7 @@
 				"Function"				"change_little"
 				"NewUnit"         "npc_orc_ultra_wolvrine"
 				"GoldCost"        "100"
+				"RenKou"          "1"
       }
     }
   }

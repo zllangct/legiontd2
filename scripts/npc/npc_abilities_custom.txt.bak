@@ -19,6 +19,7 @@
         "ScriptFile"			"scripts/vscripts/buildings.lua"
 				"Function"				"getBuildingPoint"
 				"UName"           "npc_orc_little_wolvrine"
+				"GoldCost"        "100"
       }
     }
   }
@@ -59,6 +60,7 @@
         "ScriptFile"			"scripts/vscripts/buildings.lua"
 				"Function"				"change_little"
 				"NewUnit"         "npc_orc_ultra_wolvrine"
+				"GoldCost"        "100"
       }
     }
   }
@@ -152,53 +154,7 @@
       }
     }
   
-  "ability_effect"
-	{
-		"BaseClass"					"ability_datadriven"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"MaxLevel"					"1"
 
-		"Modifiers"
-		{
-			"modifier_npc_dota_hero_sven_effect"
-			{
-				"IsHidden"			"1"
-
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\units\heroes\hero_sven\sven_spell_gods_strength_ambient.vpcf"
-						"EffectAttachType"  "start_at_customorigin"
-						"Target"  			"CASTER"
-						"ControlPointEntities"
-						{
-							"CASTER"		"attach_attack1"
-							"CASTER"		"attach_attack1"
-							"CASTER"		"attach_head"
-							"CASTER"		"attach_head"
-							"CASTER"		"attach_head"
-						}
-					}
-				}
-			}
-
-			"modifier_npc_dota_hero_juggernaut_effect"
-			{
-				"IsHidden"			"1"
-
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\econ\courier\courier_greevil_green\courier_greevil_green_ambient_3.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"  			"CASTER"
-					}
-				}
-			}
-		}
-	}
   
   
   

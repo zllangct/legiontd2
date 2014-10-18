@@ -12,12 +12,12 @@ function getBuildingPoint(keys)
 	local caster = keys.caster
   local pid = caster:GetPlayerID()
   local name = keys.UName
-  
+  local rk = keys.RenKou
   local gc = keys.GoldCost
   
   if PlayerS[pid][1]>=gc then
   
-    PlayerS[pid][1]=PlayerS[pid][1]-gc
+    
     
     for _,thing in pairs(Entities:FindAllInSphere(GetGroundPosition(keys.target_points[1], nil), CHECKINGRADIUS) )  do
  
@@ -29,21 +29,26 @@ function getBuildingPoint(keys)
  
         if (inTrigger == true) then
          	if point ~= -1 then
-         	  PlayerS[12]=PlayerS[12]+1;  --玩家操控单位数量+1
-         	  
-            PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, nil, caster, keys.caster:GetTeam())
+         	  if ((PlayerS[pid][4]-PlayerS[pid][3])>=rk) then
+         	    PlayerS[12]=PlayerS[12]+1;  --玩家操控单位数量+1
+         	    PlayerS[pid][1]=PlayerS[pid][1]-gc  --扣除金钱
+         	    sendinfotoui();                     --更新面板
+              PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, nil, caster, keys.caster:GetTeam())
             
-		        BuildingHelper:AddBuilding(PlayerS[13][PlayerS[12]])
-		        PlayerS[13][PlayerS[12]]:UpdateHealth(BUILD_TIME,true,.85)
-		        PlayerS[13][PlayerS[12]]:SetHullRadius(64)
-		        PlayerS[13][PlayerS[12]]:SetControllableByPlayer( keys.caster:GetPlayerID(), true )
-		        PlayerS[14][PlayerS[12]]=pid
-		        PlayerS[15][PlayerS[12]]=point
-		        PlayerS[16][PlayerS[12]]=name
-		       
+		          BuildingHelper:AddBuilding(PlayerS[13][PlayerS[12]])
+		          PlayerS[13][PlayerS[12]]:UpdateHealth(BUILD_TIME,true,.85)
+		          PlayerS[13][PlayerS[12]]:SetHullRadius(64)
+		          PlayerS[13][PlayerS[12]]:SetControllableByPlayer( keys.caster:GetPlayerID(), true )
+		          PlayerS[14][PlayerS[12]]=pid
+		          PlayerS[15][PlayerS[12]]=point
+		          PlayerS[16][PlayerS[12]]=name
+		        else
+		          Say(nil,"you need more food!", false)
+		        
+		        end
         	else
-		        Say(nil,"you can't build here", false)
-		        --Fire a game event here and use Actionscript to let the player know he can't place a building at this spot.
+		        Say(nil,"you can't build on a existing unit", false)
+		  
 	        end
 	      else
 	        Say(nil,"you can't build here", false)
@@ -69,7 +74,8 @@ function change_little(keys)
   
   
   local newcaster = keys.NewUnit
-
+  local rk=keys.RenKou
+  local gc=keys.GoldCost
   
   
   local axb = 1
@@ -80,15 +86,21 @@ function change_little(keys)
     end
   end                              --axb是pid
   
+  axb=axb-1
   
   if PlayerS[axb][1]>=gc then
-    PlayerS[13][axb] = CreateUnitByName(newcaster, point, false, nil, nil, keys.caster:GetTeam())
-    PlayerS[16][axb] = newcaster
+    if ((PlayerS[axb][4]-PlayerS[axb][3])>=rk) then
+      PlayerS[axb][1]=PlayerS[axb][1]-gc  --扣除金钱
+      PlayerS[13][axb] = CreateUnitByName(newcaster, point, false, nil, nil, keys.caster:GetTeam())
+      PlayerS[16][axb] = newcaster
+      sendinfotoui();                     --更新面板
+      caster:ForceKill(true)
+      local pid=PlayerS[14][axb]
   
-    caster:ForceKill(true)
-    local pid=PlayerS[14][axb]
-  
-    PlayerS[13][axb]:SetControllableByPlayer(pid,true)
+      PlayerS[13][axb]:SetControllableByPlayer(pid,true)
+    else
+      Say(nil,"you need more food!", false)
+    end
   else
   
     Say(nil,"not enough gold", false)
