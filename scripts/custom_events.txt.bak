@@ -1,0 +1,17 @@
+"CustomEvents"
+{
+  "ui_update"
+  {
+    //设定参数的类型和名称
+    "player1"        "string"
+    "player2"        "string"
+    "player3"        "string"
+    "player4"        "string"
+    "player5"        "string"
+    "player6"        "string"
+    "player7"        "string"
+    "player8"        "string"
+    "jaja"        "string"
+  }
+}
+

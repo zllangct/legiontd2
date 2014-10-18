@@ -1,0 +1,368 @@
+// Units File
+"DOTAUnits"
+{
+	"Version"	"1"
+	"npc_player_base"
+	{
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/props_structures/bad_ancient_destruction.vmdl"
+    "ModelScale" "1"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" ""
+    "Ability2" "upgrade_worker"
+//    "Ability3" "upgrade_king_hp"
+//    "Ability4" "upgrade_king_atk"
+//    "Ability5" "upgrade_king_atkspd"
+    "Ability6" ""
+    "Ability7" ""
+    "Ability8" ""
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "0"                                             //攻击力
+    "AttackDamageMax" "0"
+    "AttackRate" "1.25"                                               //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "225"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "34"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  }
+  "base_worker"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/props_structures/good_ancient_fountain001.vmdl"
+    "ModelScale" "0.5"
+    
+    "Ability1" "purchase_worker"
+    "TeamName" "DOTA_TEAM_NEUTRALS" 
+  }
+  
+  "hirer_1"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/creeps/greevil_shopkeeper/greevil_shopkeeper.vmdl"
+    "ModelScale" "0.5"
+    
+    "MovementSpeed" "275"
+    
+    "Ability1" "hire_godb"
+    "Ability2" "hire_archer"
+    "Ability3" "hire_basher"
+    "Ability4" "hire_ghoul"
+    "TeamName" "DOTA_TEAM_NEUTRALS"
+  
+  
+  }
+  
+  "godb"
+  {
+    
+     "BaseClass" "npc_dota_creature"
+    "Model" "models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl"
+    "ModelScale" "0.5"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" ""
+    "Ability2" ""
+    "Ability3" ""
+    "Ability4" ""
+
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "3"                                             //攻击力
+    "AttackDamageMax" "5"
+    "AttackRate" "1"                                                  //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "275"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "40"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_BASIC"              //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	
+	"npc_enemy_crab"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/creeps/courier/octopus/octopus.vmdl"
+    "ModelScale" "0.8"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" ""
+    "Ability2" ""
+    "Ability3" ""
+    "Ability4" ""
+    "Ability5" ""
+    "Ability6" ""
+    "Ability7" ""
+    "Ability8" ""
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "3"                                             //攻击力
+    "AttackDamageMax" "4"
+    "AttackRate" "1.25"                                               //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "225"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "34"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  }
+  "npc_enemy_murloc"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/heroes/slark/slark.vmdl"
+    "ModelScale" "0.5"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" ""
+    "Ability2" ""
+    "Ability3" ""
+    "Ability4" ""
+    "Ability5" ""
+    "Ability6" ""
+    "Ability7" ""
+    "Ability8" ""
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "3"                                             //攻击力
+    "AttackDamageMax" "5"
+    "AttackRate" "1"                                                  //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "275"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "40"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_BASIC"              //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  }
+
+
+//orc buidling units
+ "npc_orc_little_wolvrine"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl"
+    "ModelScale" "0.5"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" "orc_little_wolvrine_upgrade"
+    "Ability2" ""
+    "Ability3" ""
+    "Ability4" ""
+
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "3"                                             //攻击力
+    "AttackDamageMax" "5"
+    "AttackRate" "1"                                                  //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "275"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "40"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_BASIC"              //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  }
+
+  "npc_orc_medium_wolvrine"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/heroes/lycan/lycan_wolf.vmdl"
+    "ModelScale" "1.5"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" "orc_medium_wolvrine_upgrade"
+    "Ability2" "orc_medium_wolvrine_mania"
+    "Ability3" ""
+    "Ability4" ""
+
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "3"                                             //攻击力
+    "AttackDamageMax" "5"
+    "AttackRate" "1"                                                  //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "275"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "40"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_BASIC"              //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  }
+  "npc_orc_ultra_wolvrine"
+  {
+    "BaseClass" "npc_dota_creature"
+    "Model" "models/heroes/lycan/lycan.vmdl"
+    "ModelScale" "0.5"
+    "SoundSet" "Creep_Good_Melee"
+    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    "MinimapIcon" ""
+    "MinimapIconSize" "50"
+    "HealthBarOffset" "-1"
+    "Ability1" "orc_ultra_wolvrine_critical"
+    "Ability2" "huskar_berserkers_blood"
+    "Ability3" ""
+    "Ability4" ""
+
+    "ArmorPhysical" "3"                                               //护甲
+    "MagicalResistance" "0"
+    "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
+    "AttackDamageMin" "3"                                             //攻击力
+    "AttackDamageMax" "5"
+    "AttackRate" "1"                                                  //攻速
+    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAcquisitionRange" "100"                                    //攻击距离
+    "AttackRange" "100"
+    "ProjectileModel" ""
+    "ProjectileSpeed" ""
+    "BountyXP" "0"
+    "BountyGoldMin" "3"                                               //赏金
+    "BountyGoldMax" "3"
+    "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
+    "RingRadius" "20"                                                 //碰撞体积
+    "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
+    "MovementSpeed" "275"                                             //移速
+    "MovementTurnRate" "1.5"                                          //转身速度
+    "StatusHealth" "40"                                               //血量
+    "StatusHealthRegen" "0"                                           //回血
+    "StatusMana" "0"
+    "StatusManaRegen" "0"
+    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_BASIC"              //攻击类型
+    "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
+    "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange" "1500"
+  }
+
+}

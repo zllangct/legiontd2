@@ -1,0 +1,1895 @@
+"legiontd"
+{
+	"wave_data"
+	{
+		"1"//第一波怪物
+		{
+			"name"					"npc_enemy_crab"
+			"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			"count"					"36"//刷怪数量可以不定义，为默认刷怪数量
+			"level"					"1" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 1 Octopus Feast!"
+			"RoundQuestTitle"		"#LegionTD: Wave 1 Octopus Feast!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}								
+			}
+			
+		}
+		"2"//第二波怪物
+		{
+			"name"					"npc_enemy_murloc"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"2" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 2 I'm Murloc urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 2 I'm Murloc urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"3"//第二波怪物
+		{
+			"name"					"npc_enemy_Scorpion"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"40"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"3" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 3 I'm Scorpion urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 3 I'm Scorpion urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"4"//第二波怪物
+		{
+			"name"					"npc_enemy_Hystrix_hodgsoni"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"4" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 4 I'm Hystrix hodgsoni urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 4 I'm Hystrix hodgsoni urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"5"//第二波怪物
+		{
+			"name"					"npc_enemy_eagle"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"5" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 5 I'm eagle urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 5 I'm eagle urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"6"//第二波怪物
+		{
+			"name"					"npc_enemy_Golem"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"6" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 6 I'm Golem urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 6 I'm Golem urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"7"//第二波怪物
+		{
+			"name"					"npc_enemy_Satyr"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"30"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"7" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 7 I'm Satyr urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 7 I'm Satyr urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"8"//第二波怪物
+		{
+			"name"					"npc_enemy_acolyte"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"8" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 8 I'm acolyte urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 8 I'm acolyte urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"9"//第二波怪物
+		{
+			"name"					"npc_enemy_zombie"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"9" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 9 I'm zombie urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 9 I'm zombie urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"10"//第二波怪物
+		{
+			"name"					"npc_enemy_Draenei"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"3"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"10" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 10 I'm Draenei urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 10 I'm Draenei urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"11"//第二波怪物
+		{
+			"name"					"npc_enemy_Clockwerk"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"54"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"11" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 11 I'm Clockwerk urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 11 I'm Clockwerk urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"12"//第二波怪物
+		{
+			"name"					"npc_enemy_Naga"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"12" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 12 I'm Naga urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 12 I'm Naga urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"13"//第二波怪物
+		{
+			"name"					"npc_enemy_Wind_Serpent"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"13" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 13 I'm Wind Serpent urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 13 I'm Wind Serpent urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+		"14"//第二波怪物
+		{
+			"name"					"npc_enemy_Tuskarr"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"26"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"14" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 14 I'm Tuskarr urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 14 I'm Tuskarr urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"15"//第二波怪物
+		{
+			"name"					"npc_enemy_centaur"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"15" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 15 I'm centaur urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 15 I'm centaur urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"16"//第二波怪物
+		{
+			"name"					"npc_enemy_salamander"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"16" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 16 I'm salamander urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 16 I'm salamander urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"17"//第二波怪物
+		{
+			"name"					"npc_enemy_Flesh_Golem"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"35"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"17" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 17 I'm Flesh Golem urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 17 I'm Flesh Golem urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"18"//第二波怪物
+		{
+			"name"					"npc_enemy_nsln"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"18" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 18 I'm Flesh nsln urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 18 I'm Flesh nsln urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"19"//第二波怪物
+		{
+			"name"					"npc_enemy_Giant_Spider"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"19" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 19 I'm Giant Spider urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 19 I'm Giant Spider urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"20"//第二波怪物
+		{
+			"name"					"npc_enemy_Dragon_Turtle"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"3"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"19" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 19 I'm Dragon Turtle urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 19 I'm Dragon Turtle urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"21"//第二波怪物
+		{
+			"name"					"npc_enemy_Hippogryph"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"21" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 21 I'm Hippogryph urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 21 I'm Hippogryph urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"22"//第二波怪物
+		{
+			"name"					"npc_enemy_mammoth"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"48"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"22" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 22 I'm mammoth urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 22 I'm mammoth urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"23"//第二波怪物
+		{
+			"name"					"npc_enemy_eagle_head_blame"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"23" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 23 I'm  eagle head blame urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 23 I'm  eagle head blame urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"24"//第二波怪物
+		{
+			"name"					"npc_enemy_deep_evil_spirit"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"35"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"24" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 24 I'm  deep evil spirit urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 24 I'm  deep evil spirit urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"25"//第二波怪物
+		{
+			"name"					"npc_enemy_vixen"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"25" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 25 I'm  vixen urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 25 I'm  vixen urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"26"//第二波怪物
+		{
+			"name"					"npc_enemy_Naga_Mob"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"26" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 26 I'm  Naga Mob urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 26 I'm  Naga Mob urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"27"//第二波怪物
+		{
+			"name"					"npc_enemy_doom"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"36"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"27" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 27 I'm  father urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 27 I'm  father urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"28"//第二波怪物
+		{
+			"name"					"npc_enemy_Buddha"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"18"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"28" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 28 I'm  Buddha urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 28 I'm  Buddha urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"29"//第二波怪物
+		{
+			"name"					"npc_enemy_Wyrm"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"30"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"29" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 29 I'm  Wyrm urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 29 I'm  Wyrm urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"30"//第二波怪物
+		{
+			"name"					"npc_enemy_Magnus"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"3"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"30" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 30 I'm  Magnus urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 30 I'm  Magnus urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"31"//第二波怪物
+		{
+			"name"					"npc_enemy_Bianconeri_terminator"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"6"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"31" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 31 I'm  Bianconeri terminator urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 31 I'm  Bianconeri terminator urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"32"//第二波怪物
+		{
+			"name"					"npc_enemy_Crypt_Lord"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"3"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"32" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 32 I'm  Crypt Lord urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 32 I'm  Crypt Lord urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"33"//第二波怪物
+		{
+			"name"					"npc_enemy_lord_of_war"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"3"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"33" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 33 I'm  lord of war urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 33 I'm  lord of war urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"34"//第二波怪物
+		{
+			"name"					"npc_enemy_Fire_Lord"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"3"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"34" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 34 I'm  Fire Lord urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 34 I'm  Fire Lord urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	"35"//第二波怪物
+		{
+			"name"					"npc_enemy_Archimonde"
+			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
+			//"count"				"1"//刷怪数量可以不定义，为默认刷怪数量
+			//"level"				"35" //怪物等级，可以不定义，默认为1级
+			"RoundTitle"			"LegionTD: Wave 35 I'm  Archimonde urrrrry!"
+			"RoundQuestTitle"		"#LegionTD: Wave 35 I'm  Archimonde urrrrry!"
+			"spawner"
+			{
+				"1"//随机的刷怪点，可以定义多个,至少要有一个
+				{
+					"SpawnerEntityName"			"CFSpawner_1"
+					"FirstPathCorner"			"CFSpawner_1_path_1"
+				}
+				"2"
+				{
+					"SpawnerEntityName"			"CFSpawner_2"
+					"FirstPathCorner"			"CFSpawner_2_path_1"
+				}
+				"3"
+				{
+					"SpawnerEntityName"			"CFSpawner_3"
+					"FirstPathCorner"			"CFSpawner_3_path_1"
+				}
+				"4"
+				{
+					"SpawnerEntityName"			"CFSpawner_4"
+					"FirstPathCorner"			"CFSpawner_4_path_1"
+				}
+				"5"
+				{
+					"SpawnerEntityName"			"CFSpawner_5"
+					"FirstPathCorner"			"CFSpawner_5_path_1"
+				}	
+				"6"
+				{
+					"SpawnerEntityName"			"CFSpawner_6"
+					"FirstPathCorner"			"CFSpawner_6_path_1"
+				}
+				"7"
+				{
+					"SpawnerEntityName"			"CFSpawner_7"
+					"FirstPathCorner"			"CFSpawner_7_path_1"
+				}
+				"8"
+				{
+					"SpawnerEntityName"			"CFSpawner_8"
+					"FirstPathCorner"			"CFSpawner_8_path_1"
+				}		
+				
+			}
+		}
+	}
+	//"boss_data"//待完成
+}

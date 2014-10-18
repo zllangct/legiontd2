@@ -1,0 +1,161 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+	
+  "build_orc_wolvrine"                       //造最小的金刚狼
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"			"scripts/vscripts/buildings.lua"
+				"Function"				"getBuildingPoint"
+				"UName"           "npc_orc_little_wolvrine"
+				"GoldCost"        "100"
+      }
+    }
+  }
+  "orc_little_wolvrine_upgrade"           //升级成中等的金刚狼
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"			"scripts/vscripts/buildings.lua"
+				"Function"				"change_little"
+				"NewUnit"         "npc_orc_medium_wolvrine"
+				"GoldCost"        "100"
+      }
+    }
+  }
+  
+    "orc_medium_wolvrine_upgrade"           //升级成最大的金刚狼
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"			"scripts/vscripts/buildings.lua"
+				"Function"				"change_little"
+				"NewUnit"         "npc_orc_ultra_wolvrine"
+				"GoldCost"        "100"
+      }
+    }
+  }
+  
+  "orc_medium_wolvrine_mania"
+  {
+        "AbilityBehavior"                                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"                                      "ability_datadriven"
+        "AbilityTextureName"                             "juggernaut_blade_dance"
+
+        "Modifiers"
+        {
+                "modifier_MyAbility_passive"
+                {
+                        "Passive"        "1"                //这句很重要
+                        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "80"
+                    
+                        //这里面可以填写BUFF或者攻击事件等
+                }
+        }
+  }
+  
+    "orc_ultra_wolvrine_critical"
+  {
+        "AbilityBehavior"                                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "BaseClass"                                      "ability_datadriven"
+        "AbilityTextureName"                             "juggernaut_blade_dance"
+        
+        "Modifiers"
+        {
+        
+          "Chance"    "3"
+          "OnSuccess"
+          {
+          
+                  "modifier_MyAbility_passive"
+                  {
+                        "Passive"        "1"   
+                        "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"   "10"
+                  }
+          }
+        }
+  }
+  
+  
+  
+  
+  "build_orc_warlock"
+  {
+  }
+  
+  "purchase_worker" 
+  {
+  
+   "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityChannelTime" "1.5"
+    "OnSpellStart"
+    {
+      "RunScript"
+      { 
+        "ScriptFile"			"scripts/vscripts/buildings.lua"
+				"Function"				"purchase_worker"
+      }
+    }
+  }
+  
+  
+  "hire_godb"
+  {
+
+
+      "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"			"scripts/vscripts/buildings.lua"
+				"Function"				"hire"
+				"Hire_Unit"       "godb"
+				
+      }
+    }
+  
+
+  
+  
+  
+}
