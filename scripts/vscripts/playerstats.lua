@@ -97,14 +97,18 @@ function playerstats:init()
       
       --≥ı ºªØ”¢–€
       local j=0
-      local hero=PlayerResource:GetAssignedHero(i)
+      print(i)
+    if GetPlayer(i) then  
+      local hero=PlayerResource:GetPlayer(i):GetAssignedHero()
       
       hero:SetAbilityPoints(0)
+      
+      
       for j = 1,6,1 do
         local temp1=hero:GetAbilityByIndex(j)
         temp1:SetLevel(1)
       end
-        
+    end
     end
   end
   
