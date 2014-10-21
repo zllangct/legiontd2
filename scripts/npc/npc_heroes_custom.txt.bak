@@ -10,11 +10,11 @@
 		
 		"Abilitylayout" "6"
 		"Ability1" "build_orc_wolvrine"
-		"Ability2" "build_orc_warlock"
-		"Ability3" "build_orc_rider"
-		"Ability4" "build_orc_healer"
-		"Ability5" "build_orc_wyvine"
-		"Ability6" "build_orc_leader"
+//		"Ability2" "build_orc_warlock"
+//		"Ability3" "build_orc_rider"
+//		"Ability4" "build_orc_healer"
+//		"Ability5" "build_orc_wyvine"
+//		"Ability6" "build_orc_leader"
 	 //"Ability7" "king_heal"  TODO	
 	}
 }

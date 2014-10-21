@@ -20,17 +20,31 @@ function Precache( context )
 	
 	PrecacheResource( "model", "models/courier/octopus/octopus.vmdl", context)
 	PrecacheResource( "model", "models/heroes/slark/slark.vmdl", context)
+	
 	PrecacheResource( "model", "models/heroes/lycan/lycan.vmdl", context)
 	PrecacheResource( "model", "models/heroes/lycan/lycan_wolf.vmdl", context)
 	PrecacheResource( "model", "models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl", context)
 	PrecacheResource( "model", "models/props_structures/bad_ancient_destruction.vmdl", context)
 	PrecacheResource( "model", "models/creeps/greevil_shopkeeper/greevil_shopkeeper.vmdl", context)
 	PrecacheResource( "model", "models/props_structures/good_ancient_fountain001.vmdl", context)
+	PrecacheResource( "model", "models/props_structures/good_ancient_fountain001.vmdl", context)
 	
-	--PrecacheResource( "model", "models/props_structures/good_ancient_fountain001.vmdl", context)
-	
-	
-	
+--orc兵种模型载入	
+	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll_frost.vmdl", context)
+	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl", context)
+	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_beast/n_creep_beast.vmdl", context)
+	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl", context)
+	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl", context)
+	PrecacheResource( "model", "models/items/lone_druid/true_form/form_of_the_atniw/form_of_the_atniw.vmdl", context)
+	PrecacheResource( "model", "models/items/lone_druid/true_form/rabid_black_bear/rabid_black_bear.vmdl", context)
+	PrecacheResource( "model", "models/heroes/witchdoctor/witchdoctor.vmdl", context)
+	PrecacheResource( "model", "models/heroes/blood_seeker/blood_seeker.vmdl", context)
+	PrecacheResource( "model", "models/items/lycan/wolves/icewrack_pack/icewrack_pack.vmdl", context)
+	PrecacheResource( "model", "models/items/lycan/ultimate/sirius_curse/sirius_curse.vmdl", context)
+	PrecacheResource( "model", "models/heroes/magnataur/magnataur.vmdl", context)
+	PrecacheResource( "model", "models/heroes/beastmaster/beastmaster.vmdl", context)
+
+
 	
 	
 	PrecacheResource( "particle", "particles/drow/wave.vpcf", context )
@@ -62,14 +76,6 @@ function legiontdGameMode:InitGameMode()
   print("preparing")
  
 end
-
-
-
-
-
-
-
-
 
 
 

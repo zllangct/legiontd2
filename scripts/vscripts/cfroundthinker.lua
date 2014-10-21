@@ -197,9 +197,12 @@ end
 function rebuildunit()
 
  for i=1,PlayerS[12],1 do
+ 
+ 
     local temp = PlayerS[16][i]
     
     PlayerS[13][i]=CreateUnitByName(temp, PlayerS[15][i], false, nil, nil, PlayerS[13][i]:GetTeam())
+    
     
     PlayerS[13][i]:SetControllableByPlayer(PlayerS[14][i],true)
   end

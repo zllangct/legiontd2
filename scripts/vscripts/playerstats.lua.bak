@@ -9,7 +9,9 @@ function playerstats:init()
 
   for i=0,8 do
     PlayerS[i]= {}
-    PlayerS[i]={300,100,0,12,0,{},1,0,0,nil,nil,0}    --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income
+    PlayerS[i]={3000,100,0,12,0,{},1,0,0,nil,nil,0}    
+    --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income, 
+    --15 基地， 16 农民， 17 雇佣兵， 18 人口
   end
   PlayerS[4]=nil
   print("done playerstat init")
@@ -45,11 +47,14 @@ function playerstats:init()
   
   
   
+  
   print("done init player's stat")
   sendinfotoui();
   
   for i=0,0,1 do               --15 base, 16 workers
     if not(i==4) then
+    
+      --创建基地
 
       local temp=Entities:FindByName(nil,"player"..tostring(i+1).."_base")
       
@@ -59,20 +64,47 @@ function playerstats:init()
       
       PlayerS[i][15]:SetControllableByPlayer(0,true)
       
-
       
       
-      for j=1,7,1 do
+      --PlayerS[i][15]:SetPlayerID(i)
+      
+      --创建人口
+      
+      local temp=Entities:FindByName(nil,"player"..tostring(i+1).."_renkou")
+      
+      PlayerS[i][18]=CreateUnitByName("npc_renkou",temp:GetAbsOrigin(),false,nil,nil,2)
+      
+      
+      PlayerS[i][18]:SetControllableByPlayer(0,true)
+      
+      --PlayerS[i][18]:SetPlayerID(i)
+      
+      
+      for j=1,7,1 do           --7个农民
         temp=Entities:FindByName(nil,"player"..tostring(i+1).."_worker"..tostring(j))
         PlayerS[i][16][j]=CreateUnitByName("base_worker",temp:GetAbsOrigin(),false,nil,nil,2)
 
         PlayerS[i][16][j]:SetControllableByPlayer(0,true)
+        
+        --PlayerS[i][16][j]:SetPlayerID(i)
       end
       
       temp=Entities:FindByName(nil,"player"..tostring(i+1).."_hirer1")
       PlayerS[i][17]=CreateUnitByName("hirer_1",temp:GetAbsOrigin(),false,nil,nil,2)  --雇佣兵营1号
       PlayerS[i][17]:SetControllableByPlayer(0,true)
       
+      
+      
+      --初始化英雄
+      local j=0
+      local hero=PlayerResource:GetAssignedHero()
+      
+      hero:SetAbilityPoints(0)
+      for j = 1,6,1 do
+        local temp1=hero:GetAbilityByIndex(j)
+        temp1:SetLevel(1)
+      end
+        
     end
   end
   
@@ -91,7 +123,7 @@ function sendinfotoui()
   p[0]="lol"
   for i=0,8,1 do
     if not(i==4) then
-      p[i]=tostring(PlayerS[i][1]).."        "..tostring(PlayerS[i][2]).."        "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."        "..tostring(PlayerS[i][9]).."        "..tostring(PlayerS[i][5]).."        "..tostring(PlayerS[i][12])
+      p[i]=tostring(PlayerS[i][1]).."          "..tostring(PlayerS[i][2]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12])
       print(i,"'s player: ",p[i])
     end
   end

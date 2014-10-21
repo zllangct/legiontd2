@@ -162,6 +162,7 @@ function CFRoundThinker:StartNextRound()
 	-- 读出这一轮怪的信息
 	local tRoundData = self:ReadRoundData(self._nCurrRound)
 	-- 调用core/CFSpawner.lua开始这一轮刷怪
+	
 	CFSpawner:SpawnWave(self._nCurrRound,tRoundData.wavedata,tRoundData.spawner)
 	
 	
@@ -196,9 +197,12 @@ end
 function rebuildunit()
 
  for i=1,PlayerS[12],1 do
+ 
+ 
     local temp = PlayerS[16][i]
     
-    PlayerS[13][i]=CreateUnitByName(temp, PlayerS[15][i], false, nil, nil, PlayerS[13][i]:GetTeam())
+    PlayerS[13][i]=nil
+      PlayerS[13][i]=CreateUnitByName(temp, PlayerS[15][i], false, nil, nil, PlayerS[13][i]:GetTeam())
     
     PlayerS[13][i]:SetControllableByPlayer(PlayerS[14][i],true)
   end
