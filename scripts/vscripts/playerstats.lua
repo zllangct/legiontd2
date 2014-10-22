@@ -95,11 +95,11 @@ function playerstats:init()
       
       
       
-      --初始化英雄
+      --[[初始化英雄
       local j=0
       print(i)
-    if GetPlayer(i) then  
-      local hero=PlayerResource:GetPlayer(i):GetAssignedHero()
+      
+      local hero = PlayerResource:GetPlayer(i):GetAssignedHero()
       
       hero:SetAbilityPoints(0)
       
@@ -108,7 +108,9 @@ function playerstats:init()
         local temp1=hero:GetAbilityByIndex(j)
         temp1:SetLevel(1)
       end
-    end
+      ]]
+      
+      
     end
   end
   

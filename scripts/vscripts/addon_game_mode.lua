@@ -75,25 +75,57 @@ function legiontdGameMode:InitGameMode()
   CFRoundThinker:InitPara()
   print("preparing")
  
+  ListenToGameEvent("npc_spawned", Dynamic_Wrap(legiontdGameMode, "OnNPCSpawned"), self)
 end
+
+
+function legiontdGameMode:OnNPCSpawned( keys )
+   print("OnNPCSpawned")
+   DeepPrintTable(keys)     
+   local unit =  EntIndexToHScript(keys.entindex)
+   
+   if unit:IsHero() then
+      unit:SetAbilityPoints(0)
+      local j=0
+      
+      for j = 0,5,1 do
+        local temp1=unit:GetAbilityByIndex(j)
+        temp1:SetLevel(1)
+      end
+   
+   end
+
+end
+
+
+
+
+
+
+
+
+
+
 
 
 
 -- Evaluate the state of the game
 function legiontdGameMode:OnThink()
+	  if hulage==0 then
+      playerstats:init()
+      print("axb")
+      hulage=1
+    end
 
 
-  if hulage==0 then
-    playerstats:init()
-    print("axb")
-    hulage=1
-  end
   
 
 
 
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-	  print("executing thinking")
+	
+
+ 	  print("executing thinking")
 		CFRoundThinker:Think()
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
 		return nil

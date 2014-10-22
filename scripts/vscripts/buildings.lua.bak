@@ -105,7 +105,7 @@ function change_little(keys)
       for i=1,PlayerS[12],1 do
         
         local temp1=PlayerS[13][i]:GetContext("name")
-        if temp1[1]==caster:GetContext("name") then
+        if temp1==caster:GetContext("name") then
           xuhao=i
           break
         end

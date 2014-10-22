@@ -49,6 +49,7 @@ function getBuildingPoint(keys)
 		          PlayerS[13][PlayerS[12]]:SetContext("name",tostring(PlayerS[12]),0)
 		          
 		          PlayerS[14][PlayerS[12]]=pid    --pid
+		          
 		          PlayerS[15][PlayerS[12]]=point
 		          PlayerS[16][PlayerS[12]]=name
 		          
