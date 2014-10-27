@@ -1,14 +1,4 @@
---[[
-			==天炼:CFSpawner.lua==
-			*********2014.08.10*********
-			***********AMHC*************
-			============================
-				Authors:
-				XavierCHN
-				...
-			============================
-]]
--------------------------------------------------------------------------------------------
+require("playerstats")
 if CFSpawner == nil then
 	CFSpawner = class({})
 end
@@ -53,8 +43,11 @@ function CFSpawner:SpawnWave( round , wavedata, spawner)
 	self._nCreatureLevel = wavedata.level or DEFAULT_SPAWN_UNIT_LEVEL
 	self._szRoundTitle = wavedata.roundtitle or "empty"
 	self._szRoundQuestTitle = wavedata.roundquesttitle or "empty"
+	
 	self._tSpawner = spawner
 
+  DeepPrintTable(spawner)
+  
 	-- 初始化变量
 	self._bFinishedSpawn = false
 	self._nUnitsSpawnedThisRound = 0
@@ -96,24 +89,68 @@ function CFSpawner:Think()
 
 	if self._flag==0 then
 
-	  for li=1,1,1 do                                 --8个出生点
+	  for li=1,8,1 do                                 --8个出生点
+	     if li<=4 then
+	       tempt=li-1
+	     else
+	       tempt=li
+	     end
+	   
+	   print("tempt")
+	   print(tempt)
+	   if PlayerS[tempt][30]==1 then 
+       	  
+       	  
+       print("li")
+       print(li)
+       
 	     local _spawner = self._tSpawner[li]
+	     
+	     local _spawnerName = _spawner.name
+	     local _spawnerFirstTargetName = _spawner.waypoint
+	     local _eSpawner = Entities:FindByName(nil,_spawnerName)
+	     
+
+	     
+		   local _eFirstTarget = Entities:FindByName(nil,_spawnerFirstTargetName)
+		   
+		   local _vBaseLocation = _eSpawner:GetAbsOrigin()
+		   local _vSpawnLocation = _vBaseLocation + RandomVector(100)
 	     for lj=1,self._nUnitToSpawnCount,1 do        --产怪
-	       		local _spawnerName = _spawner.name
-		        local _spawnerFirstTargetName = _spawner.waypoint
-	          local _eSpawner = Entities:FindByName(nil,_spawnerName)
-		        local _eFirstTarget = Entities:FindByName(nil,_spawnerFirstTargetName)
-		        local _vBaseLocation = _eSpawner:GetAbsOrigin()
-		        local _vSpawnLocation = _vBaseLocation + RandomVector(100)
-		        local _eUnitSpawned = CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_BADGUYS )
+	     	 		local _spawnerName = _spawner.name
+
+		        local _eUnitSpawned = CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
+		        
 		        _eUnitSpawned:SetInitialGoalEntity( _eFirstTarget )
+		        
 		        table.insert( self._teEnemyUnitList , _eUnitSpawned )
 		        
 		        self._nUnitToSpawnCount = self._nUnitToSpawnCount - 1
 		      	self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
 			      self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
-	     end 
+	     end
+	     
+	     for lj=1,PlayerS[25],1 do                   --产雇佣兵
+	     
+	       if PlayerS[27]==li then  
+	         
+	         local _spawnerName=PlayerS[26][lj]:GetName();  
+	       
+		       local _eUnitSpawned = CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
+		        
+		       _eUnitSpawned:SetInitialGoalEntity( _eFirstTarget )
+		        
+		       PlayerS[26][lj]:ForceKill(true)	     
+		       
+		     end
+		   end  
+		     
+	    
+	     
+	     PlayerS[25]=0
+	      
        self._flag=1
+     end
 	  end
 	end
 end
@@ -142,13 +179,70 @@ function CFSpawner:OnEntityKilled(keys)
 	end
 
 	
-	-- 增加玩家得分
+	
+	-- 增加杀敌玩家金钱 军功
 	local attackerUnit = EntIndexToHScript( keys.entindex_attacker or -1 )
+	
+	local playerID = tonumber(attackerUnit:GetContext("pid"))
+	
 	if attackerUnit then
-		local playerID = attackerUnit:GetPlayerOwnerID()
-		self._playerScore[playerID] = self._playerScore[playerID] or 0
-		self._playerScore[playerID] = self._playerScore[playerID] + 1
+		
+		
+		print(playerID)
+		PlayerS[playerID][1]=PlayerS[playerID][1]+1
+		--更新ui
+		sendinfotoui()
+		
+		--todo
+		
 	end
+	
+	
+	if PlayerS[playerID][19]==0 then --检查兵种移动flag
+	  
+	  PlayerS[playerID][19]=1
+	  
+	  --将此玩家所有兵种a向出兵点
+	  
+	  for i=1,PlayerS[12],1 do
+
+        local pid = PlayerS[14][i]
+        
+        if pid==playerID then
+        
+          if (IsValidEntity(PlayerS[13][i])) then
+          
+            if pid<4 then
+              tt=pid+1
+            else
+              tt=pid
+            end
+             
+          
+            local mubiao = Entities:FindByName(nil,"CFSpawner_"..tostring(tt)) --出怪点
+          
+            local zuobiao = mubiao:GetAbsOrigin();
+          
+            local newOrder = {
+          
+   	      	  UnitIndex = PlayerS[13][i]:entindex(), 
+ 	  	        OrderType = DOTA_UNIT_ORDER_ATTACK_MOVEN,
+ 		          TargetIndex = nil,
+ 		          AbilityIndex = 0,
+ 		          Position = zuobiao, --Optional.  Only used when targeting the ground
+ 		          Queue = 0 --Optional.  Used for queueing up abilities
+ 	          }
+          
+            ExecuteOrderFromTable(newOrder)
+          end
+             
+        end
+      
+      end
+	  
+	end
+	
+	
 end
 -------------------------------------------------------------------------------------------
 

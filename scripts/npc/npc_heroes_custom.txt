@@ -7,6 +7,10 @@
 	{
 		"override_hero"				"npc_dota_hero_juggernaut"			// Hero to override
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+		"AutoAttacksByDefault"      "0"
+		
+		
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
 		
 		"Abilitylayout" "6"
 		"Ability1" "orc_1"
@@ -16,5 +20,10 @@
 		"Ability5" "orc_5"
 		"Ability6" "orc_6"
 	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
 	}
 }

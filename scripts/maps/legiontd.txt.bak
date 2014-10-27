@@ -109,7 +109,7 @@
 			}
 		}
 	}
-	"3"//第二波怪物
+"3"//第二波怪物
 		{
 			"name"					"npc_enemy_Scorpion"
 			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
@@ -162,7 +162,6 @@
 				
 			}
 		}
-	}
 	"4"//第二波怪物
 		{
 			"name"					"npc_enemy_Hystrix_hodgsoni"
@@ -216,7 +215,7 @@
 				
 			}
 		}
-	}
+	
 	"5"//第二波怪物
 		{
 			"name"					"npc_enemy_eagle"
@@ -270,7 +269,7 @@
 				
 			}
 		}
-	}
+	
 	"6"//第二波怪物
 		{
 			"name"					"npc_enemy_Golem"
@@ -324,7 +323,7 @@
 				
 			}
 		}
-	}
+	
 	"7"//第二波怪物
 		{
 			"name"					"npc_enemy_Satyr"
@@ -378,7 +377,7 @@
 				
 			}
 		}
-	}
+	
 	"8"//第二波怪物
 		{
 			"name"					"npc_enemy_acolyte"
@@ -432,7 +431,7 @@
 				
 			}
 		}
-	}
+	
 	"9"//第二波怪物
 		{
 			"name"					"npc_enemy_zombie"
@@ -486,7 +485,7 @@
 				
 			}
 		}
-	}
+	
 	"10"//第二波怪物
 		{
 			"name"					"npc_enemy_Draenei"
@@ -540,7 +539,7 @@
 				
 			}
 		}
-	}
+	
 	"11"//第二波怪物
 		{
 			"name"					"npc_enemy_Clockwerk"
@@ -594,7 +593,7 @@
 				
 			}
 		}
-	}
+	
 	"12"//第二波怪物
 		{
 			"name"					"npc_enemy_Naga"
@@ -648,7 +647,7 @@
 				
 			}
 		}
-	}
+	
 	"13"//第二波怪物
 		{
 			"name"					"npc_enemy_Wind_Serpent"
@@ -702,7 +701,7 @@
 				
 			}
 		}
-	}
+	
 		"14"//第二波怪物
 		{
 			"name"					"npc_enemy_Tuskarr"
@@ -756,7 +755,7 @@
 				
 			}
 		}
-	}
+	
 	"15"//第二波怪物
 		{
 			"name"					"npc_enemy_centaur"
@@ -810,7 +809,7 @@
 				
 			}
 		}
-	}
+	
 	"16"//第二波怪物
 		{
 			"name"					"npc_enemy_salamander"
@@ -864,7 +863,7 @@
 				
 			}
 		}
-	}
+	
 	"17"//第二波怪物
 		{
 			"name"					"npc_enemy_Flesh_Golem"
@@ -918,7 +917,7 @@
 				
 			}
 		}
-	}
+	
 	"18"//第二波怪物
 		{
 			"name"					"npc_enemy_nsln"
@@ -972,7 +971,7 @@
 				
 			}
 		}
-	}
+	
 	"19"//第二波怪物
 		{
 			"name"					"npc_enemy_Giant_Spider"
@@ -1026,7 +1025,7 @@
 				
 			}
 		}
-	}
+	
 	"20"//第二波怪物
 		{
 			"name"					"npc_enemy_Dragon_Turtle"
@@ -1080,7 +1079,7 @@
 				
 			}
 		}
-	}
+	
 	"21"//第二波怪物
 		{
 			"name"					"npc_enemy_Hippogryph"
@@ -1134,7 +1133,7 @@
 				
 			}
 		}
-	}
+	
 	"22"//第二波怪物
 		{
 			"name"					"npc_enemy_mammoth"
@@ -1188,7 +1187,7 @@
 				
 			}
 		}
-	}
+	
 	"23"//第二波怪物
 		{
 			"name"					"npc_enemy_eagle_head_blame"
@@ -1242,7 +1241,7 @@
 				
 			}
 		}
-	}
+	
 	"24"//第二波怪物
 		{
 			"name"					"npc_enemy_deep_evil_spirit"
@@ -1296,7 +1295,7 @@
 				
 			}
 		}
-	}
+	
 	"25"//第二波怪物
 		{
 			"name"					"npc_enemy_vixen"
@@ -1350,7 +1349,7 @@
 				
 			}
 		}
-	}
+	
 	"26"//第二波怪物
 		{
 			"name"					"npc_enemy_Naga_Mob"
@@ -1404,7 +1403,7 @@
 				
 			}
 		}
-	}
+	
 	"27"//第二波怪物
 		{
 			"name"					"npc_enemy_doom"
@@ -1458,7 +1457,7 @@
 				
 			}
 		}
-	}
+	
 	"28"//第二波怪物
 		{
 			"name"					"npc_enemy_Buddha"
@@ -1512,7 +1511,7 @@
 				
 			}
 		}
-	}
+	
 	"29"//第二波怪物
 		{
 			"name"					"npc_enemy_Wyrm"
@@ -1566,7 +1565,7 @@
 				
 			}
 		}
-	}
+	
 	"30"//第二波怪物
 		{
 			"name"					"npc_enemy_Magnus"
@@ -1619,7 +1618,7 @@
 				}		
 				
 			}
-		}
+		
 	}
 	"31"//第二波怪物
 		{
@@ -1674,7 +1673,7 @@
 				
 			}
 		}
-	}
+	
 	"32"//第二波怪物
 		{
 			"name"					"npc_enemy_Crypt_Lord"
@@ -1728,7 +1727,7 @@
 				
 			}
 		}
-	}
+	
 	"33"//第二波怪物
 		{
 			"name"					"npc_enemy_lord_of_war"
@@ -1782,7 +1781,7 @@
 				
 			}
 		}
-	}
+	
 	"34"//第二波怪物
 		{
 			"name"					"npc_enemy_Fire_Lord"
@@ -1836,7 +1835,7 @@
 				
 			}
 		}
-	}
+	
 	"35"//第二波怪物
 		{
 			"name"					"npc_enemy_Archimonde"
@@ -1890,6 +1889,5 @@
 				
 			}
 		}
-	}
-	//"boss_data"//待完成
+	
 }

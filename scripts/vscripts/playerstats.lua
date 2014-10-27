@@ -11,7 +11,10 @@ function playerstats:init()
     PlayerS[i]= {}
     PlayerS[i]={3000,100,0,12,0,{},1,0,0,nil,nil,0}    
     --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income, 
-    --15 基地， 16 农民， 17 雇佣兵， 18 人口
+    --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag
+    
+    PlayerS[i][19]=0;
+    
   end
   PlayerS[4]=nil
   print("done playerstat init")
@@ -40,19 +43,35 @@ function playerstats:init()
   PlayerS[14]={} --所有玩家兵的所属玩家id
   PlayerS[15]={} --所有玩家兵的位置
   PlayerS[16]={} --所有玩家兵的名字
-  
-  
-  PlayerS[25]=0;               --雇佣兵计数
-  PlayerS[26]={};              --雇佣兵单位
+  PlayerS[17]={} --所有玩家兵的owner
+  PlayerS[18]={} --所有玩家兵的team
   
   
   
+  PlayerS[25]=0               --雇佣兵计数
+  PlayerS[26]={}              --雇佣兵单位
+  PlayerS[27]={}              --雇佣兵出生点
+  
+  for i=0,8,1 do              --判断在线玩家
+    if (not(i==4)) then
+     if PlayerResource:IsValidPlayer(i) then
+      
+        PlayerS[i][30]=1
+      
+      else
+    
+        print(i)
+        PlayerS[i][30]=0
+      
+      end
+    end
+  end
   
   print("done init player's stat")
   sendinfotoui();
   
-  for i=0,0,1 do               --15 base, 16 workers
-    if not(i==4) then
+  for i=0,8,1 do               --15 base, 16 workers
+    if (not(i==4)) and (PlayerS[i][30]==1)then
     
       --创建基地
 
@@ -77,6 +96,13 @@ function playerstats:init()
       
       PlayerS[i][18]:SetControllableByPlayer(0,true)
       
+      PlayerS[i][18]:SetContext("name",tostring(i),0)
+      
+      print("mark renkou")
+      
+      print(PlayerS[i][18]:GetContext("name"))
+      
+      
       --PlayerS[i][18]:SetPlayerID(i)
       
       
@@ -89,10 +115,7 @@ function playerstats:init()
         --PlayerS[i][16][j]:SetPlayerID(i)
       end
       
-      temp=Entities:FindByName(nil,"player"..tostring(i+1).."_hirer1")
-      PlayerS[i][17]=CreateUnitByName("hirer_1",temp:GetAbsOrigin(),false,nil,nil,2)  --雇佣兵营1号
-      PlayerS[i][17]:SetControllableByPlayer(0,true)
-      
+
       
       
       --[[初始化英雄

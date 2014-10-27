@@ -14,7 +14,7 @@ function getBuildingPoint(keys)
   local name = keys.UName
   local rk = keys.RenKou
   local gc = keys.GoldCost
-  
+  print(pid)
   if PlayerS[pid][1]>=gc then
   
     
@@ -47,13 +47,14 @@ function getBuildingPoint(keys)
 		          PlayerS[13][PlayerS[12]]:SetOwner(PlayerResource:GetPlayer(pid))
 		          
 		          PlayerS[13][PlayerS[12]]:SetContext("name",tostring(PlayerS[12]),0)
-		          
+		          PlayerS[13][PlayerS[12]]:SetContext("pid",tostring(pid),0)
 		          PlayerS[14][PlayerS[12]]=pid    --pid
 		          
 		          PlayerS[15][PlayerS[12]]=point
 		          PlayerS[16][PlayerS[12]]=name
 		          
-		          
+		          PlayerS[17][PlayerS[12]]=caster
+		          PlayerS[18][PlayerS[12]]=keys.caster:GetTeam()
 		          
 		        else
 		          Say(nil,"you need more food!", false)
@@ -64,7 +65,7 @@ function getBuildingPoint(keys)
 		  
 	        end
 	      else
-	        Say(nil,"you can't build here", false)
+	 --       Say(nil,"you can't build here", false)
 	        
         end
     end
@@ -91,20 +92,16 @@ function change_little(keys)
   local gc=keys.GoldCost
   
   
- --axb是pid
-  
-  
-  axb=caster:GetPlayerOwnerID()
-  
-  print(caster:GetUnitName())
-  
+ --xuhao是单位序号 axb是pid
 
-  print(axb)
   
+  print("PlayerS[12]:")
+  print(PlayerS[12])
   local xuhao=0
       
       for i=1,PlayerS[12],1 do
-        
+        print("i")
+        print(i)
         local temp1=PlayerS[13][i]:GetContext("name")
         if temp1==caster:GetContext("name") then
           xuhao=i
@@ -136,8 +133,10 @@ function change_little(keys)
       PlayerS[13][xuhao]:SetControllableByPlayer(axb,true)
       
       PlayerS[13][xuhao]:SetOwner(PlayerResource:GetPlayer(axb))
+     
+      --升级的单位未更新name context 可能会有问题
       
-      
+      PlayerS[13][xuhao]:SetContext("pid",tostring(axb),0)
     else
       Say(nil,"you need more food!", false)
     end
@@ -182,18 +181,31 @@ function hire(keys)                --购买佣兵
     sendinfotoui()
   
     if tim==2 then
+    
        born="team1_hirer"
+   
+       local pla=(Entities:FindByName(nil,born)):GetAbsOrigin()  --获得雇佣兵出生位置
+  
+       PlayerS[25]=PlayerS[25]+1
+  
+       PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
+     
+       PlayerS[27]=RandomInt(5,8)
+       
      else
+     
        born="team2_hirer"
+       
+       local pla=(Entities:FindByName(nil,born)):GetAbsOrigin()  --获得雇佣兵出生位置
+  
+       PlayerS[25]=PlayerS[25]+1
+  
+       PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
+       
+       PlayerS[27]=RandomInt(1,4)
     end
-  
-    print("hirer:")
-    print(born)
-    local pla=(Entities:FindByName(nil,born)):GetAbsOrigin()  --获得雇佣兵出生位置
-  
-    PlayerS[25]=PlayerS[25]+1
-  
-    PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
+
+
   else
        Say(nil,"not enough lumber", false)
   end
@@ -206,9 +218,12 @@ function renkou(keys)
 
   local gc=keys.GoldCost
   local lc=keys.LumberCost
+  local caster=keys.caster
   
-  pid=caster:GetPlayerOwnerID()  
   
+  print(caster:GetContext("name"))
+  pid=tonumber(caster:GetContext("name"))  
+  print(pid)
   if PlayerS[pid][1]>=gc then
     if PlayerS[pid][2]>=lc then
       
@@ -225,4 +240,43 @@ function renkou(keys)
   else
     Say(nil,"not enough gold", false)
   end
+end
+
+
+
+function gegeda_1( keys )
+	local caster = keys.caster
+
+	local effect1 = ParticleManager:CreateParticle(keys.effect1, PATTACH_WORLDORIGIN, caster)
+	ParticleManager:SetParticleControl(effect1, 0, caster:GetOrigin())
+end
+
+function gegeda_2( keys )
+	local caster = keys.caster
+
+	GameRules:GetGameModeEntity():SetContextThink(DoUniqueString("gegeda"), 
+		function( )
+			local effect2 = ParticleManager:CreateParticle(keys.effect2, PATTACH_WORLDORIGIN, caster)
+			ParticleManager:SetParticleControl(effect2, 0, caster:GetOrigin())
+			ParticleManager:ReleaseParticleIndex(effect2)
+				--增加木材
+			
+			
+			local tt=caster:GetContext("name")
+			local pid=tonumber(caster:GetContext("name")) 
+			
+			print("renkou test")
+			print(tt)
+			print(pid)
+	
+			PlayerS[pid][2]=PlayerS[pid][2]+10+PlayerS[pid][8]
+			
+			sendinfotoui()
+			return keys.time
+			
+			
+		
+			
+			
+		end, 0)
 end

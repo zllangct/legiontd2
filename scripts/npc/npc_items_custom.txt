@@ -1,80 +1,50 @@
 "DOTAAbilities"
 {
-	//=================================================================================================================
-	// Recipe: Arcane Boots
-	//=================================================================================================================
-	"item_recipe_arcane_boots2"
-	{
-		"ID"							"1005"
+"item_hirer1"
+{
+    "ID"                "1003"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
 
-		"BaseClass"						"item_recipe_arcane_boots"
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
-		"ItemShopTags"					""
-		
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_arcane_boots2"
-		"ItemRequirements"
-		{
-			"01"						"item_energy_booster;item_arcane_boots"
-		}
-	}
-	
-	//=================================================================================================================
-	// Arcane Boots II
-	//=================================================================================================================
-	"item_arcane_boots2"
-	{
-		"ID"							"1006"
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
 
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"BaseClass"						"item_arcane_boots"
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"			"scripts/vscripts/buildings.lua"
+	          			"Function"				"hire"
+				          "Hire_Unit"       "godb"
+				          "LumberCost"      "10"
+                }
 
-		// Stats		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"55.0"
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"25"
-		"ItemCost"						"2450"
-		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
-		"ItemQuality"					"rare"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemDisassembleRule"			"0"
-		"ItemAlertable"					"1"
-		"ItemAliases"					"mana;mb"
-		
-		// Special	
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement"		"75"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"500"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"replenish_radius"		"600"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"replenish_amount"		"250"
-			}
-		}
-	}
+    }
+
+}
 }

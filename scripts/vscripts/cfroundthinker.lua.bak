@@ -113,6 +113,7 @@ end
 -------------------------------------------------------------------------------------------
 function CFRoundThinker:ReadAllEnemiesFromKv()
 	local kv = LoadKeyValues( "scripts/maps/legiontd.txt" )
+	
 	if not kv then print('Runtime error, maybe you havent put a mapName KV file in maps/ directory') end
 	for k,v in pairs(kv["wave_data"]) do
 
@@ -166,10 +167,10 @@ function CFRoundThinker:StartNextRound()
 	CFSpawner:SpawnWave(self._nCurrRound,tRoundData.wavedata,tRoundData.spawner)
 	
 	
-	
+	jiesuan()
 	clearallunit()
 	rebuildunit()
-	
+	qingli()
 	
 end
 -------------------------------------------------------------------------------------------
@@ -184,12 +185,33 @@ function CFRoundThinker:IncreaseRestTime(duration)
 end
 -------------------------------------------------------------------------------------------
 
+function qingli() --清理出兵flag
+
+  for i=0,8,1 do             
+  
+    if not(i==4) and PlayerS[i][30]==1 then
+    
+      PlayerS[i][19]=0
+      
+    end
+    
+  end  
+  
+end
+
+
+
 
 function clearallunit()
+
   for i=1,PlayerS[12],1 do
-    if (IsValidEntity(PlayerS[13][i])) then
+  
+    if IsValidEntity( PlayerS[13][i] ) then
+    
       PlayerS[13][i]:ForceKill(true)
+      
     end
+    
   end
 
 end
@@ -201,9 +223,15 @@ function rebuildunit()
  
     local temp = PlayerS[16][i]
     
-    PlayerS[13][i]=nil
-      PlayerS[13][i]=CreateUnitByName(temp, PlayerS[15][i], false, nil, nil, PlayerS[13][i]:GetTeam())
+    PlayerS[13][i]=CreateUnitByName(temp, PlayerS[15][i], false, PlayerS[17][i], PlayerS[17][i], PlayerS[18][i] )
+    
+     --todo 也许需要重复building全部过程
+    
+    PlayerS[13][i]:SetContext("name",tostring(i),0)
+		PlayerS[13][i]:SetContext("pid",tostring(PlayerS[14][i]),0)
+    
     
     PlayerS[13][i]:SetControllableByPlayer(PlayerS[14][i],true)
   end
 end
+

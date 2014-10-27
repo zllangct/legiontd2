@@ -59,7 +59,7 @@
 		{
 			"name"					"npc_enemy_murloc"
 			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
-			//"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
+			"count"				"45"//刷怪数量可以不定义，为默认刷怪数量
 			//"level"				"2" //怪物等级，可以不定义，默认为1级
 			"RoundTitle"			"LegionTD: Wave 2 I'm Murloc urrrrry!"
 			"RoundQuestTitle"		"#LegionTD: Wave 2 I'm Murloc urrrrry!"
@@ -113,7 +113,7 @@
 		{
 			"name"					"npc_enemy_Scorpion"
 			//"spawn_interval"		"0" //每个怪之间的刷怪时间间隔，可以不定义
-			//"count"				"40"//刷怪数量可以不定义，为默认刷怪数量
+			"count"				"40"//刷怪数量可以不定义，为默认刷怪数量
 			//"level"				"3" //怪物等级，可以不定义，默认为1级
 			"RoundTitle"			"LegionTD: Wave 3 I'm Scorpion urrrrry!"
 			"RoundQuestTitle"		"#LegionTD: Wave 3 I'm Scorpion urrrrry!"

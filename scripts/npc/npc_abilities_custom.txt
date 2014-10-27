@@ -435,7 +435,7 @@
 				"LumberCost"      "10"
       }
     }
-  
+  }
     "up_renkou"
   {
 
@@ -457,120 +457,47 @@
 				"LumberCost"      "24"
       }
     }
-//创建特效
-	"ability_effect"
-	{
-		"BaseClass"					"ability_datadriven"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"MaxLevel"					"1"
+  }
 
-		"Modifiers"
-		{
-			"modifier_npc_dota_hero_sven_effect"
-			{
-				"IsHidden"			"1"
 
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\units\heroes\hero_sven\sven_spell_gods_strength_ambient.vpcf"
-						"EffectAttachType"  "start_at_customorigin"
-						"Target"  			"CASTER"
-						"ControlPointEntities"
-						{
-							"CASTER"		"attach_attack1"
-							"CASTER"		"attach_attack1"
-							"CASTER"		"attach_head"
-							"CASTER"		"attach_head"
-							"CASTER"		"attach_head"
-						}
-					}
-				}
-			}
 
-			"modifier_npc_dota_hero_juggernaut_effect"
-			{
-				"IsHidden"			"1"
-
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\econ\courier\courier_greevil_green\courier_greevil_green_ambient_3.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"  			"CASTER"
-					}
-				}
-			}
-		}
-	}
-
-	//咯咯哒
 	"gegeda"
-	
 	{
 		"BaseClass"					"ability_datadriven"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"MaxLevel"					"1"
-		"AbilityTextureName"		"shadow_shaman_voodoo"
 		"AbilityChannelTime"		"10"
 
 		"precache" //缓存特效
         {
-            "particle_folder"       "particles/econ/courier"
-            "particle_folder"       "particles/econ/items/abaddon_alliance"
+            "particle"              "particles/dire_fx/bad_ancient002_pit_lava_glow.vpcf"
+            "particle"       		"particles/items_fx/abyssal_blade_impact03.vpcf"
         }
 
 		"OnSpellStart"
 		{
-			"ApplyModifier"
+			"RunScript"
 			{
-				"Target" 			"CASTER"
-				"ModifierName"		"modifier_gegeda"
+				"ScriptFile" 	"scripts/vscripts/buildings.lua"
+				"Target"		"CASTER"
+				"Function"		"gegeda_1"
+				"effect1"		"particles/dire_fx/bad_ancient002_pit_lava_glow.vpcf"
 			}
 		}
 
-		"OnChannelInterrupted"
-		{
-			"RemoveModifier"
-			{
-				"Target" 			"CASTER"
-				"ModifierName"		"modifier_gegeda"
-			}
-		}
-		
 		"OnChannelSucceeded"
 		{
-			"RemoveModifier"
+			"RunScript"
 			{
-				"Target" 			"CASTER"
-				"ModifierName"		"modifier_gegeda"
+				"ScriptFile" 	"scripts/vscripts/buildings.lua"
+				"Target"		"CASTER"
+				"Function"		"gegeda_2"
+				"effect2"		"particles/items_fx/abyssal_blade_impact03.vpcf"
+				"time"			"5" //每隔多少秒出现effect2
 			}
 			"RemoveAbility"
 			{
-				"Target"			"CASTER"
-				"AbilityName"		"gegeda"
-			}
-		}
-
-		"Modifiers"
-		{
-			"modifier_gegeda"
-			{
-				"IsHidden"			"1"
-				"EffectName"		"particles\econ\courier\courier_roshan_lava\courier_roshan_lava.vpcf"
-				"EffectAttachType"	"follow_origin"
-				"ThinkInterval"		"0.5"
-				"OnIntervalThink"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\econ\items\abaddon\abaddon_alliance\abaddon_aphotic_shield_alliance_explosion.vpcf"
-						"EffectAttachType"  "follow_chest"
-						"Target"    		"TARGET"
-					}	
-				}
+				"Target"		"CASTER"
+				"AbilityName"	"gegeda"
 			}
 		}
 	}

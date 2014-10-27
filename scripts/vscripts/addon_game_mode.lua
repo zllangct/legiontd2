@@ -49,7 +49,7 @@ function Precache( context )
 	
 	PrecacheResource( "particle", "particles/drow/wave.vpcf", context )
 	
-
+	PrecacheItemByNameSync( "item_hirer1", context )
   print("done precache")
 end
 
@@ -67,10 +67,16 @@ end
 
 --init
 function legiontdGameMode:InitGameMode()
-	GameRules:SetPreGameTime(60)
+
+  --准备时间
+	GameRules:SetPreGameTime(10)
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
   
   GameRules:SetSameHeroSelectionEnabled(true)
+  GameRules:SetUseUniversalShopMode(true)
+  
+  local temp=GameRules:GetGameModeEntity()
+  temp:SetRecommendedItemsDisabled(true)
   hulage=0
   CFRoundThinker:InitPara()
   print("preparing")
@@ -80,19 +86,21 @@ end
 
 
 function legiontdGameMode:OnNPCSpawned( keys )
-   print("OnNPCSpawned")
-   DeepPrintTable(keys)     
+
    local unit =  EntIndexToHScript(keys.entindex)
    
-   if unit:IsHero() then
-      unit:SetAbilityPoints(0)
+   if unit:IsHero() then                      --如果是英雄
+      unit:SetAbilityPoints(0)                --取消技能点
       local j=0
       
       for j = 0,5,1 do
-        local temp1=unit:GetAbilityByIndex(j)
-        temp1:SetLevel(1)
+        local temp1=unit:GetAbilityByIndex(j) --获取技能实体
+        temp1:SetLevel(1)                     --设置技能等级
       end
    
+     --local pid=unit:GetPlayerID()             --获取玩家id
+     
+     --PlayerS[pid][18]:SetOwner(unit)          --设置人口拥有者
    end
 
 end

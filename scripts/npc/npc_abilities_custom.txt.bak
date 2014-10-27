@@ -131,7 +131,168 @@
   }
   
   
-  
+  //===========================1.0兽人战士升级成1.1沸血兽人战士========================
+    "orc_10to11"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_11"
+                "GoldCost"        "80"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+
+   //===========================1.1沸血兽人战士升级成1.2嗜血兽人========================
+    "orc_11to12"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_12"
+                "GoldCost"        "150"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================2.0兽人术士升级成2.1沸血兽人术士========================
+    "orc_20to21"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_21"
+                "GoldCost"        "80"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+    //===========================3.0灰熊战士升级成3.1银熊战神========================
+    "orc_30to31"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_31"
+                "GoldCost"        "150"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================4.0生命术士升级成4.1禁忌术士========================
+    "orc_40to41"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_41"
+                "GoldCost"        "200"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================5.0狂暴白狼战士升级成5.1狂暴红狼战神========================
+    "orc_50to51"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_51"
+                "GoldCost"        "200"
+                "RenKou"          "2"
+      }
+    }
+  }
+
+
+    //===========================6.0战争首领升级成6.1兽王卡洛尔========================
+    "orc_60to61"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_orc_61"
+                "GoldCost"        "380"
+                "RenKou"          "2"
+      }
+    }
+  }
   
   
   
@@ -274,7 +435,7 @@
 				"LumberCost"      "10"
       }
     }
-  
+  }
     "up_renkou"
   {
 
@@ -296,120 +457,47 @@
 				"LumberCost"      "24"
       }
     }
-//创建特效
-	"ability_effect"
-	{
-		"BaseClass"					"ability_datadriven"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-		"MaxLevel"					"1"
+  }
 
-		"Modifiers"
-		{
-			"modifier_npc_dota_hero_sven_effect"
-			{
-				"IsHidden"			"1"
 
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\units\heroes\hero_sven\sven_spell_gods_strength_ambient.vpcf"
-						"EffectAttachType"  "start_at_customorigin"
-						"Target"  			"CASTER"
-						"ControlPointEntities"
-						{
-							"CASTER"		"attach_attack1"
-							"CASTER"		"attach_attack1"
-							"CASTER"		"attach_head"
-							"CASTER"		"attach_head"
-							"CASTER"		"attach_head"
-						}
-					}
-				}
-			}
 
-			"modifier_npc_dota_hero_juggernaut_effect"
-			{
-				"IsHidden"			"1"
-
-				"OnCreated"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\econ\courier\courier_greevil_green\courier_greevil_green_ambient_3.vpcf"
-						"EffectAttachType"  "follow_origin"
-						"Target"  			"CASTER"
-					}
-				}
-			}
-		}
-	}
-
-	//咯咯哒
 	"gegeda"
-	
 	{
 		"BaseClass"					"ability_datadriven"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"MaxLevel"					"1"
-		"AbilityTextureName"		"shadow_shaman_voodoo"
 		"AbilityChannelTime"		"10"
 
 		"precache" //缓存特效
         {
-            "particle_folder"       "particles/econ/courier"
-            "particle_folder"       "particles/econ/items/abaddon_alliance"
+            "particle"              "particles/basic_rope/basic_rope.vpcf"
+            "particle"       		"particles/items_fx/abyssal_blade_impact03.vpcf"
         }
 
 		"OnSpellStart"
 		{
-			"ApplyModifier"
+			"RunScript"
 			{
-				"Target" 			"CASTER"
-				"ModifierName"		"modifier_gegeda"
+				"ScriptFile" 	"scripts/vscripts/buildings.lua"
+				"Target"		"CASTER"
+				"Function"		"gegeda_1"
+				"effect1"		"particles/basic_rope/basic_rope.vpcf"
 			}
 		}
 
-		"OnChannelInterrupted"
-		{
-			"RemoveModifier"
-			{
-				"Target" 			"CASTER"
-				"ModifierName"		"modifier_gegeda"
-			}
-		}
-		
 		"OnChannelSucceeded"
 		{
-			"RemoveModifier"
+			"RunScript"
 			{
-				"Target" 			"CASTER"
-				"ModifierName"		"modifier_gegeda"
+				"ScriptFile" 	"scripts/vscripts/buildings.lua"
+				"Target"		"CASTER"
+				"Function"		"gegeda_2"
+				"effect2"		"particles/items_fx/abyssal_blade_impact03.vpcf"
+				"time"			"5" //每隔多少秒出现effect2
 			}
 			"RemoveAbility"
 			{
-				"Target"			"CASTER"
-				"AbilityName"		"gegeda"
-			}
-		}
-
-		"Modifiers"
-		{
-			"modifier_gegeda"
-			{
-				"IsHidden"			"1"
-				"EffectName"		"particles\econ\courier\courier_roshan_lava\courier_roshan_lava.vpcf"
-				"EffectAttachType"	"follow_origin"
-				"ThinkInterval"		"0.5"
-				"OnIntervalThink"
-				{
-					"AttachEffect"
-					{
-						"EffectName"		"particles\econ\items\abaddon\abaddon_alliance\abaddon_aphotic_shield_alliance_explosion.vpcf"
-						"EffectAttachType"  "follow_chest"
-						"Target"    		"TARGET"
-					}	
-				}
+				"Target"		"CASTER"
+				"AbilityName"	"gegeda"
 			}
 		}
 	}
