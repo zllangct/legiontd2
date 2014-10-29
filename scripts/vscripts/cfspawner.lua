@@ -46,8 +46,7 @@ function CFSpawner:SpawnWave( round , wavedata, spawner)
 	
 	self._tSpawner = spawner
 
-  DeepPrintTable(spawner)
-  
+
 	-- 初始化变量
 	self._bFinishedSpawn = false
 	self._nUnitsSpawnedThisRound = 0
@@ -96,14 +95,11 @@ function CFSpawner:Think()
 	       tempt=li
 	     end
 	   
-	   print("tempt")
-	   print(tempt)
+
 	   if PlayerS[tempt][30]==1 then 
        	  
        	  
-       print("li")
-       print(li)
-       
+
 	     local _spawner = self._tSpawner[li]
 	     
 	     local _spawnerName = _spawner.name
@@ -121,6 +117,8 @@ function CFSpawner:Think()
 
 		        local _eUnitSpawned = CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
 		        
+		        _eUnitSpawned:SetTeam(DOTA_TEAM_NEUTRALS)
+
 		        _eUnitSpawned:SetInitialGoalEntity( _eFirstTarget )
 		        
 		        table.insert( self._teEnemyUnitList , _eUnitSpawned )
@@ -185,10 +183,11 @@ function CFSpawner:OnEntityKilled(keys)
 	
 	local playerID = tonumber(attackerUnit:GetContext("pid"))
 	
-	if attackerUnit then
+	if playerID then
 		
 		
 		print(playerID)
+		--增加金币
 		PlayerS[playerID][1]=PlayerS[playerID][1]+1
 		--更新ui
 		sendinfotoui()
@@ -198,9 +197,12 @@ function CFSpawner:OnEntityKilled(keys)
 	end
 	
 	
-	if PlayerS[playerID][19]==0 then --检查兵种移动flag
+	if 1==1 then --检查兵种移动flag
+		--flag有问题 暂时取消
 	  
-	  PlayerS[playerID][19]=1
+	  print("start atk ordering")
+
+--	  PlayerS[playerID][19]=1
 	  
 	  --将此玩家所有兵种a向出兵点
 	  
@@ -221,16 +223,16 @@ function CFSpawner:OnEntityKilled(keys)
           
             local mubiao = Entities:FindByName(nil,"CFSpawner_"..tostring(tt)) --出怪点
           
-            local zuobiao = mubiao:GetAbsOrigin();
+            local zuobiao = mubiao:GetAbsOrigin() --出怪点坐标
           
             local newOrder = {
           
-   	      	  UnitIndex = PlayerS[13][i]:entindex(), 
- 	  	        OrderType = DOTA_UNIT_ORDER_ATTACK_MOVEN,
- 		          TargetIndex = nil,
- 		          AbilityIndex = 0,
- 		          Position = zuobiao, --Optional.  Only used when targeting the ground
- 		          Queue = 0 --Optional.  Used for queueing up abilities
+   	      	      UnitIndex = PlayerS[13][i]:entindex(),       --兵的index       
+ 	  	          OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,    --a到出怪点
+ 		          TargetIndex = nil,                   
+ 		          AbilityIndex = 0,                             
+ 		          Position = zuobiao,                          --a向出怪点
+ 		          Queue = 0                                    --Optional.  Used for queueing up abilities
  	          }
           
             ExecuteOrderFromTable(newOrder)
@@ -257,8 +259,8 @@ end
 -------------------------------------------------------------------------------------------
 -- 返回是否所有怪已经都被杀死
 function CFSpawner:IsWaveClear()
-  print(self._nUnitsCurrentlyAlive)
-  print(self._bFinishedSpawn)
+  --print(self._nUnitsCurrentlyAlive)
+  --print(self._bFinishedSpawn)
 	if self._bFinishedSpawn and self._nUnitsCurrentlyAlive == 0 then
 		self:FinishRound()
 		return true

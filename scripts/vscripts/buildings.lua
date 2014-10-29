@@ -95,13 +95,11 @@ function change_little(keys)
  --xuhao是单位序号 axb是pid
 
   
-  print("PlayerS[12]:")
-  print(PlayerS[12])
+
   local xuhao=0
       
       for i=1,PlayerS[12],1 do
-        print("i")
-        print(i)
+
         local temp1=PlayerS[13][i]:GetContext("name")
         if temp1==caster:GetContext("name") then
           xuhao=i
@@ -173,8 +171,7 @@ function hire(keys)                --购买佣兵
   
   pid=caster:GetPlayerOwnerID()
   
-  print(pid)
-  
+
   if PlayerS[pid][2]>=lc then
   
     PlayerS[pid][2]=PlayerS[pid][2]-lc
@@ -261,6 +258,7 @@ function gegeda_2( keys )
 			ParticleManager:ReleaseParticleIndex(effect2)
 				--增加木材
 			
+
 			
 			local tt=caster:GetContext("name")
 			local pid=tonumber(caster:GetContext("name")) 

@@ -11,7 +11,10 @@ function playerstats:init()
     PlayerS[i]= {}
     PlayerS[i]={3000,100,0,12,0,{},1,0,0,nil,nil,0}    
     --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income, 
-    --15 基地， 16 农民， 17 雇佣兵， 18 人口
+    --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag
+    
+    PlayerS[i][19]=0;
+    
   end
   PlayerS[4]=nil
   print("done playerstat init")
@@ -42,6 +45,8 @@ function playerstats:init()
   PlayerS[16]={} --所有玩家兵的名字
   PlayerS[17]={} --所有玩家兵的owner
   PlayerS[18]={} --所有玩家兵的team
+  
+  
   
   PlayerS[25]=0               --雇佣兵计数
   PlayerS[26]={}              --雇佣兵单位

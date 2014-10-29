@@ -23,7 +23,6 @@ function CFRoundThinker:InitPara(kv)
 	self._tAllEnemies = {}
 	-- 读取所有的怪信息，赋给self._tAllEnemies
 	self:ReadAllEnemiesFromKv()
-	print("done spawner initpara")
 end
 -------------------------------------------------------------------------------------------
 
@@ -144,7 +143,6 @@ function CFRoundThinker:ReadAllEnemiesFromKv()
 		-- 存入self.tAllEnemies
 		local i = tonumber(k)
 		self._tAllEnemies[i] = tSingleWaveData
-		print("done loading info from kv")
 	end
 
 end

@@ -11,7 +11,7 @@ function playerstats:init()
     PlayerS[i]= {}
     PlayerS[i]={3000,100,0,12,0,{},1,0,0,nil,nil,0}    
     --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income, 
-    --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag
+    --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag, 20 传送区域
     
     PlayerS[i][19]=0;
     
@@ -96,7 +96,7 @@ function playerstats:init()
       
       PlayerS[i][18]:SetControllableByPlayer(0,true)
       
-      PlayerS[i][18]:SetContext("name",tostring(i),0)
+      PlayerS[i][18]:SetContext("name",tostring(i),0) --挂进pid
       
       print("mark renkou")
       
@@ -116,7 +116,9 @@ function playerstats:init()
       end
       
 
-      
+      local temp=Entities:FindByName(nil,"trigger_teleport"..tostring(i))
+      PlayerS[i][20]=temp
+
       
       --[[初始化英雄
       local j=0
@@ -153,7 +155,7 @@ function sendinfotoui()
   for i=0,8,1 do
     if not(i==4) then
       p[i]=tostring(PlayerS[i][1]).."          "..tostring(PlayerS[i][2]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12])
-      print(i,"'s player: ",p[i])
+
     end
   end
 

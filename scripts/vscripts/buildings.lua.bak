@@ -262,7 +262,7 @@ function gegeda_2( keys )
 				--Ôö¼ÓÄ¾²Ä
 			
 			
-			local tt=caster:GetContext("name"))
+			local tt=caster:GetContext("name")
 			local pid=tonumber(caster:GetContext("name")) 
 			
 			print("renkou test")
