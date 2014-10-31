@@ -7,6 +7,20 @@ PlayerS = {}
 
 function playerstats:init()
 
+  local temp=Entities:FindByName(nil,"zibao") --所有单位假死沉睡的最终之地 神之居所瓦尔哈拉！
+  zibao=temp:GetAbsOrigin()
+
+  local temp=Entities:FindByName(nil,"wang_1")
+  wang1=temp:GetAbsOrigin()                   --王1的坐标
+
+  local temp=Entities:FindByName(nil,"wang_2")
+  wang2=temp:GetAbsOrigin()                   --王二的坐标
+
+  wang_1=CreateUnitByName("King_light", wang1, false, nil, nil, DOTA_TEAM_GOODGUYS)
+  
+  wang_2=CreateUnitByName("King_dark", wang1, false, nil, nil, DOTA_TEAM_BADGUYS)
+  
+
   for i=0,8 do
     PlayerS[i]= {}
     PlayerS[i]={3000,100,0,12,0,{},1,0,0,nil,nil,0}    
@@ -73,6 +87,8 @@ function playerstats:init()
   for i=0,8,1 do               --15 base, 16 workers
     if (not(i==4)) and (PlayerS[i][30]==1)then
     
+      wang_1:SetControllableByPlayer(i, true)
+      wang_2:SetControllableByPlayer(i, true)
       --创建基地
 
       local temp=Entities:FindByName(nil,"player"..tostring(i+1).."_base")

@@ -59,6 +59,9 @@ function CFRoundThinker:ThinkFighting()
 
 	-- 判断这一轮的怪物是否都被干掉了
 	if CFSpawner:IsWaveClear() then
+        	
+        clearallunit()
+	    rebuildunit()
 
 		-- 如果每一轮的怪物都被干掉了
 		if self._nCurrRound > #self._tAllEnemies then
@@ -166,9 +169,7 @@ function CFRoundThinker:StartNextRound()
 	
 	
 	
-	clearallunit()
-	rebuildunit()
-	qingli()
+
 	
 end
 -------------------------------------------------------------------------------------------
@@ -183,19 +184,7 @@ function CFRoundThinker:IncreaseRestTime(duration)
 end
 -------------------------------------------------------------------------------------------
 
-function qingli() --清理出兵flag
 
-  for i=0,8,1 do             
-  
-    if not(i==4) and PlayerS[i][30]==1 then
-    
-      PlayerS[i][19]=0
-      
-    end
-    
-  end  
-  
-end
 
 
 
@@ -206,6 +195,8 @@ function clearallunit()
   
     if IsValidEntity( PlayerS[13][i] ) then
     
+      PlayerS[13][i]:SetAbsOrigin(zibao)
+
       PlayerS[13][i]:ForceKill(true)
       
     end

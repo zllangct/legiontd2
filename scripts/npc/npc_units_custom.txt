@@ -9,7 +9,7 @@
     "Model" "models/heroes/chen/chen.vmdl"
     "ModelScale" "2.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "100"
     "HealthBarOffset" "-1"
@@ -36,7 +36,7 @@
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "20"                                                 //碰撞体积
     "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                //地面单位
-    "MovementSpeed" "225"                                             //移速
+    "MovementSpeed" "0"                                             //移速
     "MovementTurnRate" "1.5"                                          //转身速度
     "StatusHealth" "5000"                                               //血量
     "StatusHealthRegen" "0"                                           //回血
@@ -56,7 +56,7 @@
     "Model" "models/props_structures/bad_ancient_destruction.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -104,7 +104,7 @@
     "Model" "models/props_structures/bad_ancient_destruction.vmdl"
     "ModelScale" "0.2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -179,7 +179,7 @@
     "Model" "models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -234,7 +234,7 @@
     "Model" "models/courier/octopus/octopus.vmdl"
     "ModelScale" "0.4"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -282,7 +282,7 @@
     "Model" "models/heroes/slark/slark.vmdl"
     "ModelScale" "0.4"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -322,34 +322,36 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+    "Creature" {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "7714" 武器-爪子-尾巴
+                        "ItemDef"           "7714" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "7711" 手部-爪子-背部
+                        "ItemDef"           "7711" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "7713" 脚-其他
+                        "ItemDef"           "7713" //脚-其他
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "7712" 头部
+                        "ItemDef"           "7712" //头部
                     }
                 }
+        }
   }
   //===========================3=======================
    "npc_enemy_Scorpion"
   {
     "BaseClass" "npc_dota_creature"
-    "Model" "models/heroes/sand_king/sand_king.vmdl"
+    "Model"     "models/heroes/sand_king/sand_king.vmdl"
     "ModelScale" "0.4"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -389,25 +391,28 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+    "Creature"
+      {
             "AttachWearables"   // 附加饰品
             {
                 "Wearable1"
                 {
-                    "ItemDef"           "4501" 武器-爪子-尾巴
-                }
+                    "ItemDef"           "4501" //武器-爪子-尾巴
+                }   
                 "Wearable2"
                 {
-                    "ItemDef"           "5684" 手部-爪子
+                    "ItemDef"           "5684" //手部-爪子
                 }
                 "Wearable3"
                 {
-                    "ItemDef"           "4942" 脚
+                    "ItemDef"           "4942" //脚
                 }
                 "Wearable4"
                 {
-                    "ItemDef"           "5677" 头部
+                    "ItemDef"           "5677" //头部
                 }
             }
+     }
   }
   //===========================4=======================
   "npc_enemy_Hystrix_hodgsoni"
@@ -425,7 +430,7 @@
     "Model" "models/items/beastmaster/boar/beast_deming/beast_deming.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -478,7 +483,7 @@
     "Model" "models/items/beastmaster/hawk/fotw_eagle/fotw_eagle.vmdl"
     "ModelScale" "0.4"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -531,7 +536,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_golem_b/n_creep_golem_b.vmdl"
     "ModelScale" "0.4"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -582,7 +587,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_satyr_b/n_creep_satyr_b.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -634,7 +639,7 @@
     "Model" "models/creeps/neutral_creeps/n_creeps_forest_troll/n_creep_forest_troll_high_priest.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -684,7 +689,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
     "ModelScale" "0.9"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -734,7 +739,7 @@
     "Model" "models/creeps/lane_creeps/creep_good_melee/creep_good_melee.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -784,7 +789,7 @@
     "Model" "models/heroes/rattletrap/rattletrap.vmdl"
     "ModelScale" "0.7"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -817,25 +822,28 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+    "Creature" 
+      {
             "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "484" 武器-爪子-尾巴
+                        "ItemDef"           "484" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "485" 手部-爪子-背部
+                        "ItemDef"           "485" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "446" 脚-其他-尾巴
+                        "ItemDef"           "446" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "191" 头部
+                        "ItemDef"           "191" //头部
                     }
                 }
+      }
    }
   //===========================12=======================
   "npc_enemy_Naga"
@@ -853,7 +861,7 @@
     "Model" "models/heroes/siren/siren.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -886,25 +894,28 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "AttachWearables"   // 附加饰品
+    "Creature"
+       {
+        "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "192" 武器-爪子-尾巴
+                        "ItemDef"           "192" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "193" 手部-爪子-背部
+                        "ItemDef"           "193" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "194" 脚-其他-尾巴
+                        "ItemDef"           "194" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "191" 头部
+                        "ItemDef"           "191" //头部
                     }
                 }
+      }
    }
   //===========================13=======================
   "npc_enemy_Wind_Serpent"
@@ -922,7 +933,7 @@
     "Model" "models/heroes/viper/viper.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -972,7 +983,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1022,7 +1033,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_centaur_med/n_creep_centaur_med.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1055,31 +1066,34 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
             "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "5058" 武器-爪子-尾巴
+                        "ItemDef"           "5058" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "5026" 手部-爪子-背部
+                        "ItemDef"           "5026" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "5057" 脚-其他-尾巴
+                        "ItemDef"           "5057" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "5015" 头部
+                        "ItemDef"           "5015" //头部
                     }
                     "Wearable5"
                     {
-                        "ItemDef"           "4928" 头部
+                        "ItemDef"           "4928" //头部
                     }
 
                 }
-                }
+        }
+  }
   //===========================16=======================
     "npc_enemy_salamander"
   {
@@ -1096,7 +1110,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_dragonspawn_b/n_creep_dragonspawn_b.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1146,7 +1160,7 @@
     "Model" "models/heroes/undying/undying_flesh_golem.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1196,7 +1210,7 @@
     "Model" "models/heroes/enigma/eidelon.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1246,7 +1260,7 @@
     "Model" "models/heroes/broodmother/broodmother.vmdl"
     "ModelScale" "1.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1281,22 +1295,25 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+    "Creature"
+       {
         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "4750" 武器-爪子-尾巴
+                        "ItemDef"           "4750" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "4751" 手部-爪子-背部
+                        "ItemDef"           "4751" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "4752" 脚-其他-尾巴
+                        "ItemDef"           "4752" //脚-其他-尾巴
                     }
 
                 }
+        }
   }
   //===========================20=======================
   "npc_enemy_Dragon_Turtle"
@@ -1314,7 +1331,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_big.vmdl"
     "ModelScale" "1.2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1364,7 +1381,7 @@
     "Model" "models/heroes/visage/visage_familiar.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1416,7 +1433,7 @@
     "Model" "models/heroes/magnataur/magnataur.vmdl"
     "ModelScale" "1.3"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1449,24 +1466,27 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+    "Creature"
+       {
         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "6388" 武器-爪子-尾巴
+                        "ItemDef"           "6388" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "6531" 手部-爪子-背部
+                        "ItemDef"           "6531" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "6532" 脚-其他-尾巴
+                        "ItemDef"           "6532" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "6533" 头部
+                        "ItemDef"           "6533" //头部
                     }
+                }
                 }
    }
   //===========================23========================
@@ -1485,7 +1505,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_harpy_b/n_creep_harpy_b.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1535,7 +1555,7 @@
     "Model" "models/heroes/razor/razor.vmdl"
     "ModelScale" "1.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1568,25 +1588,28 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+    "Creature"
+       {
         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "6388" 武器-爪子-尾巴
+                        "ItemDef"           "6388" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "6531" 手部-爪子-背部
+                        "ItemDef"           "6531" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "6532" 脚-其他-尾巴
+                        "ItemDef"           "6532" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "6533" 头部
+                        "ItemDef"           "6533" //头部
                     }
                 }
+        }
    }
   //===========================25========================
   "npc_enemy_vixen"
@@ -1604,7 +1627,7 @@
     "Model" "models/heroes/queenofpain/queenofpain.vmdl"
     "ModelScale" "0.9"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1639,24 +1662,27 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"           //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "5359" 武器-爪子-尾巴
+                        "ItemDef"           "5359" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "5340" 手部-爪子-背部
+                        "ItemDef"           "5340" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "5341" 脚-其他-尾巴
+                        "ItemDef"           "5341" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "5342" 头部
+                        "ItemDef"           "5342" //头部
                     }
+        }
                 }
   }
   //===========================26========================
@@ -1675,7 +1701,7 @@
     "Model" "models/heroes/slardar/slardar.vmdl"
     "ModelScale" "1.1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1708,24 +1734,27 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "4192" 武器-爪子-尾巴
+                        "ItemDef"           "4192" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "5072" 手部-爪子-背部
+                        "ItemDef"           "5072" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "5071" 脚-其他-尾巴
+                        "ItemDef"           "5071" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "5073" 头部
+                        "ItemDef"           "5073" //头部
                     }
+                }
                 }
     }
   //===========================27========================
@@ -1744,7 +1773,7 @@
     "Model" "models/heroes/doom/doom.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1794,7 +1823,7 @@
     "Model" "models/npc_minions/draft_siege_good.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1844,7 +1873,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_jungle_stalker/n_creep_jungle_stalker.vmdl"
     "ModelScale" "1.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1895,7 +1924,7 @@
     "Model" "models/heroes/magnataur/magnataur.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -1928,24 +1957,27 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "6388" 武器-爪子-尾巴
+                        "ItemDef"           "6388" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "6531" 手部-爪子-背部
+                        "ItemDef"           "6531" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "6532" 脚-其他-尾巴
+                        "ItemDef"           "6532" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "6533" 头部
+                        "ItemDef"           "6533" //头部
                     }
+                }
                 }
     }
   //===========================31========================
@@ -1964,7 +1996,7 @@
     "Model" "models/heroes/slark/slark.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2014,7 +2046,7 @@
     "Model" "models/heroes/nerubian_assassin/nerubian_assassin.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2049,24 +2081,27 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"           //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
             "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "5238" 武器-爪子-尾巴
+                        "ItemDef"           "5238" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "5228" 手部-爪子-背部
+                        "ItemDef"           "5228" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "5345" 脚-其他-尾巴
+                        "ItemDef"           "5345" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "5237" 头部
+                        "ItemDef"           "5237" //头部
                     }
+                }
                 }
   }
   //===========================33========================
@@ -2085,7 +2120,7 @@
     "Model" "models/heroes/wraith_king/wraith_frost.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2118,28 +2153,31 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "4445" 武器-爪子-尾巴
+                        "ItemDef"           "4445" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "5065" 手部-爪子-背部
+                        "ItemDef"           "5065" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "5066" 脚-其他-尾巴
+                        "ItemDef"           "5066" //脚-其他-尾巴
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "5067" 头部
+                        "ItemDef"           "5067" //头部
                     }
                     "Wearable5"
                     {
-                        "ItemDef"           "5068" 头部
+                        "ItemDef"           "5068" //头部
                     }
+                }
                 }
     }
   //===========================34========================
@@ -2158,7 +2196,7 @@
     "Model" "models/heroes/nevermore/nevermore.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2191,13 +2229,16 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "6998" 武器-爪子-尾巴
+                        "ItemDef"           "6998" //武器-爪子-尾巴
                     }
 
+                }
                 }
    }
   //===========================35========================
@@ -2216,7 +2257,7 @@
     "Model" "models/creeps/roshan/roshan.vmdl"
     "ModelScale" "2"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2260,7 +2301,7 @@
     "Model" "models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2305,7 +2346,7 @@
     "Model" "models/heroes/lycan/lycan_wolf.vmdl"
     "ModelScale" "1.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2349,7 +2390,7 @@
     "Model" "models/heroes/lycan/lycan.vmdl"
     "ModelScale" "0.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2400,7 +2441,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll_frost.vmdl"
     "ModelScale"  "1.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2451,7 +2492,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"
     "ModelScale" "1.5"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2501,7 +2542,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_beast/n_creep_beast.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2561,11 +2602,11 @@
     "Model" "models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
-    "Ability1" "orc_20to21"//削弱--减甲
+    "Ability1" "orc_20to21"//削弱 减甲
     "Ability2" ""
     "Ability3" ""
     "Ability4" ""
@@ -2597,7 +2638,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/neutral_fx/troll_heal.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/neutral_fx/troll_heal.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
  
   }
@@ -2619,7 +2660,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl"
     "ModelScale" "1.1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2654,7 +2695,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/neutral_fx/troll_heal.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/neutral_fx/troll_heal.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
   }
     //===========================30=======================
@@ -2676,7 +2717,7 @@
     "Model" "models/items/lone_druid/true_form/form_of_the_atniw/form_of_the_atniw.vmdl"
     "ModelScale" "0.9"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2788,7 +2829,7 @@
     "Model" "models/heroes/witchdoctor/witchdoctor.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2824,27 +2865,29 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "4253" 武器-爪子-尾巴
+                        "ItemDef"           "4253" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "4251" 手部-爪子-背部
+                        "ItemDef"           "4251" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "5176" 脚-其他
+                        "ItemDef"           "5176" //脚-其他
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "6577" 头部
+                        "ItemDef"           "6577" //头部
                     }
                 }
-
-     "ProjectileModel" "particles/units/heroes/hero_witchdoctor/witchdoctor_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    }
+     "ProjectileModel" "particles/units/heroes/hero_witchdoctor/witchdoctor_base_attack.vpcf"  
      "ProjectileSpeed" "1000"   //投射物飞行速度
 
   }
@@ -2867,7 +2910,7 @@
     "Model" "models/heroes/blood_seeker/blood_seeker.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2903,40 +2946,42 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "4330" 武器-爪子-尾巴
+                        "ItemDef"           "4330" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "4331" 手部-爪子-背部
+                        "ItemDef"           "4331" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "4332" 脚-其他
+                        "ItemDef"           "4332" //脚-其他
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "4328" 头部
+                        "ItemDef"           "4328" //头部
                     }
 
                     "Wearable5"
                     {
-                        "ItemDef"           "4333" 脚-其他
+                        "ItemDef"           "4333" //脚-其他
                     }
                     "Wearable6"
                     {
-                        "ItemDef"           "4329" 脚-其他
+                        "ItemDef"           "4329" //脚-其他
                     }
                     "Wearable7"
                     {
-                        "ItemDef"           "4327" 脚-其他
+                        "ItemDef"           "4327" //脚-其他
                     }
                 }
-
-     "ProjectileModel" "particles/econ/items/queen_of_pain/qop_navi_mace/queen_base_attack_navi_mace.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+      }
+     "ProjectileModel" "particles/econ/items/queen_of_pain/qop_navi_mace/queen_base_attack_navi_mace.vpcf"  
      "ProjectileSpeed" "1000"   //投射物飞行速度
   }
      //===========================50======================
@@ -2958,7 +3003,7 @@
     "Model" "models/items/lycan/wolves/icewrack_pack/icewrack_pack.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -2995,7 +3040,7 @@
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
 
-     "ProjectileModel" "particles/econ/items/axe/axe_weapon_wyvernguard_edge/axe_attack_blur_counterhelix_wyvernguard_edge.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/econ/items/axe/axe_weapon_wyvernguard_edge/axe_attack_blur_counterhelix_wyvernguard_edge.vpcf"  
      "ProjectileSpeed" "1000"   //投射物飞行速度
   }
 
@@ -3018,7 +3063,7 @@
     "Model" "models/items/lycan/ultimate/sirius_curse/sirius_curse.vmdl"
     "ModelScale" "0.8"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3054,7 +3099,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/econ/items/axe/axe_weapon_wyvernguard_edge/axe_attack_blur_counterhelix_wyvernguard_edge_b.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/econ/items/axe/axe_weapon_wyvernguard_edge/axe_attack_blur_counterhelix_wyvernguard_edge_b.vpcf"  
      "ProjectileSpeed" "1100"   //投射物飞行速度
 
   }
@@ -3077,7 +3122,7 @@
     "Model" "models/heroes/magnataur/magnataur.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3113,29 +3158,32 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
+        "Creature"
+       {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "6531" 武器-爪子-尾巴
+                        "ItemDef"           "6531" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "6532" 手部-爪子-背部
+                        "ItemDef"           "6532" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "6533" 脚-其他
+                        "ItemDef"           "6533" //脚-其他
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "6534" 头部
+                        "ItemDef"           "6534" //头部
                     }
 
                     "Wearable5"
                     {
-                        "ItemDef"           "6535" 脚-其他
+                        "ItemDef"           "6535" //脚-其他
                     }
+                }
                 }
   }
      //===========================61=======================
@@ -3157,7 +3205,7 @@
     "Model" "models/heroes/beastmaster/beastmaster.vmdl"
     "ModelScale" "1.1"
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3193,33 +3241,38 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "AttachWearables"   // 附加饰品
+        "Creature"
+       {
+            "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "313" 武器-爪子-尾巴
+                        "ItemDef"           "313" //武器-爪子-尾巴
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "314" 手部-爪子-背部
+                        "ItemDef"           "314" //手部-爪子-背部
                     }
                     "Wearable3"
                     {
-                        "ItemDef"           "315" 脚-其他
+                        "ItemDef"           "315" //脚-其他
                     }
                     "Wearable4"
                     {
-                        "ItemDef"           "316" 头部
+                        "ItemDef"           "316" //头部
                     }
 
                     "Wearable5"
                     {
-                        "ItemDef"           "317" 脚-其他
+                        "ItemDef"           "317" //脚-其他
                     }
                 }
+        }
   }
-  --雇佣兵
-     //===========================1=======================
+
+
+  //雇佣兵
+  //===========================1=======================
   //========================民兵====================
   //===========================1=======================
 
@@ -3238,11 +3291,11 @@
     "Model" "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+ 
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
-    "Ability1" ""//无
+    "Ability1" ""                                                  //无
     "Ability2" ""
     "Ability3" ""
     "Ability4" ""
@@ -3274,33 +3327,9 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
 
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
+
 
   }
 
@@ -3323,7 +3352,7 @@
     "Model" "models/heroes/drow/drow.vmdl"  //模型
     "ModelScale" "0.8"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3342,8 +3371,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "400"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -3359,10 +3387,11 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
-
-     "AttachWearables"   // 附加饰品
+    "Creature"
+       {
+       "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
@@ -3395,6 +3424,7 @@
                     }
 
                 }
+            }
 
   }
    //===========================3=======================
@@ -3416,7 +3446,7 @@
     "Model" "models/heroes/life_stealer/life_stealer.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3452,33 +3482,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -3501,7 +3505,7 @@
     "Model" "models/heroes/ursa/ursa.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3537,33 +3541,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -3588,7 +3566,7 @@
     "Model" "models/heroes/dragon_knight/dragon_knight_dragon.vmdl"  //模型
     "ModelScale" "0.8"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3606,9 +3584,7 @@
 
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "250"                                  //攻击距离 
-    
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -3624,34 +3600,9 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/units/heroes/hero_lina/lina_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/units/heroes/hero_lina/lina_base_attack.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
-
+   
   }
 
      //===========================6=======================
@@ -3673,7 +3624,7 @@
     "Model" "models/heroes/zuus/zuus.vmdl"  //模型
     "ModelScale" "0.8"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3692,8 +3643,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "250"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -3709,33 +3659,8 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/units/heroes/hero_zuus/zuus_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/units/heroes/hero_zuus/zuus_base_attack.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -3758,7 +3683,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_thunder_lizard/n_creep_thunder_lizard_small.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3777,8 +3702,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "300"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -3794,33 +3718,8 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "ProjectileModel" "particles/units/heroes/hero_stormspirit/stormspirit_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    "ProjectileModel" "particles/units/heroes/hero_stormspirit/stormspirit_base_attack.vpcf"  
     "ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -3843,7 +3742,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_centaur_lrg/n_creep_centaur_lrg.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3879,33 +3778,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -3928,7 +3801,7 @@
     "Model" "models/items/lone_druid/true_form/wizened_bear/wizened_bear.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -3964,33 +3837,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -4013,7 +3860,7 @@
     "Model" "models/heroes/viper/viper.vmdl"  //模型
     "ModelScale" "0.8"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4032,8 +3879,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "300"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4049,33 +3895,8 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "ProjectileModel" "particles/units/heroes/hero_viper/viper_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    "ProjectileModel" "particles/units/heroes/hero_viper/viper_base_attack.vpcf"  
     "ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
   //===========================11=======================
@@ -4097,7 +3918,7 @@
     "Model" "models/creeps/lane_creeps/creep_bad_siege/creep_bad_siege.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4115,9 +3936,7 @@
 
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "700"                                  //攻击距离 
-    
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4133,33 +3952,8 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/base_attacks/ranged_siege_bad.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/base_attacks/ranged_siege_bad.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -4182,7 +3976,7 @@
     "Model" "models/creeps/neutral_creeps/n_creep_furbolg/n_creep_furbolg_disrupter.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4218,33 +4012,6 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRONG"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -4267,7 +4034,7 @@
     "Model" "models/items/lycan/wolves/icewrack_pack/icewrack_pack.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4303,33 +4070,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -4352,7 +4093,7 @@
     "Model" "models/heroes/bane/bane.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4371,8 +4112,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "275"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4388,33 +4128,10 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_SOFT"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "ProjectileModel" "particles/units/heroes/hero_bane/bane_projectile_attack_e.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    "ProjectileModel" "particles/units/heroes/hero_bane/bane_projectile_attack_e.vpcf"  
     "ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
 
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -4437,7 +4154,7 @@
     "Model" "models/heroes/dazzle/dazzle.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4456,8 +4173,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "400"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4473,9 +4189,10 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "ProjectileModel" "particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    "ProjectileModel" "particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf"  
     "ProjectileSpeed" "900"   //投射物飞行速度
-
+    "Creature"
+       {
     "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
@@ -4500,7 +4217,7 @@
                         "ItemDef"           "6354"  
                     }
                 }
-
+      }
   }
 
   //===========================16=======================
@@ -4522,7 +4239,7 @@
     "Model" "models/items/lone_druid/viciouskraitpanda/viciouskrait_panda.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4541,8 +4258,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "100"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4558,10 +4274,10 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
+    "Creature"
+       {
+             "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
@@ -4585,14 +4301,14 @@
                         "ItemDef"           "25"  
                     }
                 }
-
+        }
   }
 
   //===========================17=======================
   //========================炮车====================
   //===========================17=======================
 
-  "npc_soldiers_1"
+  "npc_soldiers_17"
   {
     "MovementSpeed" "300"                                        
     "StatusHealth" "530"                                               //血量
@@ -4607,7 +4323,7 @@
     "Model" "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4626,8 +4342,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "600"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4643,33 +4358,9 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "particles/base_attacks/ranged_siege_good.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    "ProjectileModel"  "particles/base_attacks/ranged_siege_good.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
 
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
 
   }
 
@@ -4692,7 +4383,7 @@
     "Model" "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4711,8 +4402,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "400"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4728,10 +4418,11 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/units/heroes/hero_lion/lion_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/units/heroes/hero_lion/lion_base_attack.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
-
-     "AttachWearables"   // 附加饰品
+     "Creature"
+     {
+         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
@@ -4751,7 +4442,7 @@
                     }
 
                 }
-
+    }
   }
 
   //===========================19=======================
@@ -4773,7 +4464,7 @@
     "Model" "models/heroes/pudge/pudge.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4809,10 +4500,10 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
-     "AttachWearables"   // 附加饰品
+     "Creature"
+     {
+         "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
                     {
@@ -4827,7 +4518,7 @@
                         "ItemDef"           "5901" 
                     }
                 }
-
+      }
   }
 
   //===========================20=======================
@@ -4849,7 +4540,7 @@
     "Model" "models/heroes/obsidian_destroyer/obsidian_destroyer.vmdl"  //模型
     "ModelScale" "0.8"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4868,8 +4559,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "250"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4885,9 +4575,10 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "ProjectileModel" "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_base_attack_core.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+    "ProjectileModel" "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_base_attack_core.vpcf"  
      "ProjectileSpeed" "900"   //投射物飞行速度
-
+"Creature"
+     {
      "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
@@ -4916,7 +4607,7 @@
                         "ItemDef"           "4641"  
                     }
                 }
-
+       }
   }
 
   //===========================21=======================
@@ -4938,7 +4629,7 @@
     "Model"  "models/heroes/magnataur/magnataur.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -4957,8 +4648,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "100"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+  
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -4974,9 +4664,9 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
 
+"Creature"
+     {
      "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
@@ -5001,7 +4691,7 @@
                         "ItemDef"           "326"  
                     }
                 }
-
+     }
   }
 
   //===========================22=======================
@@ -5023,7 +4713,7 @@
     "Model" "models/heroes/medusa/medusa.vmd"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -5042,8 +4732,7 @@
     "AttackAnimationPoint" "1"                                     
     "AttackAcquisitionRange" "400"                                  //攻击距离 
     
-    "ProjectileModel" ""
-    "ProjectileSpeed" ""
+ 
     "BountyXP" "0"
     "BoundsHullName" "DOTA_HULL_SIZE_SMALL"
     "RingRadius" "25"                                              
@@ -5059,9 +4748,10 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     "ProjectileModel" "particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"  //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
+     "ProjectileModel" "particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"   
      "ProjectileSpeed" "900"   //投射物飞行速度
-
+"Creature"
+     {
      "AttachWearables"   // 附加饰品
                 {
                     "Wearable1"
@@ -5086,7 +4776,7 @@
                         "ItemDef"           "5008"  
                     }
                 }
-
+      }
   }
 
   //===========================23=======================
@@ -5108,7 +4798,7 @@
     "Model" "models/items/warlock/warlock_fourleg_demon.vmdl"  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -5144,33 +4834,7 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-     //"ProjectileModel" "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     //"ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
+   
 
   }
 
@@ -5193,7 +4857,7 @@
     "Model" "models/heroes/terrorblade/demon.vmdl "  //模型
     "ModelScale" "1"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
-    "GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
+    //"GameSoundsFile" "soundevents/game_sounds_creeps.vsndevts"
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
@@ -5229,33 +4893,8 @@
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_WEAK"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
     "VisionDaytimeRange" "1500"
-    "ProjectileModel" "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf" //这是攻击投射物的模型，可以选择远程攻击英雄的，如是远程请把最前面的//删除
-     "ProjectileSpeed" "900"   //投射物飞行速度
-
-     //"AttachWearables"   // 附加饰品
-                {
-                    "Wearable1"
-                    {
-                        "ItemDef"           "21"  
-                    }
-                    "Wearable2"
-                    {
-                        "ItemDef"           "22"  
-                    }
-                    "Wearable3"
-                    {
-                        "ItemDef"           "23"  
-                    }
-                    "Wearable4"
-                    {
-                        "ItemDef"           "24"  
-                    }
-
-                    "Wearable5"
-                    {
-                        "ItemDef"           "25"  
-                    }
-                }
+    "ProjectileModel" "particles/units/heroes/hero_terrorblade/terrorblade_metamorphosis_base_attack.vpcf"  
+    "ProjectileSpeed" "900"   //投射物飞行速度
 
   }
 }

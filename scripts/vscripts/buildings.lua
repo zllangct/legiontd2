@@ -124,6 +124,8 @@ function change_little(keys)
       PlayerS[16][xuhao] = newcaster
       
       sendinfotoui();                     --¸üÐÂÃæ°å
+
+      caster:SetAbsOrigin(zibao)
       caster:ForceKill(true)
       
       local pid=PlayerS[14][xuhao]
