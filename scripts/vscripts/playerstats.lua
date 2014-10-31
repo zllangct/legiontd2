@@ -20,6 +20,14 @@ function playerstats:init()
   
   wang_2=CreateUnitByName("King_dark", wang1, false, nil, nil, DOTA_TEAM_BADGUYS)
   
+  --雇佣兵处的照明马甲
+  local temp=Entities:FindByName(nil,"team1_hirer")
+  hirer1=temp:GetAbsOrigin()                   --雇佣兵处1的坐标
+  dummy=CreateUnitByName("npc_dummy", hirer1, false, nil, nil, DOTA_TEAM_GOODGUYS)
+
+  local temp=Entities:FindByName(nil,"team2_hirer")
+  hirer2=temp:GetAbsOrigin()                   --雇佣兵处1的坐标
+  dummy=CreateUnitByName("npc_dummy", hirer2, false, nil, nil, DOTA_TEAM_BADGUYS)
 
   for i=0,8 do
     PlayerS[i]= {}
