@@ -30,8 +30,1089 @@
                 {
                   "ScriptFile"			"scripts/vscripts/buildings.lua"
 	          			"Function"				"hire"
-				          "Hire_Unit"       "godb"
+				          "Hire_Unit"       "npc_soldiers_1"
 				          "LumberCost"      "10"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer2"
+{
+    "ID"                "1004"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_2"
+                          "LumberCost"      "20"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer3"
+{
+    "ID"                "1005"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_3"
+                          "LumberCost"      "40"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer4"
+{
+    "ID"                "1006"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_4"
+                          "LumberCost"      "80"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer5"
+{
+    "ID"                "1007"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_5"
+                          "LumberCost"      "100"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer6"
+{
+    "ID"                "1008"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_6"
+                          "LumberCost"      "100"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer7"
+{
+    "ID"                "1009"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_7"
+                          "LumberCost"      "120"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer8"
+{
+    "ID"                "1013"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_8"
+                          "LumberCost"      "120"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer9"
+{
+    "ID"                "1014"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_9"
+                          "LumberCost"      "140"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer10"
+{
+    "ID"                "1015"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_10"
+                          "LumberCost"      "180"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer11"
+{
+    "ID"                "1016"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_11"
+                          "LumberCost"      "200"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer12"
+{
+    "ID"                "1017"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_12"
+                          "LumberCost"      "200"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer13"
+{
+    "ID"                "1018"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_13"
+                          "LumberCost"      "240"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer14"
+{
+    "ID"                "1019"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_14"
+                          "LumberCost"      "300"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer15"
+{
+    "ID"                "1020"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_15"
+                          "LumberCost"      "300"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer16"
+{
+    "ID"                "1021"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_16"
+                          "LumberCost"      "300"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer17"
+{
+    "ID"                "1022"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_17"
+                          "LumberCost"      "340"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer18"
+{
+    "ID"                "1023"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_18"
+                          "LumberCost"      "400"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer19"
+{
+    "ID"                "1024"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_19"
+                          "LumberCost"      "400"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer20"
+{
+    "ID"                "1025"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_20"
+                          "LumberCost"      "440"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer21"
+{
+    "ID"                "1026"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_21"
+                          "LumberCost"      "500"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer22"
+{
+    "ID"                "1027"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_22"
+                          "LumberCost"      "600"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer23"
+{
+    "ID"                "1028"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_23"
+                          "LumberCost"      "1000"
+                }
+
+                "RemoveModifier"
+                {
+                    "Target"        "CASTER"
+                    "ModifierName"      "modifier_book_auto_applier"
+                    //为保证安全，手动添加一个移除modifier
+                    //正常来说，当物品消失，这个modifier自然也就消失了、
+                }
+            }
+        }
+
+    }
+
+}
+"item_hirer24"
+{
+    "ID"                "1029"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
+    "BaseClass"         "item_datadriven"//datadriven类
+    
+    
+    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityCastPoint"      "0.0"//无施法前摇
+
+    "ItemKillable"          "0"//不可摧毁
+    "ItemCost"          "0"//价格
+
+    "ItemPermanent"         "0"//使用后消失
+    "ItemInitialCharges"        "1"//只能使用一次
+
+    "Modifiers"
+    {
+        "modifier_book_auto_applier"//自动吃书的Modifier
+        {
+            "Passive"           "1"//被动，就是当物品放到英雄身上的时候，就会自动执行OnCreated
+            "OnCreated"
+            {
+                "SpendCharge"//使用物品，因为只能使用一次，使用了之后书就消失
+                {}
+                
+                "RunScript"
+                {
+                  "ScriptFile"          "scripts/vscripts/buildings.lua"
+                        "Function"              "hire"
+                          "Hire_Unit"       "npc_soldiers_24"
+                          "LumberCost"      "1500"
                 }
 
                 "RemoveModifier"

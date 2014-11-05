@@ -2,6 +2,213 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
+   "light_king_hp"
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "lightkinghp"
+      }
+    }
+  }
+
+     "light_king_heal"
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "lightkingheal"
+      }
+    }
+  }
+
+     "light_king_atk"
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "lightkingatk"
+      }
+    }
+  }
+
+//自然族基本建造技能
+  "natural_1"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_nature_10"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "natural_2"                   
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_nature_20"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "natural_3"                    
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_nature_30"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "natural_4"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_nature_40"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "natural_5"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_nature_50"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "natural_6"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_nature_60"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "majia"  //马甲的基本技能
+  {
+    "BaseClass"       "ability_datadriven"
+    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+    "Modifiers"
+    {
+      "modifier_majia"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "States"
+        {
+          "MODIFIER_STATE_NO_HEALTH_BAR"  "MODIFIER_STATE_VALUE_ENABLED" //隐藏血条
+          "MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" //魔法免疫
+          "MODIFIER_STATE_ATTACK_IMMUNE"  "MODIFIER_STATE_VALUE_ENABLED" //攻击免疫
+          "MODIFIER_STATE_UNSELECTABLE" "MODIFIER_STATE_VALUE_ENABLED" //不可选择
+          "MODIFIER_STATE_NO_UNIT_COLLISION"  "MODIFIER_STATE_VALUE_ENABLED" //无碰撞
+        }
+      }
+    }
+  }
 	//兽族基本建造技能
   "orc_1"                       //造最小的金刚狼
   {
@@ -130,6 +337,168 @@
     }
   }
   
+
+   //===========================10菇灵升级成11远古树人========================
+    "nature_10to11"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_11"
+                "GoldCost"        "95"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+
+   //===========================20花妖升级成21花仙========================
+    "nature_20to21"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_21"
+                "GoldCost"        "115"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+    //===========================30精灵龙升级成31雷霆飞龙========================
+    "nature_30to31"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_31"
+                "GoldCost"        "155"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================40急速古树升级成41虚空古树========================
+    "nature_40to41"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_41"
+                "GoldCost"        "165"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================50巨石勇士升级成51山岭巨人========================
+    "nature_50to51"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_51"
+                "GoldCost"        "225"
+                "RenKou"          "2"
+      }
+    }
+  }
+
+    //===========================60亘古树灵升级成61圣灵古树========================
+    "nature_60to61"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_61"
+                "GoldCost"        "380"
+                "RenKou"          "2"
+      }
+    }
+  }
+ //===========================60圣灵古树升级成62禁忌古树========================
+    "nature_60to62"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_nature_62"
+                "GoldCost"        "380"
+                "RenKou"          "2"
+      }
+    }
+  }
+
   
   //===========================1.0兽人战士升级成1.1沸血兽人战士========================
     "orc_10to11"   

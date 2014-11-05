@@ -1,4 +1,5 @@
 "CustomHeroList"
 {
   "npc_dota_hero_juggernaut" "-1"
+  "npc_dota_hero_furion" "-1"
 }

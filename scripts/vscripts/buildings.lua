@@ -34,10 +34,11 @@ function getBuildingPoint(keys)
          	    PlayerS[12]=PlayerS[12]+1;  --玩家操控单位数量+1
          	    PlayerS[pid][1]=PlayerS[pid][1]-gc  --扣除金钱
          	    sendinfotoui();                     --更新面板
+              
               PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, caster, caster, keys.caster:GetTeam())
             
               
-            
+              PlayerS[13][PlayerS[12]]:SetBaseMoveSpeed(1)
             
 		          BuildingHelper:AddBuilding(PlayerS[13][PlayerS[12]])
 		          PlayerS[13][PlayerS[12]]:UpdateHealth(BUILD_TIME,true,.85)
@@ -133,7 +134,7 @@ function change_little(keys)
       PlayerS[13][xuhao]:SetControllableByPlayer(axb,true)
       
       PlayerS[13][xuhao]:SetOwner(PlayerResource:GetPlayer(axb))
-     
+      PlayerS[13][xuhao]:SetBaseMoveSpeed(1)
       --升级的单位未更新name context 可能会有问题
       
       PlayerS[13][xuhao]:SetContext("pid",tostring(axb),0)
@@ -173,8 +174,9 @@ function hire(keys)                --购买佣兵
   
   pid=caster:GetPlayerOwnerID()
   
-
-  if PlayerS[pid][2]>=lc then
+  print(pid)
+  print(lc)
+  if PlayerS[pid][2]>=tonumber(lc) then
   
     PlayerS[pid][2]=PlayerS[pid][2]-lc
     sendinfotoui()
@@ -279,4 +281,72 @@ function gegeda_2( keys )
 			
 			
 		end, 0)
+end
+
+function rc(mm)            --随机函数
+  math.randomseed(os.time())
+  local i=1;
+  while not(mm[i]==nil) do
+    i=i+1
+  end
+  return mm[math.random(i)];
+end
+
+
+function lightkinghp(keys)
+  local caster=keys.caster
+  local temp=caster:GetContext("name")
+  local pid=tonumber(temp)
+
+  if PlayerS[pid][2]>=100 then
+    if lwang[1]<15 then
+      wang_1:SetBaseMaxHealth(5000+lwang[1]*500)
+      lwang[1]=lwang[1]+1
+      PlayerS[pid][12]=PlayerS[pid][12]+3
+      sendinfotoui()
+    else
+      Say(nil,"Already Max Level!")
+    end
+  else
+    Say(nil,"need more lumber",false)
+  end
+
+end
+
+function lightkingheal(keys)
+  local caster=keys.caster
+  local temp=caster:GetContext("name")
+  local pid=tonumber(temp)
+
+  if PlayerS[pid][2]>=100 then
+    if lwang[2]<15 then
+      wang_1:SetBaseHealthRegen(50*lwang[2])
+      lwang[2]=lwang[2]+1
+      PlayerS[pid][12]=PlayerS[pid][12]+3
+      sendinfotoui()
+    else
+      Say(nil,"Already Max Level!")
+    end
+  else
+    Say(nil,"need more lumber",false)
+  end
+end
+
+function lightkingatk(keys)
+  local caster=keys.caster
+  local temp=caster:GetContext("name")
+  local pid=tonumber(temp)
+
+  if PlayerS[pid][2]>=100 then
+    if lwang[3]<15 then
+      wang_1:SetBaseDamageMax(100+lwang[3]*50)
+      lwang[3]=lwang[3]+1
+      PlayerS[pid][12]=PlayerS[pid][12]+3
+      sendinfotoui()
+    else
+      Say(nil,"Already Max Level!")
+    end
+  else
+    Say(nil,"need more lumber",false)
+  end
 end

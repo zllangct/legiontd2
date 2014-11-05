@@ -1,4 +1,10 @@
 
+yx={}
+
+lwang={0,0,0}
+dwang={0,0,0}
+
+
 
 if playerstats == nil then
 	playerstats = class({})
@@ -16,27 +22,33 @@ function playerstats:init()
   local temp=Entities:FindByName(nil,"wang_2")
   wang2=temp:GetAbsOrigin()                   --王二的坐标
 
-  wang_1=CreateUnitByName("King_light", wang1, false, nil, nil, DOTA_TEAM_GOODGUYS)
+  wang_1=CreateUnitByName("King_light", wang1, false, nil, nil, 2)
   
-  wang_2=CreateUnitByName("King_dark", wang1, false, nil, nil, DOTA_TEAM_BADGUYS)
+  wang_2=CreateUnitByName("King_dark", wang2, false, nil, nil, DOTA_TEAM_BADGUYS)
   
   --雇佣兵处的照明马甲
+
   local temp=Entities:FindByName(nil,"team1_hirer")
   hirer1=temp:GetAbsOrigin()                   --雇佣兵处1的坐标
-  dummy=CreateUnitByName("npc_dummy", hirer1, false, nil, nil, DOTA_TEAM_GOODGUYS)
 
+  print(hirer1)
+
+  dummy1=CreateUnitByName("npc_dummy", hirer1, false, nil, nil, 2)
+  
+  print(dummy1)
+  print(dummy1:GetAbsOrigin())
   local temp=Entities:FindByName(nil,"team2_hirer")
   hirer2=temp:GetAbsOrigin()                   --雇佣兵处1的坐标
-  dummy=CreateUnitByName("npc_dummy", hirer2, false, nil, nil, DOTA_TEAM_BADGUYS)
+  dummy2=CreateUnitByName("npc_dummy", hirer2, false, nil, nil, DOTA_TEAM_BADGUYS)
 
   for i=0,8 do
     PlayerS[i]= {}
-    PlayerS[i]={3000,100,0,12,0,{},1,0,0,nil,nil,0}    
+    PlayerS[i]={3000,10000,0,12,0,{},1,0,0,nil,nil,0}    
     --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income, 
-    --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag, 20 传送区域
+    --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag, 20 传送区域, 24 英雄
     
     PlayerS[i][19]=0;
-    
+
   end
   PlayerS[4]=nil
   print("done playerstat init")
@@ -95,13 +107,20 @@ function playerstats:init()
   for i=0,8,1 do               --15 base, 16 workers
     if (not(i==4)) and (PlayerS[i][30]==1)then
     
-      wang_1:SetControllableByPlayer(i, true)
-      wang_2:SetControllableByPlayer(i, true)
+      if i<4 then
+        wang_1:SetControllableByPlayer(i, true)
+        dummy1:SetControllableByPlayer(i, true)
+      else
+        wang_2:SetControllableByPlayer(i, true)
+        dummy2:SetControllableByPlayer(i, true)
+      end
       --创建基地
 
       local temp=Entities:FindByName(nil,"player"..tostring(i+1).."_base")
       
       PlayerS[i][15]=CreateUnitByName("npc_player_base",temp:GetAbsOrigin(),false,nil,nil,2)
+
+      PlayerS[i][15]:SetContext("name",tostring(i),0)
       
       PlayerS[i][16]={}
       
@@ -188,3 +207,4 @@ function sendinfotoui()
   FireGameEvent('ui_update', { player1=p[0],player2=p[1],player3=p[2],player4=p[3],player5=p[5],player6=p[6],player7=p[7],player8=p[8],jaja="cao"})
   print("done update ui")
 end
+

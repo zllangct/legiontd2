@@ -3,16 +3,39 @@
 	"consumables"
 	{
 		"item"		"item_hirer1"
+		"item"      "item_hirer2"
+		"item"		"item_hirer3"
+		"item"      "item_hirer4"
+		"item"		"item_hirer5"
+		"item"      "item_hirer6"
+		"item"		"item_hirer7"
+		"item"      "item_hirer8"
+
+
 	}
 
   "attributes"
 	{
-
+		"item"		"item_hirer9"
+		"item"      "item_hirer10"
+		"item"		"item_hirer11"
+		"item"      "item_hirer12"
+		"item"		"item_hirer13"
+		"item"      "item_hirer14"
+		"item"		"item_hirer15"
+		"item"      "item_hirer16"
 	}
 
 	"weapons_armor"
 	{
-
+		"item"		"item_hirer17"
+		"item"      "item_hirer18"
+		"item"		"item_hirer19"
+		"item"      "item_hirer20"
+		"item"		"item_hirer21"
+		"item"      "item_hirer22"
+		"item"		"item_hirer23"
+		"item"      "item_hirer24"
 	}
 	
 	"misc"

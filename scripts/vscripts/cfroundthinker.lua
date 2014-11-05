@@ -60,8 +60,11 @@ function CFRoundThinker:ThinkFighting()
 	-- 判断这一轮的怪物是否都被干掉了
 	if CFSpawner:IsWaveClear() then
         	
+        setherobac()
+        
         clearallunit()
 	    rebuildunit()
+	    setunitstop()
 
 		-- 如果每一轮的怪物都被干掉了
 		if self._nCurrRound > #self._tAllEnemies then
@@ -166,7 +169,8 @@ function CFRoundThinker:StartNextRound()
 	-- 调用core/CFSpawner.lua开始这一轮刷怪
 	
 	CFSpawner:SpawnWave(self._nCurrRound,tRoundData.wavedata,tRoundData.spawner)
-	
+	setherosil();
+	setunitmove();
 	
 	
 
@@ -224,3 +228,53 @@ function rebuildunit()
   end
 end
 
+
+function setherosil()
+
+   for i=0,8 do
+     if (not(i==4)) and (PlayerS[i][30]==1)then
+       
+       local j=0
+      
+        for j = 0,5,1 do
+          local temp1=yx[i]:GetAbilityByIndex(j) --获取技能实体
+          temp1:SetLevel(0)                     --设置技能等级
+        end
+     end
+
+   end
+
+
+end
+
+function setherobac()
+
+   for i=0,8 do
+     if (not(i==4)) and (PlayerS[i][30]==1)then
+       
+       local j=0
+      
+        for j = 0,5,1 do
+          local temp1=yx[i]:GetAbilityByIndex(j) --获取技能实体
+          temp1:SetLevel(1)                     --设置技能等级
+        end
+     end
+
+   end
+
+
+end
+
+function setunitstop()
+  for i=1,PlayerS[12] do
+    PlayerS[13][i]:SetBaseMoveSpeed(1)
+  end
+
+end
+
+function setunitmove()
+  for i=1,PlayerS[12] do
+    PlayerS[13][i]:SetBaseMoveSpeed(300)
+  end
+
+end

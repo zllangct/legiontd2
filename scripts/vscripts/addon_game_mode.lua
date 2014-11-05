@@ -4,7 +4,6 @@ require('playerstats')
 require('buildinghelper')
 
 hulage=0
-
 if legiontdGameMode == nil then
 	legiontdGameMode = class({})
 end
@@ -132,7 +131,14 @@ function legiontdGameMode:OnNPCSpawned( keys )
         local temp1=unit:GetAbilityByIndex(j) --获取技能实体
         temp1:SetLevel(1)                     --设置技能等级
       end
-   
+      
+
+      unit:AddNewModifier(unit, nil, "modifier_invulnerable", nil)  --农民无敌
+
+      local temp=unit:GetPlayerOwnerID()
+      
+
+      yx[temp]=unit;
      --local pid=unit:GetPlayerID()             --获取玩家id
      
      --PlayerS[pid][18]:SetOwner(unit)          --设置人口拥有者
