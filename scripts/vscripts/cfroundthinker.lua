@@ -79,8 +79,8 @@ function CFRoundThinker:ThinkFighting()
 			-- 启动倒计时条
 			if self._entCountDown == nil then
 				self._entCountDown = SpawnEntityFromTableSynchronous( "quest", {
-					name = "#CFRoundCountingDown",
-					title =  "#CFRound_Next_Round_Count_Down"
+					name = "LegionTD RoundCountingDown",
+					title =  "LegionTD Round_Next_Round_Count_Down"
 				})
 				self._entCountDown:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_ROUND, self._nCurrRound )
 
@@ -233,6 +233,8 @@ function setherosil()
 
    for i=0,8 do
      if (not(i==4)) and (PlayerS[i][30]==1)then
+
+       PlayerS[i][19]=0                  --清理出兵flag
        
        local j=0
       
@@ -267,14 +269,17 @@ end
 
 function setunitstop()
   for i=1,PlayerS[12] do
-    PlayerS[13][i]:SetBaseMoveSpeed(1)
+    PlayerS[13][i]:AddNewModifier(caster, nil, "modifier_rooted", nil)
   end
 
 end
 
 function setunitmove()
+  print("setunitpre")
   for i=1,PlayerS[12] do
-    PlayerS[13][i]:SetBaseMoveSpeed(300)
+    PlayerS[13][i]:RemoveModifierByName("modifier_rooted")
+    
+    PlayerS[13][i]:SetControllableByPlayer(PlayerS[14][i],false)
   end
 
 end

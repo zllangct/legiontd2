@@ -196,13 +196,13 @@ function CFSpawner:OnEntityKilled(keys)
 		
 	end
 	
-	
-	if 1==1 then --检查兵种移动flag
-		--flag有问题 暂时取消
+  if playerID then
+	if PlayerS[playerID][19]==0 then --检查兵种移动flag
+		
 	  
 	  print("start atk ordering")
 
---	  PlayerS[playerID][19]=1
+	  PlayerS[playerID][19]=1
 	  
 	  --将此玩家所有兵种a向出兵点
 	  
@@ -243,7 +243,7 @@ function CFSpawner:OnEntityKilled(keys)
       end
 	  
 	end
-	
+  end
 	
 end
 -------------------------------------------------------------------------------------------

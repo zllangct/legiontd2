@@ -13,6 +13,9 @@ PlayerS = {}
 
 function playerstats:init()
 
+  SendToConsole("dota_sf_hud_inventory 0")
+  SendToConsole("dota_render_crop_height 0")
+
   local temp=Entities:FindByName(nil,"zibao") --所有单位假死沉睡的最终之地 神之居所瓦尔哈拉！
   zibao=temp:GetAbsOrigin()
 
@@ -48,7 +51,6 @@ function playerstats:init()
     --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag, 20 传送区域, 24 英雄
     
     PlayerS[i][19]=0;
-
   end
   PlayerS[4]=nil
   print("done playerstat init")
@@ -105,18 +107,21 @@ function playerstats:init()
   sendinfotoui();
   
   for i=0,8,1 do               --15 base, 16 workers
+                               --i为pid
     if (not(i==4)) and (PlayerS[i][30]==1)then
     
       if i<4 then
         wang_1:SetControllableByPlayer(i, true)
         dummy1:SetControllableByPlayer(i, true)
+           q=i
       else
         wang_2:SetControllableByPlayer(i, true)
         dummy2:SetControllableByPlayer(i, true)
+              q=i-1
       end
       --创建基地
 
-      local temp=Entities:FindByName(nil,"player"..tostring(i+1).."_base")
+      local temp=Entities:FindByName(nil,"player"..tostring(q+1).."_base")
       
       PlayerS[i][15]=CreateUnitByName("npc_player_base",temp:GetAbsOrigin(),false,nil,nil,2)
 
@@ -124,15 +129,24 @@ function playerstats:init()
       
       PlayerS[i][16]={}
       
-      PlayerS[i][15]:SetControllableByPlayer(0,true)
-      
-      
-      
+      PlayerS[i][15]:SetControllableByPlayer(i,true)
+       
+       PlayerS[i][15]:AddNewModifier(unit, nil, "modifier_invulnerable", nil)
+
+
+      if i<4 then
+        PlayerS[i][15]:SetTeam(2)
+     
+      else
+        PlayerS[i][15]:SetTeam(3)
+  
+
+      end
       --PlayerS[i][15]:SetPlayerID(i)
       
       --创建人口
       
-      local temp=Entities:FindByName(nil,"player"..tostring(i+1).."_renkou")
+      local temp=Entities:FindByName(nil,"player"..tostring(q+1).."_renkou")
       
       PlayerS[i][18]=CreateUnitByName("npc_renkou",temp:GetAbsOrigin(),false,nil,nil,2)
       
@@ -140,22 +154,29 @@ function playerstats:init()
       PlayerS[i][18]:SetControllableByPlayer(0,true)
       
       PlayerS[i][18]:SetContext("name",tostring(i),0) --挂进pid
+
+      PlayerS[i][18]:AddNewModifier(unit, nil, "modifier_invulnerable", nil)
       
-      print("mark renkou")
-      
-      print(PlayerS[i][18]:GetContext("name"))
-      
-      
+      if i<4 then
+        PlayerS[i][18]:SetTeam(2)
+      else
+        PlayerS[i][18]:SetTeam(3)
+      end
       --PlayerS[i][18]:SetPlayerID(i)
       
       
       for j=1,7,1 do           --7个农民
-        temp=Entities:FindByName(nil,"player"..tostring(i+1).."_worker"..tostring(j))
+        temp=Entities:FindByName(nil,"player"..tostring(q+1).."_worker"..tostring(j))
         PlayerS[i][16][j]=CreateUnitByName("base_worker",temp:GetAbsOrigin(),false,nil,nil,2)
 
         PlayerS[i][16][j]:SetControllableByPlayer(0,true)
+        PlayerS[i][16][j]:AddNewModifier(unit, nil, "modifier_invulnerable", nil)
         
-        --PlayerS[i][16][j]:SetPlayerID(i)
+      if i<4 then
+        PlayerS[i][16][j]:SetTeam(2)
+      else
+        PlayerS[i][16][j]:SetTeam(3)
+      end
       end
       
 
@@ -193,18 +214,21 @@ end
 
 function sendinfotoui() 
   local p={}
+  local pp={}
   local i=0
   p[0]="lol"
   for i=0,8,1 do
     if not(i==4) then
-      p[i]=tostring(PlayerS[i][1]).."          "..tostring(PlayerS[i][2]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12])
-
+      p[i]=tostring(PlayerS[i][1]).."        "..tostring(PlayerS[i][2]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12])
+      pp[i]=tostring(PlayerS[i][1]).."         "..tostring(PlayerS[i][2]).."         "..tostring(PlayerS[i][3]).."/"..tostring(PlayerS[i][4]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8])
     end
   end
 
 
 
-  FireGameEvent('ui_update', { player1=p[0],player2=p[1],player3=p[2],player4=p[3],player5=p[5],player6=p[6],player7=p[7],player8=p[8],jaja="cao"})
+  FireGameEvent('ui_update', {player1=p[0],player2=p[1],player3=p[2],player4=p[3],player5=p[5],player6=p[6],player7=p[7],player8=p[8]})
+  FireGameEvent('p_update',{pp1=pp[0],pp2=pp[1],pp3=pp[2],pp4=pp[3],pp5=pp[5],pp6=pp[6],pp7=pp[7],pp8=pp[8]})
+
   print("done update ui")
 end
 

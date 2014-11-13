@@ -1,8 +1,9 @@
 "CustomEvents"
 {
   "ui_update"
-  {
+  {  //http://www.math.wisc.edu/~terwilli/Htmlfiles/ex6sol475.pdf 数学413的答案
     //设定参数的类型和名称
+
     "player1"        "string"
     "player2"        "string"
     "player3"        "string"
@@ -11,7 +12,18 @@
     "player6"        "string"
     "player7"        "string"
     "player8"        "string"
-    "jaja"        "string"
+   }
+
+   "p_update"
+   {
+    "pp1"            "string"
+    "pp2"            "string"
+    "pp3"            "string"
+    "pp4"            "string"
+    "pp5"            "string"
+    "pp6"            "string"
+    "pp7"            "string"
+    "pp8"            "string"
   }
 }
 

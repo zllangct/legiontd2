@@ -7,7 +7,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_1"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -54,7 +54,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_2"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -101,7 +101,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_3"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -148,7 +148,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_4"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -195,7 +195,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_5"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -242,7 +242,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_6"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -289,7 +289,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_7"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -336,7 +336,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_8"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -383,7 +383,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_9"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -430,7 +430,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_10"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -477,7 +477,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_11"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -524,7 +524,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_12"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -571,7 +571,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_13"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -618,7 +618,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_14"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -665,7 +665,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_15"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -712,7 +712,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_16"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -759,7 +759,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_17"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -806,7 +806,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_18"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -853,7 +853,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_19"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -900,7 +900,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_20"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -947,7 +947,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_21"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -989,12 +989,12 @@
 }
 "item_hirer22"
 {
-    "ID"                "1027"
+    "ID"                "1528"
     "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"//无目标技能
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_22"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -1041,7 +1041,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_23"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁
@@ -1088,7 +1088,7 @@
     "BaseClass"         "item_datadriven"//datadriven类
     
     
-    "AbilityTextureName"        "item_sha_b"//物品图标
+    "AbilityTextureName"        "item_soldiers_24"//物品图标
     "AbilityCastPoint"      "0.0"//无施法前摇
 
     "ItemKillable"          "0"//不可摧毁

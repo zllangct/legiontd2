@@ -36,6 +36,90 @@ function PrecacheEverythingFromTable( context, kvtable)
 			end
 		end
 	end
+
+    local zr={
+    "models/items/chen/squareskystaff_weapon/squareskystaff_weapon.vmdl",
+    "models/items/chen/weapon_navi/weapon_navi.vmdl",
+    "models/items/chen/armor_navi/armor_navi.vmdl",
+    "models/items/chen/arms_navi/arms_navi.vmdl",
+    "models/items/chen/head_navi/head_navi.vmdl",
+    "models/items/chen/mount_navi_new/mount_navi_new.vmdl",
+    "models/items/chen/shoulder_navi/shoulder_navi.vmdl",
+
+    "models/heroes/windrunner/windrunner_bow.vmdl",
+"models/heroes/windrunner/windrunner_cape.vmdl",
+"models/heroes/windrunner/windrunner_head.vmdl",
+"models/heroes/windrunner/windrunner_quiver.vmdl",
+"models/heroes/windrunner/windrunner_shoulderpads.vmdl",
+
+
+"models/items/windrunner/wild_wind_bow/wild_wind_bow.vmdl",
+"models/items/windrunner/wild_wind_cape/wild_wind_cape.vmdl",
+"models/items/windrunner/wild_wind_hair/wild_wind_hair.vmdl",
+"models/items/windrunner/wild_wind_jacket/wild_wind_jacket.vmdl",
+"models/items/windrunner/wild_wind_quiver/wild_wind_quiver.vmdl",
+
+
+"models/heroes/sven/sven_belt.vmdl",
+"models/heroes/sven/sven_gauntlet.vmdl",
+"models/heroes/sven/sven_mask.vmdl",
+"models/heroes/sven/sven_shoulder.vmdl",
+"models/heroes/sven/sven_sword.vmdl",
+
+
+"models/items/sven/warrirors_retribution_pauldrons_sven/warrirors_retribution_pauldrons_sven.vmdl",
+"models/items/sven/warriors_retribution_sven_sword/warriors_retribution_sven_sword.vmdl",
+"models/items/sven/warriors_retribution_sven_head/warriors_retribution_sven_head.vmdl",
+"models/items/sven/warriors_retribution_sven_gauntlets/warriors_retribution_sven_gauntlets.vmdl",
+"models/items/sven/warriors_retribution_sven_cape/warriors_retribution_sven_cape.vmdl",
+"models/items/sven/warriors_retribution_sven_belt/warriors_retribution_sven_belt.vmdl",
+
+
+"models/items/silencer/whispertribunal__weapon/whispertribunal__weapon.vmdl",
+"models/items/silencer/whispertribunal_arms/whispertribunal_arms.vmdl",
+"models/items/silencer/whispertribunal_belt/whispertribunal_belt.vmdl",
+"models/items/silencer/whispertribunal_head/whispertribunal_head.vmdl",
+"models/items/silencer/whispertribunal_shield/whispertribunal_shield.vmdl",
+"models/items/silencer/whispertribunal_shoulder/whispertribunal_shoulder.vmdl",
+
+
+"models/items/omniknight/winged_shoulders/winged_shoulders.vmdl",
+"models/items/omniknight/winged_helmet/winged_helmet.vmdl",
+"models/items/omniknight/winged_gauntlet3/winged_gauntlet3.vmdl",
+"models/items/omniknight/winged_cape2/winged_cape2.vmdl",
+"models/items/omniknight/winged_axe/winged_axe.vmdl",
+"models/heroes/omniknight/head.vmdl",
+
+
+"models/items/dragon_knight/crimson_wyvern_shield/crimson_wyvern_shield.vmdl",
+"models/items/dragon_knight/wyvern_bracers/Wyvern_Bracers.vmdl",
+"models/items/dragon_knight/wyvern_shoulder/wyvern_shoulder.vmdl",
+"models/items/dragon_knight/wyvern_sword3/Wyvern_Sword3.vmdl",
+"models/items/dragon_knight/wyvern_skirt3ba/Wyvern_Skirt3ba.vmdl",
+"models/items/dragon_knight/blazingsuperiority_head/blazingsuperiority_head.vmdl",
+"models/items/dragon_knight/blazingsuperiority_back/blazingsuperiority_back.vmdl",
+
+
+"models/items/chaos_knight/rising_chaos_blade/rising_chaos_blade.vmdl",
+"models/items/chaos_knight/rising_chaos_helm/rising_chaos_helm.vmdl",
+"models/items/chaos_knight/rising_chaos_spaulders/rising_chaos_spaulders.vmdl",
+"models/items/chaos_knight/rising_chaos_steed/rising_chaos_steed.vmdl",
+
+
+"models/items/disruptor/tempestwrath_arms/tempestwrath_arms.vmdl",
+"models/items/disruptor/tempestwrath_back/tempestwrath_back.vmdl",
+"models/items/disruptor/tempestwrath_head/tempestwrath_head.vmdl",
+"models/items/disruptor/tempestwrath_mount/tempestwrath_mount.vmdl",
+"models/items/disruptor/tempestwrath_shoulder/tempestwrath_shoulder.vmdl",
+"models/items/disruptor/tempestwrath_weapon/tempestwrath_weapon.vmdl"
+    }
+
+	local t=#zr;
+	for i=1,t do
+
+      PrecacheResource( "model", zr[i], context)
+
+    end
 end
 function Precache( context )
 	--[[
@@ -103,18 +187,18 @@ end
 function legiontdGameMode:InitGameMode()
 
   --准备时间
-	GameRules:SetPreGameTime(10)
+	GameRules:SetPreGameTime(60)
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
   
   GameRules:SetSameHeroSelectionEnabled(true)
   GameRules:SetUseUniversalShopMode(true)
   
-  local temp=GameRules:GetGameModeEntity()
-  temp:SetRecommendedItemsDisabled(true)
+  GameRules:GetGameModeEntity():SetRecommendedItemsDisabled(true)
   hulage=0
   CFRoundThinker:InitPara()
-  print("preparing")
- 
+
+
+
   ListenToGameEvent("npc_spawned", Dynamic_Wrap(legiontdGameMode, "OnNPCSpawned"), self)
 end
 

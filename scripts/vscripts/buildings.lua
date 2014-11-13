@@ -38,7 +38,7 @@ function getBuildingPoint(keys)
               PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, caster, caster, keys.caster:GetTeam())
             
               
-              PlayerS[13][PlayerS[12]]:SetBaseMoveSpeed(1)
+              PlayerS[13][PlayerS[12]]:AddNewModifier(caster, nil, "modifier_rooted", nil)
             
 		          BuildingHelper:AddBuilding(PlayerS[13][PlayerS[12]])
 		          PlayerS[13][PlayerS[12]]:UpdateHealth(BUILD_TIME,true,.85)
@@ -99,8 +99,10 @@ function change_little(keys)
 
   local xuhao=0
       
+      
       for i=1,PlayerS[12],1 do
 
+        print(i)
         local temp1=PlayerS[13][i]:GetContext("name")
         if temp1==caster:GetContext("name") then
           xuhao=i
@@ -138,6 +140,7 @@ function change_little(keys)
       --升级的单位未更新name context 可能会有问题
       
       PlayerS[13][xuhao]:SetContext("pid",tostring(axb),0)
+      PlayerS[13][xuhao]:AddNewModifier(caster, nil, "modifier_rooted", nil)
     else
       Say(nil,"you need more food!", false)
     end
@@ -189,8 +192,12 @@ function hire(keys)                --购买佣兵
   
        PlayerS[25]=PlayerS[25]+1
   
+       print("wohaocaia1")
+
        PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
      
+       print("wohaocaia2")
+       
        PlayerS[27]=RandomInt(5,8)
        
      else
@@ -299,13 +306,14 @@ function lightkinghp(keys)
   local pid=tonumber(temp)
 
   if PlayerS[pid][2]>=100 then
-    if lwang[1]<15 then
-      wang_1:SetBaseMaxHealth(5000+lwang[1]*500)
+    if lwang[1]<15 then 
+      wang_1:CreatureLevelUp(1)    
       lwang[1]=lwang[1]+1
-      PlayerS[pid][12]=PlayerS[pid][12]+3
+      PlayerS[pid][2]=PlayerS[pid][2]-100              --扣木材                
+      PlayerS[pid][12]=PlayerS[pid][12]+3              --加收入
       sendinfotoui()
     else
-      Say(nil,"Already Max Level!")
+      Say(nil,"Already Max Level!",false)
     end
   else
     Say(nil,"need more lumber",false)
@@ -322,10 +330,11 @@ function lightkingheal(keys)
     if lwang[2]<15 then
       wang_1:SetBaseHealthRegen(50*lwang[2])
       lwang[2]=lwang[2]+1
+      PlayerS[pid][2]=PlayerS[pid][2]-100              --扣木材 
       PlayerS[pid][12]=PlayerS[pid][12]+3
       sendinfotoui()
     else
-      Say(nil,"Already Max Level!")
+      Say(nil,"Already Max Level!",false)
     end
   else
     Say(nil,"need more lumber",false)
@@ -341,10 +350,11 @@ function lightkingatk(keys)
     if lwang[3]<15 then
       wang_1:SetBaseDamageMax(100+lwang[3]*50)
       lwang[3]=lwang[3]+1
+      PlayerS[pid][2]=PlayerS[pid][2]-100              --扣木材 
       PlayerS[pid][12]=PlayerS[pid][12]+3
       sendinfotoui()
     else
-      Say(nil,"Already Max Level!")
+      Say(nil,"Already Max Level!",false)
     end
   else
     Say(nil,"need more lumber",false)

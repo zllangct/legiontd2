@@ -17,9 +17,13 @@ function OnStartTouch(trigger)
 
         if not(nt==DOTA_TEAM_NEUTRALS) then
 
-          FindClearSpaceForUnit(trigger.activator, point, false)
+          if not(trigger.activator:IsHero()) then
 
-          trigger.activator:Stop()
+            FindClearSpaceForUnit(trigger.activator, point, false)
+
+            trigger.activator:Stop()
+
+          end
 
         end
 

@@ -9,7 +9,7 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"AutoAttacksByDefault"      "0"
 		
-		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
 		
 		"Abilitylayout" "6"
@@ -33,7 +33,7 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 		"AutoAttacksByDefault"      "0"
 		
-		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
 		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
 		
 		"Abilitylayout" "6"
@@ -43,6 +43,103 @@
 		"Ability4" "natural_4"
 		"Ability5" "natural_5"
 		"Ability6" "natural_6"
+	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
+			"npc_legionTD_element"
+	{
+		"override_hero"				"npc_dota_hero_wisp"			// Hero to override
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "element_1"
+		"Ability2" "element_2"
+		"Ability3" "element_3"
+		"Ability4" "element_4"
+		"Ability5" "element_5"
+		"Ability6" "element_6"
+	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
+	"npc_legionTD_spirit"
+	{
+		"override_hero"				"npc_dota_hero_death_prophet"			// Hero to override
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "spirit_1"
+		"Ability2" "spirit_2"
+		"Ability3" "spirit_3"
+		"Ability4" "spirit_4"
+		"Ability5" "spirit_5"
+		"Ability6" "spirit_6"
+	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
+	"npc_legionTD_demon"
+	{
+		"override_hero"				"npc_dota_hero_enigma"			// Hero to override
+
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "demon_1"
+		"Ability2" "demon_2"
+		"Ability3" "demon_3"
+		"Ability4" "demon_4"
+		"Ability5" "demon_5"
+		"Ability6" "demon_6"
+	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
+
+		"npc_legionTD_knight"
+	{
+		"override_hero"				"npc_dota_hero_omniknight"			// Hero to override
+
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "knight_1"
+		"Ability2" "knight_2"
+		"Ability3" "knight_3"
+		"Ability4" "knight_4"
+		"Ability5" "knight_5"
+		"Ability6" "knight_6"
 	 //"Ability7" "king_heal"  TODO	
 	 
 	 

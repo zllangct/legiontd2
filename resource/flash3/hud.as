@@ -28,7 +28,6 @@
 		}
 		 public function updateui(args:Object) : * {
 			  trace("start ui update");
-			  trace(args.player1);
               this.playergold1.text=args.player1;
               this.playergold2.text=args.player2;
 			  this.playergold3.text=args.player3;
@@ -37,6 +36,8 @@
 			  this.playergold6.text=args.player6;
 			  this.playergold7.text=args.player7;
 			  this.playergold8.text=args.player8;
+			  
+			  
             }
 	}
 	
