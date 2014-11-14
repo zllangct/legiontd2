@@ -6,4 +6,7 @@
   "npc_dota_hero_death_prophet"  "-1"
   "npc_dota_hero_enigma"         "-1"
   "npc_dota_hero_omniknight"     "-1"
+  "npc_dota_hero_beastmaster"    "-1"
+  "npc_dota_hero_lycan"          "-1"
+  "npc_dota_hero_rubick"         "-1"
 }

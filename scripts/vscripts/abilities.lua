@@ -25,8 +25,10 @@ function XieEKuangReCreate( keys )
 
 		GameRules:GetGameModeEntity():SetContextThink(DoUniqueString("XieEKuangReCreate"), 
 			function( )
-				if caster:IsAlive() then
-					keys.ability:ApplyDataDrivenModifier(caster, caster, "modifier_xie_e_kuang_re", nil)
+                if IsValidEntity(caster) then
+				  if caster:IsAlive() then
+				  	keys.ability:ApplyDataDrivenModifier(caster, caster, "modifier_xie_e_kuang_re", nil)
+				  end
 				end
 				return nil
 			end, cd+0.05)
@@ -455,4 +457,3 @@ function JianRen( keys )
 		keys.ability:ApplyDataDrivenModifier(caster,caster,"modifier_jian_ren_buff",nil)
 	end
 end
-

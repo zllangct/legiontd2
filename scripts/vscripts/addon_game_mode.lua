@@ -16,28 +16,8 @@ function PrecacheEveryThingFromKV( context )
 			PrecacheEverythingFromTable( context, kvs)
 		end
 	end
-end
-function PrecacheEverythingFromTable( context, kvtable)
-	for key, value in pairs(kvtable) do
-		if type(value) == "table" then
-			PrecacheEverythingFromTable( context, value )
-		else
-			if string.find(value, "vpcf") then
-				PrecacheResource( "particle",  value, context)
-				print("PRECACHE PARTICLE RESOURCE", value)
-			end
-			if string.find(value, "vmdl") then
-				PrecacheResource( "model",  value, context)
-				print("PRECACHE MODEL RESOURCE", value)
-			end
-			if string.find(value, "vsndevts") then
-				PrecacheResource( "soundfile",  value, context)
-				print("PRECACHE SOUND RESOURCE", value)
-			end
-		end
-	end
 
-    local zr={
+ local zr={
     "models/items/chen/squareskystaff_weapon/squareskystaff_weapon.vmdl",
     "models/items/chen/weapon_navi/weapon_navi.vmdl",
     "models/items/chen/armor_navi/armor_navi.vmdl",
@@ -111,15 +91,131 @@ function PrecacheEverythingFromTable( context, kvtable)
 "models/items/disruptor/tempestwrath_head/tempestwrath_head.vmdl",
 "models/items/disruptor/tempestwrath_mount/tempestwrath_mount.vmdl",
 "models/items/disruptor/tempestwrath_shoulder/tempestwrath_shoulder.vmdl",
-"models/items/disruptor/tempestwrath_weapon/tempestwrath_weapon.vmdl"
-    }
+"models/items/disruptor/tempestwrath_weapon/tempestwrath_weapon.vmdl",
 
+
+"models/items/death_prophet/acherontia/acherontia_dress.vmdl",
+"models/items/siren/outcast_helm/outcast_helm.vmdl",
+
+"models/items/death_prophet/corset_of_the_mortal_coil/corset_of_the_mortal_coil.vmdl",
+
+"models/items/siren/outcast_dagger/outcast_dagger.vmdl",
+"models/items/siren/outcast_spear/outcast_spear.vmdl",
+--spirit_41
+"models/items/death_prophet/acherontia/acherontia_dress.vmdl",
+"models/heroes/death_prophet/death_prophet_hair.vmdl",
+"models/heroes/death_prophet/death_prophet_dresstop.vmdl",
+"models/heroes/death_prophet/death_prophet_scarf.vmdl",
+"models/heroes/death_prophet/death_prophet_vortex.vmdl",
+
+--demo_12
+"models/heroes/clinkz/clinkz_head.vmdl",
+"models/heroes/clinkz/clinkz_bow.vmdl",
+"models/heroes/clinkz/clinkz_pads.vmdl",
+"models/heroes/clinkz/clinkz_back.vmdl",
+"models/heroes/clinkz/clinkz_horns.vmdl",
+"models/heroes/clinkz/clinkz_gloves.vmdl",
+
+
+--demo_13
+"models/heroes/pugna/pugna_head.vmdl",
+"models/heroes/pugna/pugna_cape.vmdl",
+"models/heroes/pugna/pugna_bracers.vmdl",
+"models/heroes/pugna/pugna_weapon.vmdl",
+"models/heroes/pugna/pugna_belt.vmdl",
+
+--demo_21
+"models/heroes/broodmother/broodmother_hair.vmdl",
+"models/heroes/broodmother/broodmother_legs.vmdl",
+"models/heroes/broodmother/broodmother_abdomen.vmdl",
+
+
+--demo_51
+"models/heroes/nightstalker/nightstalker_wings_night.vmdl",
+"models/heroes/nightstalker/nightstalker_legarmor_night.vmdl",
+"models/heroes/nightstalker/nightstalker_tail_night.vmdl",
+
+
+--demo_60
+"models/items/shadow_demon/back_ishobolaa/back_ishobolaa.vmdl",
+"models/items/shadow_demon/belt_demonlord/belt_demonlord.vmdl",
+"models/items/shadow_demon/diabolical_back/diabolical_back.vmdl",
+"models/items/shadow_demon/tail_bishobola/tail_bishobola.vmdl",
+
+
+--demo_61
+"models/items/slark/anuxi_encore_dagger/anuxi_encore_dagger.vmdl",
+"models/items/doom/eternal_fire_helmet/eternal_fire_helmet.vmdl",
+"models/items/doom/eternal_fire_arms/eternal_fire_arms.vmdl",
+"models/items/doom/eternal_fire_back/eternal_fire_back.vmdl",
+"models/items/doom/eternal_fire_belt/eternal_fire_belt.vmdl",
+"models/items/doom/eternal_fire_shoulders/eternal_fire_shoulders.vmdl",
+"models/items/doom/eternal_fire_tail/eternal_fire_tail.vmdl",
+--orc_40
+"models/items/witchdoctor/megadon_mask/megadon_mask.vmdl",
+"models/items/witchdoctor/tale_tellers_poncho.vmdl",
+"models/items/witchdoctor/shrunken_head_staff.vmdl",
+"models/items/witchdoctor/tale_tellers_dress.vmdl",
+
+--orc_41
+"models/items/blood_seeker/arms_savagebeast.vmdl",
+"models/items/blood_seeker/back_savagebeast.vmdl",
+"models/items/blood_seeker/belt_savagebeast.vmdl",
+"models/items/blood_seeker/head_savagebeast.vmdl",
+"models/items/blood_seeker/offhand_savagebeast.vmdl",
+"models/items/blood_seeker/shoulder_savagebeast.vmdl",
+"models/items/blood_seeker/weapon_savagebeast.vmdl",
+
+--orc_60
+"models/items/magnataur/defender_arms/defender_arms.vmdl",
+"models/items/magnataur/defender_belt/defender_belt.vmdl",
+"models/items/magnataur/defender_head/defender_head.vmdl",
+"models/items/magnataur/defender_horn/defender_horn.vmdl",
+"models/items/magnataur/defender_weapon/defender_weapon.vmdl",
+
+--orc_61
+"models/heroes/beastmaster/beastmaster_arms.vmdl",
+"models/heroes/beastmaster/beastmaster_belt.vmdl",
+"models/heroes/beastmaster/beastmaster_head.vmdl",
+"models/heroes/beastmaster/beastmaster_weapon.vmdl",
+"models/heroes/beastmaster/beastmaster_shoulder.vmdl"
+
+    }
+     
+
+    print("loading shiping")
 	local t=#zr;
 	for i=1,t do
 
       PrecacheResource( "model", zr[i], context)
 
     end
+
+    print("done loading shiping")
+
+
+end
+function PrecacheEverythingFromTable( context, kvtable)
+	for key, value in pairs(kvtable) do
+		if type(value) == "table" then
+			PrecacheEverythingFromTable( context, value )
+		else
+			if string.find(value, "vpcf") then
+				PrecacheResource( "particle",  value, context)
+				print("PRECACHE PARTICLE RESOURCE", value)
+			end
+			if string.find(value, "vmdl") then
+				PrecacheResource( "model",  value, context)
+				print("PRECACHE MODEL RESOURCE", value)
+			end
+			if string.find(value, "vsndevts") then
+				PrecacheResource( "soundfile",  value, context)
+				print("PRECACHE SOUND RESOURCE", value)
+			end
+		end
+	end
+
+   
 end
 function Precache( context )
 	--[[
@@ -185,7 +281,7 @@ end
 
 --init
 function legiontdGameMode:InitGameMode()
-
+  print("start init")
   --准备时间
 	GameRules:SetPreGameTime(60)
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
@@ -213,7 +309,9 @@ function legiontdGameMode:OnNPCSpawned( keys )
       
       for j = 0,5,1 do
         local temp1=unit:GetAbilityByIndex(j) --获取技能实体
-        temp1:SetLevel(1)                     --设置技能等级
+        if temp1 then
+          temp1:SetLevel(1)                     --设置技能等级
+        end
       end
       
 

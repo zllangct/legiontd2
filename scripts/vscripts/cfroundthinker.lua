@@ -104,6 +104,9 @@ function CFRoundThinker:ThinkRest()
 	-- 休息时间结束，就开始下一轮
 	if GameRules:GetGameTime() >= self._nRoundRestTime then
 		self._currentState = ROUND_STATE_FIGHTING
+
+        stopall()
+
 		self:StartNextRound()
 		UTIL_RemoveImmediate(self._entCountDown)
 		self._entCountDown = nil 
@@ -189,7 +192,24 @@ end
 -------------------------------------------------------------------------------------------
 
 
+function stopall()
+  for i=1,PlayerS[12],1 do
+  
+    if IsValidEntity( PlayerS[13][i] ) then
+    
+      PlayerS[13][i]:Stop()
+      
+    end
+    
+  end
 
+   for i=0,8 do
+     if (not(i==4)) and (PlayerS[i][30]==1) then
+
+       yx[i]:Stop()
+     end
+   end
+end
 
 
 
@@ -256,9 +276,11 @@ function setherobac()
        
        local j=0
       
-        for j = 0,5,1 do
+        for j = 0,15,1 do
           local temp1=yx[i]:GetAbilityByIndex(j) --获取技能实体
-          temp1:SetLevel(1)                     --设置技能等级
+          if temp1 then
+            temp1:SetLevel(1)                     --设置技能等级
+          end
         end
      end
 
@@ -279,6 +301,8 @@ function setunitmove()
   for i=1,PlayerS[12] do
     PlayerS[13][i]:RemoveModifierByName("modifier_rooted")
     
+    print("b's owner")
+    print(PlayerS[14][i])
     PlayerS[13][i]:SetControllableByPlayer(PlayerS[14][i],false)
   end
 

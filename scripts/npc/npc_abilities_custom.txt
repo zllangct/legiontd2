@@ -2,7 +2,282 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
+//reroll出6个技能
 
+    "reroll"
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "rerollskill"
+      }
+    }
+  }
+
+
+
+  "semi_1"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_10"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_semi_10"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "semi_2"                   
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_20"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_semi_20"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "semi_3"                    
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_30"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_semi_30"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "semi_4"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_40"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_semi_40"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "semi_5"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_50"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_semi_50"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "semi_6"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_60"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_semi_60"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+//野兽族基本建造技能
+  "beast_1"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_10"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_beast_10"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "beast_2"                   
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_20"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_beast_20"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "beast_3"                    
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_30"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_beast_30"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "beast_4"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_40"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_beast_40"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "beast_5"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_50"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_beast_50"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
+    "beast_6"                      
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_60"
+    "AbilityCastRange" "500"
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "getBuildingPoint"
+        "UName"           "npc_beast_60"
+        "GoldCost"        "100"
+        "RenKou"          "1"
+      }
+    }
+  }
 
   //骑士族基本建造技能
   "knight_1"                      
@@ -138,7 +413,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_10"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -159,7 +434,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_20"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -180,7 +455,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_30"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -201,7 +476,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_40"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -222,7 +497,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_50"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -243,7 +518,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_60"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -266,7 +541,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_10"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -287,7 +562,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_20"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -308,7 +583,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_30"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -329,7 +604,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_40"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -350,7 +625,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_50"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -371,7 +646,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_60"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -394,7 +669,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_10"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -415,7 +690,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_20"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -436,7 +711,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_30"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -457,7 +732,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_40"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -478,7 +753,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_50"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -499,7 +774,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_60"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -578,7 +853,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_10"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -599,7 +874,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_20"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -620,7 +895,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_30"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -641,7 +916,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_40"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -662,7 +937,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_50"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -683,7 +958,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_60"
     "AbilityCastRange" "500"
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -860,7 +1135,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_10to11"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -884,7 +1159,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_20to21"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -907,7 +1182,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_30to31"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -930,7 +1205,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_40to41"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -953,7 +1228,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_50to51"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -976,7 +1251,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_60to61"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -998,7 +1273,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "nature_60to62"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1356,17 +1631,21 @@
         {
             "particle"              "particles/dire_fx/bad_ancient002_pit_lava_glow.vpcf"
             "particle"       		"particles/items_fx/abyssal_blade_impact03.vpcf"
+            "particle"          "particles/econ/generic/generic_buff_1/generic_buff_1.vpcf"
         }
 
 		"OnSpellStart"
 		{
-			"RunScript"
-			{
-				"ScriptFile" 	"scripts/vscripts/buildings.lua"
-				"Target"		"CASTER"
-				"Function"		"gegeda_1"
-				"effect1"		"particles/dire_fx/bad_ancient002_pit_lava_glow.vpcf"
-			}
+      "ApplyModifier"
+       {
+         "ModifierName"    "gelaoshi"
+         "Target"      "CASTER"
+       }
+      "RunScript"
+         {
+            "ScriptFile"  "scripts/vscripts/buildings.lua"
+            "Function"    "gegeda_1"
+         }
 		}
 
 		"OnChannelSucceeded"
@@ -1379,12 +1658,29 @@
 				"effect2"		"particles/items_fx/abyssal_blade_impact03.vpcf"
 				"time"			"5" //每隔多少秒出现effect2
 			}
-			"RemoveAbility"
-			{
-				"Target"		"CASTER"
-				"AbilityName"	"gegeda"
-			}
 		}
+
+    "Modifiers"
+  {
+    "gelaoshi"
+    {
+      "OnCreated"
+        {
+          "AttachEffect"
+          {
+            "Target" "TARGET"
+            "EffectName" "particles/econ/generic/generic_buff_1/generic_buff_1.vpcf"
+            "EffectAttachType" "follow_overhead"
+            "EffectLifeDurationScale" "1"
+            "EffectColorA" "255 255 0"
+          }
+
+        }
+    }
+  }
+
+
+
 	}
 
    
@@ -1394,7 +1690,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_10to11"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1417,7 +1713,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_20to21"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1439,7 +1735,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_30to31"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1461,7 +1757,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_40to41"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1483,7 +1779,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_50to51"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1505,7 +1801,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "element_60to61"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1528,7 +1824,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_10to11"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1551,7 +1847,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_11to12"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1573,7 +1869,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_20to21"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1595,7 +1891,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_21to22"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1617,7 +1913,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_30to31"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1639,7 +1935,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_40to41"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1661,7 +1957,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_50to51"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1682,7 +1978,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "spirit_60to61"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1706,7 +2002,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_10to11"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1729,7 +2025,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_10to12"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1751,7 +2047,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_10to13"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1773,7 +2069,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_20to21"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1795,7 +2091,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_30to31"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1817,7 +2113,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_40to41"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1839,7 +2135,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_50to51"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -1861,7 +2157,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "demon_60to61"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1.5"
@@ -2352,6 +2648,2121 @@
       {
         "var_type"      "FIELD_INTEGER"
         "chance"      "30"
+      }
+    }
+  }
+
+//===========================10半羚人巫师升级成11半羚人贤者========================
+    "semi_10to11"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_10to11"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_11"
+                "GoldCost"        "50"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+     //===========================11半羚人贤者升级成11半羚人大法师========================
+    "semi_11to12"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_11to12"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_12"
+                "GoldCost"        "300"
+                "RenKou"          "2"
+      }
+    }
+  }
+
+
+
+   //===========================20奴仆升级成21奴隶领主========================
+    "semi_20to21"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_20to21"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_21"
+                "GoldCost"        "120"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+    //===========================30枭兽升级成31愤怒枭兽========================
+    "semi_30to31"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_30to31"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_31"
+                "GoldCost"        "140"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================40萨满医师升级成41萨满神使========================
+    "semi_40to41"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_40to41"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_41"
+                "GoldCost"        "160"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================50半兽妖女升级成51魔灵妖女========================
+    "semi_50to51"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_50to51"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_51"
+                "GoldCost"        "180"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================60牛头人升级成61大脚怪========================
+    "semi_60to61"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "semi_60to61"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_semi_61"
+                "GoldCost"        "325"
+                "RenKou"          "2"
+      }
+    }
+  }
+
+   //===========================10土狼升级成11豺狼========================
+    "beast_10to11"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_10to11"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_beast_11"
+                "GoldCost"        "80"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+
+   //===========================20食人魔法师升级成21食人魔粉碎者========================
+    "beast_20to21"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_20to21"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_beast_21"
+                "GoldCost"        "105"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+    //===========================30鹰女妖升级成31魔鹰女妖========================
+    "beast_30to31"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_30to31"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_beast_31"
+                "GoldCost"        "125"
+                "RenKou"          "0"
+      }
+    }
+  }
+
+    //===========================40巨魔勇士升级成41狂暴巨魔========================
+    "beast_40to41"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_40to41"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_beast_41"
+                "GoldCost"        "145"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================50灰熊升级成51巨熊========================
+    "beast_50to51"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_50to51"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_beast_51"
+                "GoldCost"        "205"
+                "RenKou"          "1"
+      }
+    }
+  }
+
+    //===========================60龙卵领主升级成61灼热炎龙========================
+    "beast_60to61"   
+   {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "beast_60to61"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "1.5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "POINT"
+        "ScriptFile"            "scripts/vscripts/buildings.lua"
+                "Function"              "change_little"
+                "NewUnit"         "npc_beast_61"
+                "GoldCost"        "320"
+                "RenKou"          "2"
+      }
+    }
+  }
+//邪恶狂热
+  "xie_e_kuang_re"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "bristleback_warpath"
+
+    "AbilityCastRange"      "600"
+    "AbilityCooldown"     "20"
+
+    "Modifiers"
+    {
+      "modifier_xie_e_kuang_re"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "Aura"          "modifier_xie_e_kuang_re_create"
+            "Aura_Radius"   "%radius"
+            "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+            "Aura_Types"    "DOTA_UNIT_TARGET_ALL"
+            "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_xie_e_kuang_re_create"
+      {
+        "IsHidden"    "1"
+
+        "OnCreated"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "CASTER"
+            "Function"    "XieEKuangReCreate"
+          }
+        }
+      }
+
+      "modifier_xie_e_kuang_re_buff"
+      {
+        "Duration"        "%duration"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"  "%incoming_damage"
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //触发范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "600"
+      }
+      "04"  //持续时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "15"
+      }
+      "02"  //受到额外伤害
+      {
+        "var_type"      "FIELD_INTEGER"
+        "incoming_damage" "20"
+      }
+      "03"  //攻击速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "100"
+      }
+    }
+  }
+
+  //狂战士
+  "kuang_zhan_shi"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "centaur_stampede"
+
+    "Modifiers"
+    {
+      "modifier_kuang_zhan_shi"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttackStart"
+        {
+          "Random"
+          {
+            "Chance"      "%chance"
+            "PseudeoRandom"   "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+            "OnSuccess"
+            {
+              "ApplyModifier"
+              {
+                "Target"      "CASTER"
+                "ModifierName"    "modifier_kuang_zhan_shi_attack"
+              }
+            }
+            "OnFailure"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "scripts/vscripts/abilities.lua"
+                "Target"    "CASTER"
+                "Function"    "KuangZhanShiAttack"
+              }
+            }
+          }
+        }
+
+        "OnHealReceived"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "CASTER"
+            "Function"    "KuangZhanShiHeal"
+          }
+        }
+
+        "OnAttackLanded"
+        {
+          "RemoveModifier"
+          {
+            "Target"      "CASTER"
+            "ModifierName"    "modifier_kuang_zhan_shi_attack"
+          }
+        }
+      }
+
+      "modifier_kuang_zhan_shi_attack"
+      {
+        "IsHidden"        "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"  "%critical_strike"
+        }
+      }
+
+      "modifier_kuang_zhan_shi_attack_speed"
+      {
+        "IsHidden"        "0"
+        "Attributes"      "MODIFIER_ATTRIBUTE_MULTIPLE"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //触发概率
+      {
+        "var_type"      "FIELD_INTEGER"
+        "chance"      "50"
+      }
+      "02"  //倍数
+      {
+        "var_type"      "FIELD_INTEGER"
+        "critical_strike" "1000"
+      }
+      "03"  //攻击速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "15"
+      }
+      "04"  //每失去多少生命值百分比增加攻击速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "heal"        "10"
+      }
+      "05"  //最高叠加次数
+      {
+        "var_type"      "FIELD_INTEGER"
+        "buff_max"      "9"
+      }
+    }
+  }
+
+  //回血光环小
+  "hui_xue_aura_small"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "earth_spirit_boulder_smash"
+
+    "Modifiers"
+    {
+      "modifier_hui_xue_aura_small"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_hui_xue_aura_small_heal"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_hui_xue_aura_small_heal"
+      {
+        "ThinkInterval"   "1"
+        "OnIntervalThink"
+        {
+          "Heal"
+          {
+            "HealAmount"  "%heal"
+            "Target"    "TARGET"
+          }
+        } 
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //每秒恢复生命值
+      {
+        "var_type"      "FIELD_INTEGER"
+        "heal"        "10"
+      }
+    }
+  }
+
+  //回血光环大
+  "hui_xue_aura_big"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "earth_spirit_boulder_smash"
+
+    "Modifiers"
+    {
+      "modifier_hui_xue_aura_big"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_hui_xue_aura_big_heal"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_hui_xue_aura_big_heal"
+      {
+        "ThinkInterval"   "1"
+        "OnIntervalThink"
+        {
+          "Heal"
+          {
+            "HealAmount"  "%heal"
+            "Target"    "TARGET"
+          }
+        } 
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //每秒恢复生命值
+      {
+        "var_type"      "FIELD_INTEGER"
+        "heal"        "20"
+      }
+    }
+  }
+
+  //加速光环
+  "jia_su_aura"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "weaver_shukuchi"
+
+    "Modifiers"
+    {
+      "modifier_jia_su_aura"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_jia_su_aura_buff"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_jia_su_aura_buff"
+      {
+        "Properties"  
+        {
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%move_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //移动速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "move_speed"    "40"
+      }
+    }
+  }
+
+  //减速光环
+  "jian_su_aura"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "visage_grave_chill"
+
+    "Modifiers"
+    {
+      "modifier_jian_su_aura"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_jian_su_aura_buff"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_jian_su_aura_buff"
+      {
+        "Properties"  
+        {
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%move_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //移动速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "move_speed"    "-40"
+      }
+    }
+  }
+
+  //浸毒武器
+  "jin_du_wu_qi"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "sandking_caustic_finale"
+
+    "Modifiers"
+    {
+      "modifier_jin_du_wu_qi"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttackLanded"
+        {
+          "ApplyModifier"
+          {
+            "Target"      "TARGET"
+            "ModifierName"    "modifier_jin_du_wu_qi_buff"
+          }
+
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "UNIT"
+            "Function"    "JinDuWuQi"
+          }
+        }
+      }
+
+      "modifier_jin_du_wu_qi_buff"
+      {
+        "Duration"      "%duration"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%move_speed"
+        }
+
+        "ThinkInterval"   "1"
+        "OnIntervalThink"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "UNIT"
+            "Function"    "JinDuWuQiDamage"
+          }
+        }
+
+        "OnDestroy"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "UNIT"
+            "Function"    "JinDuWuQiDestroy"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "03"  //持续时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "5"
+      }
+      "01"  //攻击速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "-20"
+      }
+      "02"  //移动速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "move_speed"    "-20"
+      }
+      "04"  //伤害
+      {
+        "var_type"      "FIELD_INTEGER"
+        "damage"      "30"
+      }
+    }
+  }
+
+  //粉碎
+  "fen_sui"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "faceless_void_time_lock"
+
+    "AbilityDamage"       "100"
+
+    "Modifiers"
+    {
+      "modifier_fen_sui"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttack"
+        {
+          "Random"
+          {
+            "Chance"      "%chance"
+            "PseudeoRandom"   "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+            "OnSuccess"
+            {
+              "Damage"
+              {
+                "Target"
+                {
+                        "Types"     "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_MECHANICAL"
+                        "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_NONE"
+                        "Center"    "ATTACKER"
+                        "Radius"    "%radius"
+                    }
+                "Type"       "DAMAGE_TYPE_PHYSICAL"
+                "Damage"     "%AbilityDamage"
+              }
+            }
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "02"  //触发概率
+      {
+        "var_type"      "FIELD_INTEGER"
+        "chance"      "20"
+      }
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "300"
+      }
+    }
+  }
+
+  //风暴之锤
+  "feng_bao_zhi_chui"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "sven_storm_bolt"
+
+    "AbilityCooldown"     "15"
+    "AbilityDamage"       "150"
+
+    "precache" //缓存特效
+        {
+            "particle"              "particles\units\heroes\hero_sven\sven_spell_storm_bolt.vpcf"
+        }
+
+        "OnProjectileHitUnit"
+        {
+            "Damage"
+            {
+              "Target"     "TARGET"
+              "Type"       "DAMAGE_TYPE_MAGICAL"
+              "Damage"     "%AbilityDamage"
+            }
+
+            "Stun"
+            {
+              "Duration"    "%duration"
+              "Target"    "TARGET"
+            }
+        }
+
+    "Modifiers"
+    {
+      "modifier_feng_bao_zhi_chui"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_feng_bao_zhi_chui_create"
+            "Aura_Radius"   "%radius"
+            "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+            "Aura_Types"    "DOTA_UNIT_TARGET_ALL"
+            "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_feng_bao_zhi_chui_create"
+      {
+        "IsHidden"    "1"
+
+        "OnCreated"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "UNIT"
+            "Function"    "FengBaoZhiChui"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "02"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "01"  //眩晕时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "1"
+      }
+    }
+  }
+
+  //击晕
+  "ji_yun"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "wisp_relocate"
+
+    "Modifiers"
+    {
+      "modifier_ji_yun"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttack"
+        {
+          "Random"
+          {
+            "Chance"      "%chance"
+            "PseudeoRandom"   "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+            "OnSuccess"
+            {
+              "Stun"
+              {
+                "Duration"  "%duration"
+                "Target"  "TARGET"
+              }
+            }
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "02"  //触发概率
+      {
+        "var_type"      "FIELD_INTEGER"
+        "chance"      "20"
+      }
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "1"
+      }
+    }
+  }
+
+  //xxx
+  "xxx"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "keeper_of_the_light_recall"
+
+    "AbilityCooldown"     "30"
+
+    "Modifiers"
+    {
+      "modifier_xxx"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_xxx_create"
+            "Aura_Radius"   "%radius"
+            "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+            "Aura_Types"    "DOTA_UNIT_TARGET_ALL"
+            "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_xxx_create"
+      {
+        "IsHidden"    "1"
+
+        "OnCreated"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "UNIT"
+            "Function"    "XXX"
+          }
+        }
+      }
+
+      //召唤的单位在这个modifier填写
+      "modifier_xxx_create_unit"
+      {
+        "IsHidden"    "1"
+        "Duration"    "0.1"
+
+        "OnCreated"
+        {
+          "SpawnUnit"
+          {
+            "UnitName"        "npc_dota_creep_badguys_ranged"
+            "Target"        "CASTER"
+            "Duration"        "%duration"
+            "UnitCount"       "1"
+            "SpawnRadius"     "150"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "02"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "01"  //单位持续时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "30"
+      }
+    }
+  }
+
+  //标记
+  "biao_ji"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "kunkka_return"
+
+    "Modifiers"
+    {
+      "modifier_biao_ji"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttack"
+        {
+          "ApplyModifier"
+          {
+            "Target"      "TARGET"
+            "ModifierName"    "modifier_biao_ji_buff"
+          }
+        }
+      }
+
+      "modifier_biao_ji_buff"
+      {
+        "IsHidden"    "1"
+        "Duration"    "%duration"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE" "%damage"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "1"
+      }
+      "02"  //物理伤害加深
+      {
+        "var_type"      "FIELD_INTEGER"
+        "damage"      "20"
+      }
+    }
+  }
+
+  //闪电
+  "shan_dian"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "storm_spirit_electric_vortex"
+
+    "AbilityDamage"             "50"
+
+    "precache" //缓存特效
+        {
+            "particle"              "particles/units/heroes/hero_zuus/zuus_base_attack.vpcf"
+        }
+
+    "OnProjectileHitUnit"
+        {
+            "Damage"
+            {
+              "Target"     "TARGET"
+              "Type"       "DAMAGE_TYPE_MAGICAL"
+              "Damage"     "%AbilityDamage"
+            }
+        }
+
+    "Modifiers"
+    {
+      "modifier_shan_dian"
+      {
+        "Passive"     "1"
+
+        "OnAttack"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "CASTER"
+            "Function"    "ShanDian"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //攻击多少次触发
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_num"    "10"
+      }
+      "02"  //闪电检测范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "600"
+      }
+    }
+  }
+
+  //闪电链
+  "shan_dian_lian"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "zuus_arc_lightning"
+
+    "AbilityCooldown"     "9"
+    "AbilityDamage"       "150"
+
+    "Modifiers"
+    {
+      "modifier_shan_dian_lian"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_shan_dian_lian_create"
+            "Aura_Radius"   "%radius"
+            "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+            "Aura_Types"    "DOTA_UNIT_TARGET_ALL"
+            "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_shan_dian_lian_create"
+      {
+        "IsHidden"    "1"
+
+        "OnCreated"
+        {
+          "RunScript"
+          {
+            "ScriptFile"  "scripts/vscripts/abilities.lua"
+            "Target"    "UNIT"
+            "Function"    "ShanDianLian"
+          }
+        }
+      }
+
+      "modifier_shan_dian_lian_effect"
+      {
+        "IsHidden"    "1"
+        "Duration"    "0.5"
+
+        "OnCreated"
+        {
+          "AttachEffect"
+          {
+            "EffectName"    "particles\units\heroes\hero_zuus\zuus_arc_lightning.vpcf"
+            "EffectAttachType"  "start_at_customorigin"
+            "Target"        "CASTER"
+            "ControlPointEntities"
+            {
+              "CASTER"    "attach_hitloc"
+              "TARGET"    "attach_hitloc"
+            }
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //伤害衰减
+      {
+        "var_type"      "FIELD_INTEGER"
+        "damage_attenuate"  "0"
+      }
+      "03"  //传递数量
+      {
+        "var_type"      "FIELD_INTEGER"
+        "num"       "6"
+      }
+      "03"  //获取范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "light_radius"    "300"
+      }
+    }
+  }
+
+  //衰弱
+  "shuai_jian"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "warlock_upheaval"
+
+    "Modifiers"
+    {
+      "modifier_shuai_jian"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "OnAttackLanded"
+        {
+          "ApplyModifier"
+          {
+            "Target"      "TARGET"
+            "ModifierName"    "modifier_shuai_jian_debuff"
+          }
+        }
+      }
+      "modifier_shuai_jian_debuff"
+      {
+        "IsDebuff"    "1"
+        "Duration"    "%duration"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //持续时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "3"
+      }
+      "02"  //攻击速度
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "-20"
+      }
+    }
+  }
+
+  //虚弱
+  "xu_ruo"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "warlock_fatal_bonds"
+
+    "Modifiers"
+    {
+      "modifier_xu_ruo"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "OnAttackLanded"
+        {
+          "ApplyModifier"
+          {
+            "Target"      "TARGET"
+            "ModifierName"    "modifier_xu_ruo_debuff"
+          }
+        }
+      }
+      "modifier_xu_ruo_debuff"
+      {
+        "IsDebuff"    "1"
+        "Duration"    "%duration"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%armor"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //持续时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "3"
+      }
+      "02"  //护甲
+      {
+        "var_type"      "FIELD_INTEGER"
+        "armor"       "-6"
+      }
+    }
+  }
+
+  //心灵之火
+  "xin_ling_zhi_huo"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "troll_warlord_fervor"
+
+    "Modifiers"
+    {
+      "modifier_xin_ling_zhi_huo"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "OnAttackLanded"
+        {
+          "ApplyModifier"
+          {
+            "Target"      "TARGET"
+            "ModifierName"    "modifier_xin_ling_zhi_huo_debuff"
+          }
+        }
+      }
+      "modifier_xin_ling_zhi_huo_debuff"
+      {
+        "IsDebuff"    "1"
+        "Duration"    "%duration"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"  "%armor"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //持续时间
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "3"
+      }
+      "02"  //护甲
+      {
+        "var_type"      "FIELD_INTEGER"
+        "armor"       "-5"
+      }
+    }
+  }
+
+  //衰弱光环
+  "shuai_ruo_aura"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "chen_penitence"
+
+    "Modifiers"
+    {
+      "modifier_shuai_ruo_aura"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_shuai_ruo_aura_buff"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_shuai_ruo_aura_buff"
+      {
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"  "%incoming_damage"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //伤害减少
+      {
+        "var_type"      "FIELD_INTEGER"
+        "incoming_damage" "-8"
+      }
+    }
+  }
+
+  //虚弱光环
+  "xu_ruo_aura"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "invoker_ghost_walk"
+
+    "Modifiers"
+    {
+      "modifier_xu_ruo_aura"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_xu_ruo_aura_buff"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_xu_ruo_aura_buff"
+      {
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"  "%incoming_damage"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //伤害减少
+      {
+        "var_type"      "FIELD_INTEGER"
+        "incoming_damage" "-16"
+      }
+    }
+  }
+
+  //化学狂暴
+  "hua_xue_feng_bao"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "invoker_wex"
+
+    "Modifiers"
+    {
+      "modifier_hua_xue_feng_bao"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "80"
+      }
+    }
+  }
+
+  //电锯暴击
+  "dian_ju_bao_ji"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "zuus_thundergods_wrath"
+
+    "Modifiers"
+    {
+      "modifier_dian_ju_bao_ji"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttackStart"
+        {
+          "Random"
+          {
+            "Chance"      "%chance"
+            "PseudeoRandom"   "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+            "OnSuccess"
+            {
+              "ApplyModifier"
+              {
+                "Target"      "CASTER"
+                "ModifierName"    "modifier_dian_ju_bao_ji_attack"
+              }
+            }
+            "OnFailure"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "scripts/vscripts/abilities.lua"
+                "Target"    "CASTER"
+                "Function"    "DianJuBaoJi"
+              }
+            }
+          }
+        }
+
+        "OnAttackLanded"
+        {
+          "RemoveModifier"
+          {
+            "Target"      "CASTER"
+            "ModifierName"    "modifier_dian_ju_bao_ji_attack"
+          }
+        }
+      }
+
+      "modifier_dian_ju_bao_ji_attack"
+      {
+        "IsHidden"        "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"  "%critical_strike"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "chance"      "40"
+      }
+      "02"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "critical_strike" "200"
+      }
+    }
+  }
+
+  //火焰击
+  "huo_yan_ji"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "phoenix_launch_fire_spirit"
+
+    "OnProjectileHitUnit"
+    {
+      "Damage"
+      {
+        "Target"     "TARGET"
+        "Type"       "DAMAGE_TYPE_PHYSICAL"
+        "Damage"     "%damage"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_huo_yan_ji"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "OnAttack"
+        {
+          "TrackingProjectile"
+                {
+                    "Target"      "TARGET"
+                    "EffectName"        "particles\base_attacks\ranged_tower_bad.vpcf"
+                    "Dodgeable"         "0"
+                    "ProvidesVision"    "0"
+                    "VisionRadius"      "0"
+                    "MoveSpeed"         "1200"
+                    "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
+                }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "damage"      "50"
+      }
+    }
+  }
+
+  //邪神附体
+  "xie_shen_fu_ti"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "nevermore_requiem"
+
+    "Modifiers"
+    {
+      "modifier_xie_shen_fu_ti"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_EVASION_CONSTANT"  "%chance"
+        }
+
+        "OnAttackStart"
+        {
+          "Random"
+          {
+            "Chance"      "%chance"
+            "PseudeoRandom"   "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+            "OnSuccess"
+            {
+              "ApplyModifier"
+              {
+                "Target"      "CASTER"
+                "ModifierName"    "modifier_xie_shen_fu_ti_attack"
+              }
+            }
+            "OnFailure"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "scripts/vscripts/abilities.lua"
+                "Target"    "CASTER"
+                "Function"    "XieShenFuTi"
+              }
+            }
+          }
+        }
+
+        "OnAttackLanded"
+        {
+          "RemoveModifier"
+          {
+            "Target"      "CASTER"
+            "ModifierName"    "modifier_xie_shen_fu_ti_attack"
+          }
+        }
+      }
+
+      "modifier_xie_shen_fu_ti_attack"
+      {
+        "IsHidden"        "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"  "%critical_strike"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //触发概率
+      {
+        "var_type"      "FIELD_INTEGER"
+        "chance"      "5"
+      }
+      "02"  //暴击伤害
+      {
+        "var_type"      "FIELD_INTEGER"
+        "critical_strike" "200"
+      }
+    }
+  }
+
+  //邪神幻影
+  "xie_shen_huan_ying"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "night_stalker_hunter_in_the_night"
+
+    "Modifiers"
+    {
+      "modifier_xie_shen_huan_ying"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_EVASION_CONSTANT"  "%chance"
+        }
+
+        "OnAttackStart"
+        {
+          "Random"
+          {
+            "Chance"      "%chance"
+            "PseudeoRandom"   "DOTA_PSEUDO_RANDOM_JUGG_CRIT"
+            "OnSuccess"
+            {
+              "ApplyModifier"
+              {
+                "Target"      "CASTER"
+                "ModifierName"    "modifier_xie_shen_huan_ying_attack"
+              }
+            }
+            "OnFailure"
+            {
+              "RunScript"
+              {
+                "ScriptFile"  "scripts/vscripts/abilities.lua"
+                "Target"    "CASTER"
+                "Function"    "XieShenHuanYing"
+              }
+            }
+          }
+        }
+
+        "OnAttackLanded"
+        {
+          "RemoveModifier"
+          {
+            "Target"      "CASTER"
+            "ModifierName"    "modifier_xie_shen_huan_ying_attack"
+          }
+        }
+      }
+
+      "modifier_xie_shen_huan_ying_attack"
+      {
+        "IsHidden"        "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"  "%critical_strike"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //触发概率
+      {
+        "var_type"      "FIELD_INTEGER"
+        "chance"      "10"
+      }
+      "02"  //暴击伤害
+      {
+        "var_type"      "FIELD_INTEGER"
+        "critical_strike" "200"
+      }
+    }
+  }
+
+  //吸血光环小
+  "xi_xue_aura_small"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "nevermore_shadowraze2"
+
+    "Modifiers"
+    {
+      "modifier_xi_xue_aura_small"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_xi_xue_aura_small_heal"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_xi_xue_aura_small_heal"
+      {
+        "OnAttackLanded"
+        {
+          "Lifesteal"
+          {
+            "Target"      "ATTACKER"
+            "LifestealPercent"  "%heal"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //吸血百分比
+      {
+        "var_type"      "FIELD_INTEGER"
+        "heal"        "8"
+      }
+    }
+  }
+
+  //吸血光环大
+  "xi_xue_aura_big"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "nevermore_shadowraze1"
+
+    "Modifiers"
+    {
+      "modifier_xi_xue_aura_big"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_xi_xue_aura_big_heal"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_xi_xue_aura_big_heal"
+      {
+        "OnAttackLanded"
+        {
+          "Lifesteal"
+          {
+            "Target"      "ATTACKER"
+            "LifestealPercent"  "%heal"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "800"
+      }
+      "02"  //吸血百分比
+      {
+        "var_type"      "FIELD_INTEGER"
+        "heal"        "16"
+      }
+    }
+  }
+
+  //吸血
+  "xi_xue"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "nevermore_necromastery"
+
+    "Modifiers"
+    {
+      "modifier_xi_xue"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "OnAttackLanded"
+        {
+          "Lifesteal"
+          {
+            "Target"      "ATTACKER"
+            "LifestealPercent"  "%heal"
+          }
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "02"  //吸血百分比
+      {
+        "var_type"      "FIELD_INTEGER"
+        "heal"        "20"
+      }
+    }
+  }
+
+  //瘴气
+  "zhang_qi"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "greevil_rot"
+
+    "Modifiers"
+    {
+      "modifier_zhang_qi"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Aura"          "modifier_zhang_qi_debuff"
+                "Aura_Radius"   "%radius"
+                "Aura_Teams"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "Aura_Types"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+                "Aura_Flags"    "DOTA_UNIT_TARGET_FLAG_NONE"
+      }
+
+      "modifier_zhang_qi_debuff"
+      {
+        "IsDebuff"      "1"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_percent"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"  //作用范围
+      {
+        "var_type"      "FIELD_INTEGER"
+        "radius"      "300"
+      }
+      "02"  //伤害百分比
+      {
+        "var_type"      "FIELD_INTEGER"
+        "damage_percent"  "-20"
+      }
+    }
+  }
+
+  //鬼影
+  "gui_ying"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "slark_shadow_dance"
+
+    "Modifiers"
+    {
+      "modifier_gui_ying"
+      {
+        "Passive"     "1"
+        "IsHidden"      "1"
+
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_EVASION_CONSTANT"  "%evasion"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "02"  //闪避百分比
+      {
+        "var_type"      "FIELD_INTEGER"
+        "evasion"     "20"
+      }
+    }
+  }
+
+  //诅咒
+  "zu_zhou"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "doom_bringer_scorched_earth"
+
+    "AbilityCastPoint"      "0.0"
+    "AbilityCooldown"     "15"
+    "AbilityCastRange"      "600"
+
+    "OnSpellStart"
+    {
+      "ApplyModifier"
+      {
+        "Target"      "TARGET"
+        "ModifierName"    "modifier_zu_zhou"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_zu_zhou"
+      {
+        "Duration"    "%duration"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "3"
+      }
+      "02"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "-30"
+      }
+    }
+  }
+
+  //暗影诅咒
+  "an_ying_zu_zhou"
+  {
+    "BaseClass"         "ability_datadriven"
+    "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetType"   "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetTeam"   "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "MaxLevel"          "1"
+    "AbilityTextureName"    "satyr_hellcaller_shockwave"
+
+    "AbilityCastPoint"      "0.0"
+    "AbilityCooldown"     "15"
+    "AbilityCastRange"      "600"
+
+    "OnSpellStart"
+    {
+      "ApplyModifier"
+      {
+        "Target"      "TARGET"
+        "ModifierName"    "modifier_an_ying_zu_zhou"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_an_ying_zu_zhou"
+      {
+        "Duration"    "%duration"
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%attack_speed"
+          "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%armor"
+        }
+      }
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "duration"      "3"
+      }
+      "02"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "attack_speed"    "-30"
+      }
+      "03"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "armor"       "-5"
       }
     }
   }

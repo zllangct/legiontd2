@@ -147,4 +147,77 @@
 	  "AttackDamageMin"           "0"                         // 最小伤害
     "AttackDamageMax"           "0"                         // 最大伤害
 	}
+
+	"npc_legionTD_beast"
+	{
+		"override_hero"				"npc_dota_hero_beastmaster"			// Hero to override
+
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "beast_1"
+		"Ability2" "beast_2"
+		"Ability3" "beast_3"
+		"Ability4" "beast_4"
+		"Ability5" "beast_5"
+		"Ability6" "beast_6"
+	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
+"npc_legionTD_semi"
+	{
+		"override_hero"				"npc_dota_hero_lycan"			// Hero to override
+
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "semi_1"
+		"Ability2" "semi_2"
+		"Ability3" "semi_3"
+		"Ability4" "semi_4"
+		"Ability5" "semi_5"
+		"Ability6" "semi_6"
+	 //"Ability7" "king_heal"  TODO	
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
+	"npc_legionTD_prophet"
+	{
+		"override_hero"				"npc_dota_hero_rubick"			// Hero to override
+
+		"AutoAttacksByDefault"      "0"
+		
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"AttackCapabilities"   "DOTA_UNIT_CAP_NO_ATTACK"
+		
+		"Abilitylayout" "6"
+		"Ability1" "reroll"
+		"Ability2" ""
+		"Ability3" ""
+		"Ability4" ""
+		"Ability5" ""
+		"Ability6" ""
+	    "Ability7" "" 
+	 
+	 
+	 
+	  "AttackDamageMin"           "0"                         // 最小伤害
+    "AttackDamageMax"           "0"                         // 最大伤害
+	}
+
 }

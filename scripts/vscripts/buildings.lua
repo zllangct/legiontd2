@@ -1,8 +1,10 @@
 require('buildinghelper')
 require('playerstats')
+--require('cfroundthinker')
 
 BUILD_TIME=1.0
 
+jjj={"orc","nature","element","knight","beast","semi","demon","spirit"}
 
 function getBuildingPoint(keys)
 
@@ -14,6 +16,7 @@ function getBuildingPoint(keys)
   local name = keys.UName
   local rk = keys.RenKou
   local gc = keys.GoldCost
+  print("wtf??")
   print(pid)
   if PlayerS[pid][1]>=gc then
   
@@ -33,10 +36,11 @@ function getBuildingPoint(keys)
          	  
          	    PlayerS[12]=PlayerS[12]+1;  --玩家操控单位数量+1
          	    PlayerS[pid][1]=PlayerS[pid][1]-gc  --扣除金钱
-         	    sendinfotoui();                     --更新面板
+         	  
               
-              PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, caster, caster, keys.caster:GetTeam())
-            
+              PlayerS[13][PlayerS[12]]=CreateUnitByName(name, point, false, nil, nil, keys.caster:GetTeam())
+              
+              PlayerS[pid][3]=PlayerS[pid][3]+rk;
               
               PlayerS[13][PlayerS[12]]:AddNewModifier(caster, nil, "modifier_rooted", nil)
             
@@ -56,7 +60,7 @@ function getBuildingPoint(keys)
 		          
 		          PlayerS[17][PlayerS[12]]=caster
 		          PlayerS[18][PlayerS[12]]=keys.caster:GetTeam()
-		          
+		          sendinfotoui();                     --更新面板
 		        else
 		          Say(nil,"you need more food!", false)
 		        
@@ -120,10 +124,10 @@ function change_little(keys)
       PlayerS[axb][1]=PlayerS[axb][1]-gc  --扣除金钱
       
       
-
+      PlayerS[axb][3]=PlayerS[axb][3]+rk
       
       
-      PlayerS[13][xuhao] = CreateUnitByName(newcaster, point, false, caster:GetOwner(), caster:GetOwner() or caster, keys.caster:GetTeam())
+      PlayerS[13][xuhao] = CreateUnitByName(newcaster, point, false, nil, nil, keys.caster:GetTeam())
       PlayerS[16][xuhao] = newcaster
       
       sendinfotoui();                     --更新面板
@@ -254,13 +258,18 @@ end
 
 function gegeda_1( keys )
 	local caster = keys.caster
+  print("chufale")
+  keys.ability:ApplyDataDrivenModifier(caster, caster, "gelaoshi", nil)
+--	ParticleManager:SetParticleControl(effect1, 0, caster:GetOrigin())
 
-	local effect1 = ParticleManager:CreateParticle(keys.effect1, PATTACH_WORLDORIGIN, caster)
-	ParticleManager:SetParticleControl(effect1, 0, caster:GetOrigin())
+ --   ParticleManager:ReleaseParticleIndex(effect1)
 end
 
 function gegeda_2( keys )
 	local caster = keys.caster
+  local tt=caster:GetContext("name")
+  local pid=tonumber(caster:GetContext("name")) 
+  if PlayerS[pid][1]>=50 then
 
 	GameRules:GetGameModeEntity():SetContextThink(DoUniqueString("gegeda"), 
 		function( )
@@ -268,30 +277,51 @@ function gegeda_2( keys )
 			ParticleManager:SetParticleControl(effect2, 0, caster:GetOrigin())
 			ParticleManager:ReleaseParticleIndex(effect2)
 				--增加木材
-			
+			PopupNumbers(caster, "heal", Vector(0, 255, 0), 1.0, 10+PlayerS[pid][8], POPUP_SYMBOL_PRE_PLUS, nil)
 
 			
-			local tt=caster:GetContext("name")
-			local pid=tonumber(caster:GetContext("name")) 
-			
-			print("renkou test")
-			print(tt)
-			print(pid)
 	
 			PlayerS[pid][2]=PlayerS[pid][2]+10+PlayerS[pid][8]
 			
 			sendinfotoui()
 			return keys.time
 			
-			
+		
 		
 			
 			
 		end, 0)
+  caster:RemoveAbility("gegeda")
+
+  else
+      Say(nil,"not enough gold", false)
+  end  
 end
 
+function rerollskill(keys)
+  
+  local caster=keys.caster
+
+  --if CFRoundThinker._currentState==ROUND_STATE_PREPARE then  --只允许在准备阶段roll技能
+    caster:RemoveAbility("reroll")
+    for i=1,6,1 do
+      caster:AddAbility(rc(jjj).."_"..tostring(i))
+    end
+
+    for j = 0,15,1 do
+        local temp1=caster:GetAbilityByIndex(j) --获取技能实体
+        if temp1 then
+          temp1:SetLevel(1)                     --设置技能等级
+        end
+      end
+--  else
+--    Say(nil,"you can't reroll during battle", false)
+--  end
+
+end  
+
+
 function rc(mm)            --随机函数
-  math.randomseed(os.time())
   local i=1;
   while not(mm[i]==nil) do
     i=i+1
@@ -359,4 +389,24 @@ function lightkingatk(keys)
   else
     Say(nil,"need more lumber",false)
   end
+end
+
+function PopupNumbers(target, pfx, color, lifetime, number, presymbol, postsymbol)
+    local pfxPath = string.format("particles/msg_fx/msg_%s.vpcf", pfx)
+    local pidx = ParticleManager:CreateParticle(pfxPath, PATTACH_ABSORIGIN_FOLLOW, target) -- target:GetOwner()
+
+    local digits = 0
+    if number ~= nil then
+        digits = #tostring(number)
+    end
+    if presymbol ~= nil then
+        digits = digits + 1
+    end
+    if postsymbol ~= nil then
+        digits = digits + 1
+    end
+
+    ParticleManager:SetParticleControl(pidx, 1, Vector(tonumber(presymbol), tonumber(number), tonumber(postsymbol)))
+    ParticleManager:SetParticleControl(pidx, 2, Vector(lifetime, digits, 0))
+    ParticleManager:SetParticleControl(pidx, 3, color)
 end

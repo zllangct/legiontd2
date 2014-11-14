@@ -98,9 +98,10 @@ function CFSpawner:Think()
 
 	   if PlayerS[tempt][30]==1 then 
        	  
-       	  
+       	 print("axbli")
+       	 print(li)
 
-	     local _spawner = self._tSpawner[li]
+	     local _spawner = self._tSpawner[li] --第li个出生点
 	     
 	     local _spawnerName = _spawner.name
 	     local _spawnerFirstTargetName = _spawner.waypoint
@@ -111,11 +112,15 @@ function CFSpawner:Think()
 		   local _eFirstTarget = Entities:FindByName(nil,_spawnerFirstTargetName)
 		   
 		   local _vBaseLocation = _eSpawner:GetAbsOrigin()
-		   local _vSpawnLocation = _vBaseLocation + RandomVector(100)
-	     for lj=1,self._nUnitToSpawnCount,1 do        --产怪
-	     	 		local _spawnerName = _spawner.name
+		   
 
-		        local _eUnitSpawned = CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
+	     for lj=1,self._nUnitToSpawnCount,1 do        --产怪
+
+	     	    local _vSpawnLocation = _vBaseLocation + RandomVector(100)
+	     	 	
+	     	 	local _spawnerName = _spawner.name
+
+		        local _eUnitSpawned 	= CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
 		        
 		        _eUnitSpawned:SetTeam(DOTA_TEAM_NEUTRALS)
 
@@ -123,7 +128,6 @@ function CFSpawner:Think()
 		        
 		        table.insert( self._teEnemyUnitList , _eUnitSpawned )
 		        
-		        self._nUnitToSpawnCount = self._nUnitToSpawnCount - 1
 		      	self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
 			      self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
 	     end

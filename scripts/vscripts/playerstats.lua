@@ -13,22 +13,22 @@ PlayerS = {}
 
 function playerstats:init()
 
-  SendToConsole("dota_sf_hud_inventory 0")
-  SendToConsole("dota_render_crop_height 0")
+ -- SendToConsole("dota_sf_hud_inventory 0")
+ -- SendToConsole("dota_render_crop_height 0")
 
   local temp=Entities:FindByName(nil,"zibao") --所有单位假死沉睡的最终之地 神之居所瓦尔哈拉！
   zibao=temp:GetAbsOrigin()
 
   local temp=Entities:FindByName(nil,"wang_1")
   wang1=temp:GetAbsOrigin()                   --王1的坐标
-
+          
   local temp=Entities:FindByName(nil,"wang_2")
   wang2=temp:GetAbsOrigin()                   --王二的坐标
 
   wang_1=CreateUnitByName("King_light", wang1, false, nil, nil, 2)
-  
+  wang_1:AddNewModifier(wang_1, nil, "modifier_rooted", nil)
   wang_2=CreateUnitByName("King_dark", wang2, false, nil, nil, DOTA_TEAM_BADGUYS)
-  
+  wang_2:AddNewModifier(wang_2, nil, "modifier_rooted", nil)
   --雇佣兵处的照明马甲
 
   local temp=Entities:FindByName(nil,"team1_hirer")
@@ -91,12 +91,14 @@ function playerstats:init()
   for i=0,8,1 do              --判断在线玩家
     if (not(i==4)) then
      if PlayerResource:IsValidPlayer(i) then
-      
+
+        print("playerconnected:")
+        print(i)
+
         PlayerS[i][30]=1
       
       else
-    
-        print(i)
+        
         PlayerS[i][30]=0
       
       end
@@ -131,8 +133,8 @@ function playerstats:init()
       
       PlayerS[i][15]:SetControllableByPlayer(i,true)
        
-       PlayerS[i][15]:AddNewModifier(unit, nil, "modifier_invulnerable", nil)
-
+       PlayerS[i][15]:AddNewModifier(PlayerS[i][15], nil, "modifier_invulnerable", nil)
+       PlayerS[i][15]:AddNewModifier(PlayerS[i][15], nil, "modifier_rooted", nil)
 
       if i<4 then
         PlayerS[i][15]:SetTeam(2)
@@ -155,8 +157,8 @@ function playerstats:init()
       
       PlayerS[i][18]:SetContext("name",tostring(i),0) --挂进pid
 
-      PlayerS[i][18]:AddNewModifier(unit, nil, "modifier_invulnerable", nil)
-      
+      PlayerS[i][18]:AddNewModifier(PlayerS[i][18], nil, "modifier_invulnerable", nil)
+      PlayerS[i][18]:AddNewModifier(PlayerS[i][18], nil, "modifier_rooted", nil)
       if i<4 then
         PlayerS[i][18]:SetTeam(2)
       else
@@ -168,9 +170,9 @@ function playerstats:init()
       for j=1,7,1 do           --7个农民
         temp=Entities:FindByName(nil,"player"..tostring(q+1).."_worker"..tostring(j))
         PlayerS[i][16][j]=CreateUnitByName("base_worker",temp:GetAbsOrigin(),false,nil,nil,2)
-
+        PlayerS[i][16][j]:SetContext("name",tostring(i),0)
         PlayerS[i][16][j]:SetControllableByPlayer(0,true)
-        PlayerS[i][16][j]:AddNewModifier(unit, nil, "modifier_invulnerable", nil)
+        PlayerS[i][16][j]:AddNewModifier(PlayerS[i][16][j], nil, "modifier_invulnerable", nil)
         
       if i<4 then
         PlayerS[i][16][j]:SetTeam(2)
@@ -219,8 +221,8 @@ function sendinfotoui()
   p[0]="lol"
   for i=0,8,1 do
     if not(i==4) then
-      p[i]=tostring(PlayerS[i][1]).."        "..tostring(PlayerS[i][2]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12])
-      pp[i]=tostring(PlayerS[i][1]).."         "..tostring(PlayerS[i][2]).."         "..tostring(PlayerS[i][3]).."/"..tostring(PlayerS[i][4]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8])
+      p[i]=tostring(PlayerS[i][1]).."      "..tostring(PlayerS[i][2]).."        "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12]).."           "..tostring(PlayerS[i][3]).."/"..tostring(PlayerS[i][4])
+      pp[i]=tostring(PlayerS[i][1]).."         "..tostring(PlayerS[i][2]).."          "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."           "..tostring(PlayerS[i][3]).."/"..tostring(PlayerS[i][4])
     end
   end
 
