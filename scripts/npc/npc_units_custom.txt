@@ -936,7 +936,7 @@
     "Ability1" "light_king_hp"
     "Ability2" "light_king_heal"
     "Ability3" "light_king_atk"
-    "Ability4" ""
+    "Ability4" "up_keji"
 //    "Ability5" "upgrade_king_atkspd"
     "Ability6" ""
     "Ability7" ""
@@ -1345,7 +1345,7 @@
   {
   	"MovementSpeed" "350"                                             //移速
   	"StatusHealth" "115"                                               //血量
-  	"AttackRate" "0.8"    	                                            //攻速
+  	"AttackRate" "1.8"    	                                            //攻速
   	"AttackRange" "100"
   	"ArmorPhysical" "3"                                               //护甲
   	"AttackDamageMin" "8"                                             //攻击力
@@ -7998,7 +7998,7 @@
     //===========================50=======================
     "npc_demon_50"
   {
-    "BaseClass" "npc_dota_creature"
+"BaseClass" "npc_dota_creature"
     "Model" "models/heroes/dark_seer/dark_seer.vmdl" //模型
     "ModelScale"  "0.5"                                                            //模型尺寸
     "SoundSet" "Creep_Good_Melee"
@@ -8022,7 +8022,7 @@
     "AttackRate""0.3"                                            //攻速
     "AttackAnimationPoint" "0.1"                                  
     "AttackAcquisitionRange" "500"                                  //攻击距离
-    "AttackRange" "400"
+    "AttackRange" "200"
     "ProjectileModel" ""
     "ProjectileSpeed" ""
     "BountyXP" "0"
@@ -8033,7 +8033,7 @@
     "MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND"                
     "MovementSpeed" "225"                                             
     "MovementTurnRate" "1.5"                                           
-    "StatusHealth" " 995"                                      //生命值                              
+    "StatusHealth" "995"                                      //生命值                              
     "StatusHealthRegen" "0"                                     
     "StatusMana" "0"
     "StatusManaRegen" "0"
@@ -10734,22 +10734,18 @@
                 {
                     "Wearable1"
                     {
-                        "ItemDef"           "1"  
+                        "ItemDef"           "6315"  
                     }
                     "Wearable2"
                     {
-                        "ItemDef"           "6315"  
-                    }
-                    "Wearable3"
-                    {
                         "ItemDef"           "5640"  
                     }
-                    "Wearable4"
+                    "Wearable3"
                     {
                         "ItemDef"           "6313"  
                     }
 
-                    "Wearable5"
+                    "Wearable4"
                     {
                         "ItemDef"           "5459"  
                     }

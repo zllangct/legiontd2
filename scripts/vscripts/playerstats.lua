@@ -46,7 +46,7 @@ function playerstats:init()
 
   for i=0,8 do
     PlayerS[i]= {}
-    PlayerS[i]={3000,10000,0,12,0,{},1,0,0,nil,nil,0}    
+    PlayerS[i]={3000,10000,0,12,0,{},0,0,0,nil,nil,0}    
     --1 Gold, 2 Lumber, 3 CurFood, 4 FullFood, 5 Point, 6 units, 7 farmerNum, 8 tech, 9 unitpoint, 12 income, 
     --15 基地， 16 农民， 17 雇佣兵， 18 人口, 19 兵种移动flag, 20 传送区域, 24 英雄
     

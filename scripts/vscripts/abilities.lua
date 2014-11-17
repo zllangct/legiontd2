@@ -457,3 +457,45 @@ function JianRen( keys )
 		keys.ability:ApplyDataDrivenModifier(caster,caster,"modifier_jian_ren_buff",nil)
 	end
 end
+
+
+--[[哀嚎
+function aihao( keys )
+	local caster = keys.caster
+	local target = keys.target
+
+	if caster:HasModifier("modifier_aihao") and keys.ability:IsCooldownReady()==false then
+		caster:RemoveModifierByName("modifier_aihao")
+		return
+	end
+
+	if caster:HasModifier("modifier_aihao") and keys.ability:IsCooldownReady() then
+		caster:RemoveModifierByName("modifier_aihao")
+
+		local i = keys.ability:GetLevel() - 1
+
+		local cd = keys.ability:GetCooldown(i)
+
+		keys.ability:StartCooldown(cd)
+
+		local info = 
+	    {
+	        Target = target,
+	        Source = caster,
+	        Ability = keys.ability,  
+	        EffectName = "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf",
+	        bDodgeable = false,
+	        iMoveSpeed = 1100,
+	        bProvidesVision = true,
+	        iVisionRadius = 300,
+	        iVisionTeamNumber = caster:GetTeamNumber(),
+	        iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_1
+	    }
+	    projectile = ProjectileManager:CreateTrackingProjectile(info)
+
+	    GameRules:GetGameModeEntity():SetContextThink(DoUniqueString("FengBaoZhiChui"), 
+	    	function( )
+	    		keys.ability:ApplyDataDrivenModifier(caster, caster, "modifier_aihao", nil)
+	    	end, cd+0.05)
+	end
+end]]

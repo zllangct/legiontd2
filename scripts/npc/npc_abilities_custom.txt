@@ -3,6 +3,11 @@
 {
 	"Version"		"1"
 //reroll出6个技能
+ 
+ 
+
+
+
 
     "reroll"
   {
@@ -795,7 +800,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "lkup"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1"
@@ -814,7 +819,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "lkup"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1"
@@ -833,7 +838,7 @@
     "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "lkup"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "1"
@@ -1596,6 +1601,33 @@
       }
     }
   }
+
+//升级科技
+    "up_keji"
+  {
+
+
+      "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "techup"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "5"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "keji"
+      }
+    }
+  }
+
+
+
+
+//升级人口
     "up_renkou"
   {
 
@@ -1603,7 +1635,7 @@
       "BaseClass" "ability_datadriven"
     "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
     "AbilityManaCost" "0"
-    "AbilityTextureName" "axe_battle_hunger"
+    "AbilityTextureName" "renkou"
 
     "AbilityCastPoint" "0"
     "AbilityChannelTime" "10"
@@ -1626,7 +1658,7 @@
 		"BaseClass"					"ability_datadriven"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityChannelTime"		"10"
-
+    "AbilityTextureName" "activate"
 		"precache" //缓存特效
         {
             "particle"              "particles/dire_fx/bad_ancient002_pit_lava_glow.vpcf"
@@ -3532,7 +3564,8 @@
       "modifier_feng_bao_zhi_chui_create"
       {
         "IsHidden"    "1"
-
+        "Attributes"  "MODIFIER_ATTRIBUTE_MULTIPLE"
+        
         "OnCreated"
         {
           "RunScript"

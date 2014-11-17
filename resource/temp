@@ -1,0 +1,55 @@
+     //兽人全部建造相关技能
+        "DOTA_Tooltip_ability_orc_1"					"金刚狼的孙子"
+		"DOTA_Tooltip_ability_orc_1_Description"	    "金币消耗：50   建造一个玩具兽人步兵"
+		"DOTA_Tooltip_ability_orc_1_Lore"				"为什么说是玩具呢？因为又小又弱啊……"
+
+		"DOTA_Tooltip_ability_orc_2"					"年轻的兽人术士"
+		"DOTA_Tooltip_ability_orc_2_Description"	    "金币消耗：100   建造一个年轻的兽人术士"
+		"DOTA_Tooltip_ability_orc_2_Lore"				"虽然年轻 但是也可以对敌人施加一些小小的诅咒"
+
+        "DOTA_Tooltip_ability_orc_3"					"熊骑兵"
+		"DOTA_Tooltip_ability_orc_3_Description"	    "金币消耗：140   建造一个熊骑兵"
+		"DOTA_Tooltip_ability_orc_3_Lore"				"因为Dota2没有狼骑的模型 所以他委委屈屈的变成了熊骑兵"
+
+
+	    "DOTA_Tooltip_ability_orc_4"					"年轻的巫医"
+		"DOTA_Tooltip_ability_orc_4_Description"	    "金币消耗：160   建造一个年轻的巫医"
+		"DOTA_Tooltip_ability_orc_4_Lore"				"年轻巫医最好的朋友是奴隶主 别问我是怎么知道的"
+
+		"DOTA_Tooltip_ability_orc_5"					"狼风龙"
+		"DOTA_Tooltip_ability_orc_5_Description"	    "金币消耗：180   建造一个狼风龙"
+		"DOTA_Tooltip_ability_orc_5_Lore"				"仿佛又回到了以前打开街霸的风龙攻略数格子的日子……"
+
+        "DOTA_Tooltip_ability_orc_6"					"酋长"
+		"DOTA_Tooltip_ability_orc_6_Description"	    "金币消耗：300   建造一个酋长"
+		"DOTA_Tooltip_ability_orc_6_Lore"				"这是一个非洲的酋长 他最心爱的东西是一个超大的陀螺"
+	
+
+        "DOTA_Tooltip_ability_orc_10to11"					"血腥兽人"
+		"DOTA_Tooltip_ability_orc_10to11_Description"	    "金币消耗：80   升级为血腥兽人"
+		"DOTA_Tooltip_ability_orc_10to11_Lore"				"他和200能量的那个红色佣兵是什么关系？这可是个秘密"
+      
+        "DOTA_Tooltip_ability_orc_11to12"					"金刚狼！"
+		"DOTA_Tooltip_ability_orc_11to12_Description"	    "金币消耗：100   升级为金刚狼"
+		"DOTA_Tooltip_ability_orc_11to12_Lore"				"强大而弱智的近战之王"
+
+		"DOTA_Tooltip_ability_orc_20to21"					"年老的兽人术士"
+		"DOTA_Tooltip_ability_orc_20to21_Description"	    "金币消耗：120   升级为年老的兽人术士"
+		"DOTA_Tooltip_ability_orc_20to21_Lore"				"老年人的目光腐蚀掉敌人的铠甲还是没有问题的"
+
+        "DOTA_Tooltip_ability_orc_30to31"					"熊骑兵"
+		"DOTA_Tooltip_ability_orc_30to31_Description"	    "金币消耗：130   升级为大熊骑兵"
+		"DOTA_Tooltip_ability_orc_30to31_Lore"				"大熊骑兵一般都会骑着多啦a梦 当然有时候他会骑着静香"
+
+
+	    "DOTA_Tooltip_ability_orc_40to41"					"年老的巫医"
+		"DOTA_Tooltip_ability_orc_40to41_Description"	    "金币消耗：150   升级为年老的巫医"
+		"DOTA_Tooltip_ability_orc_40to41_Lore"				"年老巫医拥有很多奴隶 因为他年轻的时候和奴隶主关系不错"
+
+		"DOTA_Tooltip_ability_orc_50to51"					"毒狼风龙"
+		"DOTA_Tooltip_ability_orc_50to51_Description"	    "金币消耗：180   升级为毒狼风龙"
+		"DOTA_Tooltip_ability_orc_50to51_Lore"				"为什么毒液伤害能叠加呢……想不通……想不通……"
+
+        "DOTA_Tooltip_ability_orc_60to61"					"萨尔"
+		"DOTA_Tooltip_ability_orc_60to61_Description"	    "金币消耗：350   升级为萨尔"
+		"DOTA_Tooltip_ability_orc_60to61_Lore"				"用锤子砸死对面吧！"

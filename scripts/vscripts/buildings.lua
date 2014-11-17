@@ -107,7 +107,7 @@ function change_little(keys)
       for i=1,PlayerS[12],1 do
 
         print(i)
-        local temp1=PlayerS[13][i]:GetContext("name")
+        temp1=PlayerS[13][i]:GetContext("name")
         if temp1==caster:GetContext("name") then
           xuhao=i
           break
@@ -128,6 +128,8 @@ function change_little(keys)
       
       
       PlayerS[13][xuhao] = CreateUnitByName(newcaster, point, false, nil, nil, keys.caster:GetTeam())
+      PlayerS[13][xuhao]:SetContext("name", tostring(xuhao), 0)
+
       PlayerS[16][xuhao] = newcaster
       
       sendinfotoui();                     --更新面板
@@ -157,9 +159,7 @@ function change_little(keys)
 end
 
 
-function purchase_worker(keys)  --农民激活
 
-end
 
 function hire(keys)                --购买佣兵
 
@@ -254,7 +254,40 @@ function renkou(keys)
   end
 end
 
+function keji(keys)
+  
 
+
+  local caster=keys.caster
+  
+  
+  print(caster:GetContext("name"))
+  pid=tonumber(caster:GetContext("name"))  
+  print(pid)
+
+  local gc=PlayerS[pid][8]*20+50
+  local lc=gc
+
+
+  if PlayerS[pid][1]>=gc then
+    if PlayerS[pid][2]>=lc then
+      if PlayerS[pid][8]<=150 then
+        PlayerS[pid][1]=PlayerS[pid][1]-gc
+        PlayerS[pid][2]=PlayerS[pid][2]-lc
+        PlayerS[pid][8]=PlayerS[pid][8]+1
+      
+        sendinfotoui()
+      else
+         Say(nil,"alreay max lv", false)
+      end
+    else
+      Say(nil,"not enough lumber", false)
+    end
+  
+  else
+    Say(nil,"not enough gold", false)
+  end
+end
 
 function gegeda_1( keys )
 	local caster = keys.caster
@@ -292,7 +325,8 @@ function gegeda_2( keys )
 			
 		end, 0)
   caster:RemoveAbility("gegeda")
-
+  PlayerS[pid][7]=PlayerS[pid][7]+1
+  sendinfotoui()
   else
       Say(nil,"not enough gold", false)
   end  

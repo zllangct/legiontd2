@@ -34,14 +34,14 @@
 			  trace(args.pp1);
 			  switch(pID) {
                 
-			     case 0:this.gold.text=args.pp1;
-				 case 1:this.gold.text=args.pp1;
-				 case 2:this.gold.text=args.pp1;
-				 case 3:this.gold.text=args.pp1;
-				 case 5:this.gold.text=args.pp1;
-				 case 6:this.gold.text=args.pp1;
-				 case 7:this.gold.text=args.pp1;
-			     case 8:this.gold.text=args.pp1;
+			     case 0:this.gold.text=args.pp1;break;
+				 case 1:this.gold.text=args.pp2;break;
+				 case 2:this.gold.text=args.pp3;break;
+				 case 3:this.gold.text=args.pp4;break;
+				 case 5:this.gold.text=args.pp5;break;
+				 case 6:this.gold.text=args.pp6;break;
+				 case 7:this.gold.text=args.pp7;break;
+			     case 8:this.gold.text=args.pp8;break;
 			  }
 
             }
