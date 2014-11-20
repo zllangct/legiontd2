@@ -1,17 +1,34 @@
 require("playerstats")
 
-function OnStartTouch(trigger)
+function OnStartTouch1(trigger)
  
-    local ent = Entities:FindByName(nil,	"mudi_"..tostring(1))
+    local ent = Entities:FindByName(nil,	"mudi_"..tostring(1)) --西方军团的王前传送点
+ 
+    local point=ent:GetAbsOrigin()                                  
+
+    local nt=trigger.activator:GetTeam()
+
+    if not(nt==DOTA_TEAM_NEUTRALS) then                            --不对刷出来的怪有效
+
+        if not(trigger.activator:IsHero()) then                    --不对英雄生效
+
+            FindClearSpaceForUnit(trigger.activator, point, false)  --完成传送
+
+            trigger.activator:Stop()
+
+        end
+     end
+
+
+end
+
+
+function OnStartTouch2(trigger)
+ 
+    local ent = Entities:FindByName(nil,	"mudi_"..tostring(2))
 
     local point=ent:GetAbsOrigin()
 
-      
- --   for i=1,PlayerS[12],1 do
-
- --     local nt1=trigger.activator:GetName()
-      
- --     local nt2=PlayerS[13][i]:GetName()
 
         local nt=trigger.activator:GetTeam()
 
@@ -27,6 +44,6 @@ function OnStartTouch(trigger)
 
         end
 
- --   end
+
 
 end

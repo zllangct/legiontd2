@@ -88,6 +88,10 @@ function CFSpawner:Think()
 
 	if self._flag==0 then
 
+
+
+
+
 	  for li=1,8,1 do                                 --8个出生点
 	     if li<=4 then
 	       tempt=li-1
@@ -98,8 +102,6 @@ function CFSpawner:Think()
 
 	   if PlayerS[tempt][30]==1 then 
        	  
-       	 print("axbli")
-       	 print(li)
 
 	     local _spawner = self._tSpawner[li] --第li个出生点
 	     
@@ -109,14 +111,14 @@ function CFSpawner:Think()
 	     
 
 	     
-		   local _eFirstTarget = Entities:FindByName(nil,_spawnerFirstTargetName)
+		 local _eFirstTarget = Entities:FindByName(nil,_spawnerFirstTargetName)
 		   
-		   local _vBaseLocation = _eSpawner:GetAbsOrigin()
+		 local _vBaseLocation = _eSpawner:GetAbsOrigin()
 		   
 
 	     for lj=1,self._nUnitToSpawnCount,1 do        --产怪
 
-	     	    local _vSpawnLocation = _vBaseLocation + RandomVector(100)
+	     	    _vSpawnLocation = _vBaseLocation + RandomVector(100)
 	     	 	
 	     	 	local _spawnerName = _spawner.name
 
@@ -129,31 +131,57 @@ function CFSpawner:Think()
 		        table.insert( self._teEnemyUnitList , _eUnitSpawned )
 		        
 		      	self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
-			      self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
+			    self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
 	     end
 	     
-	     for lj=1,PlayerS[25],1 do                   --产雇佣兵
-	     
-	       if PlayerS[27]==li then  
-	         
-	         local _spawnerName=PlayerS[26][lj]:GetName();  
-	       
-		       local _eUnitSpawned = CreateUnitByName( self._sUnitToSpawnName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
-		        
-		       _eUnitSpawned:SetInitialGoalEntity( _eFirstTarget )
-		        
-		       PlayerS[26][lj]:ForceKill(true)	     
-		       
-		     end
-		   end  
-		     
-	    
-	     
-	     PlayerS[25]=0
-	      
-       self._flag=1
-     end
+        
+         self._flag=1
+       end
 	  end
+
+	  for li=1,8,1 do
+         print("guyongbing")
+         print(PlayerS[25])
+         local _spawner = self._tSpawner[li]
+         local _spawnerName = _spawner.name
+	     local _spawnerFirstTargetName = _spawner.waypoint
+	     local _eSpawner = Entities:FindByName(nil,_spawnerName)
+	     
+
+	     
+		 local _eFirstTarget = Entities:FindByName(nil,_spawnerFirstTargetName)
+		   
+		 local _vBaseLocation = _eSpawner:GetAbsOrigin()
+
+
+	     for lj=1,PlayerS[25],1 do                   --产雇佣兵
+	       _vSpawnLocation = _vBaseLocation + RandomVector(100)
+	       print("csd")
+	       print(PlayerS[27][lj])
+	       if PlayerS[27][lj]==li then  
+	         print("zzz")
+	         print(lj)
+	         local _spawnerName=PlayerS[28][lj] 
+             print(_spawnerName)
+		     local _eUnitSpawned = CreateUnitByName( _spawnerName, _vSpawnLocation, true, nil, nil, DOTA_TEAM_NEUTRALS )
+		        
+		      _eUnitSpawned:SetTeam(DOTA_TEAM_NEUTRALS)
+		      _eUnitSpawned:SetInitialGoalEntity( _eFirstTarget )
+		      
+              table.insert( self._teEnemyUnitList , _eUnitSpawned )
+		        
+		      self._nUnitsSpawnedThisRound = self._nUnitsSpawnedThisRound + 1
+			  self._nUnitsCurrentlyAlive = self._nUnitsCurrentlyAlive + 1
+
+		      PlayerS[26][lj]:SetAbsOrigin(zibao)
+		      PlayerS[26][lj]:ForceKill(true)	     
+
+
+		      PlayerS[25]=PlayerS[25]-1
+		   end
+		 end  
+
+      end
 	end
 end
 -------------------------------------------------------------------------------------------
@@ -190,7 +218,7 @@ function CFSpawner:OnEntityKilled(keys)
 	if playerID then
 		
 		
-		print(playerID)
+
 		--增加金币
 		PlayerS[playerID][1]=PlayerS[playerID][1]+1
 		--更新ui
@@ -204,7 +232,7 @@ function CFSpawner:OnEntityKilled(keys)
 	if PlayerS[playerID][19]==0 then --检查兵种移动flag
 		
 	  
-	  print("start atk ordering")
+
 
 	  PlayerS[playerID][19]=1
 	  

@@ -1,5 +1,45 @@
 "DOTAAbilities"
 {
+
+//modifier提供者
+"item_apply_modifiers"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"                            "1124"  // unique ID number for this item.  Do not change this once 
+    "BaseClass"                     "item_datadriven"
+    "ItemBaseLevel"                 "1"
+
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "9999"
+    "AbilityCastPoint"                      "0.0" 
+
+    "Modifiers"
+    {
+      "modifier_zhandouzhong"
+      {
+        "Passive"   "1"
+        "IsHidden"    "1"
+
+        "States"
+        {
+          "MODIFIER_STATE_UNSELECTABLE" "MODIFIER_STATE_VALUE_ENABLED" //不可选择
+        }
+      }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 "item_hirer1"
 {
     "ID"                "1003"

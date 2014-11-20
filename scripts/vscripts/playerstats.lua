@@ -87,7 +87,8 @@ function playerstats:init()
   PlayerS[25]=0               --雇佣兵计数
   PlayerS[26]={}              --雇佣兵单位
   PlayerS[27]={}              --雇佣兵出生点
-  
+  PlayerS[28]={}              --雇佣兵的名字
+
   for i=0,8,1 do              --判断在线玩家
     if (not(i==4)) then
      if PlayerResource:IsValidPlayer(i) then
@@ -115,11 +116,11 @@ function playerstats:init()
       if i<4 then
         wang_1:SetControllableByPlayer(i, true)
         dummy1:SetControllableByPlayer(i, true)
-           q=i
+        q=i
       else
         wang_2:SetControllableByPlayer(i, true)
         dummy2:SetControllableByPlayer(i, true)
-              q=i-1
+        q=i-1
       end
       --创建基地
 
@@ -153,7 +154,7 @@ function playerstats:init()
       PlayerS[i][18]=CreateUnitByName("npc_renkou",temp:GetAbsOrigin(),false,nil,nil,2)
       
       
-      PlayerS[i][18]:SetControllableByPlayer(0,true)
+      PlayerS[i][18]:SetControllableByPlayer(i,true)
       
       PlayerS[i][18]:SetContext("name",tostring(i),0) --挂进pid
 
@@ -171,7 +172,7 @@ function playerstats:init()
         temp=Entities:FindByName(nil,"player"..tostring(q+1).."_worker"..tostring(j))
         PlayerS[i][16][j]=CreateUnitByName("base_worker",temp:GetAbsOrigin(),false,nil,nil,2)
         PlayerS[i][16][j]:SetContext("name",tostring(i),0)
-        PlayerS[i][16][j]:SetControllableByPlayer(0,true)
+        PlayerS[i][16][j]:SetControllableByPlayer(i,true)
         PlayerS[i][16][j]:AddNewModifier(PlayerS[i][16][j], nil, "modifier_invulnerable", nil)
         
       if i<4 then
@@ -218,7 +219,7 @@ function sendinfotoui()
   local p={}
   local pp={}
   local i=0
-  p[0]="lol"
+
   for i=0,8,1 do
     if not(i==4) then
       p[i]=tostring(PlayerS[i][1]).."      "..tostring(PlayerS[i][2]).."        "..tostring(PlayerS[i][7]).."/"..tostring(PlayerS[i][8]).."          "..tostring(PlayerS[i][9]).."          "..tostring(PlayerS[i][5]).."          "..tostring(PlayerS[i][12]).."           "..tostring(PlayerS[i][3]).."/"..tostring(PlayerS[i][4])
@@ -231,6 +232,5 @@ function sendinfotoui()
   FireGameEvent('ui_update', {player1=p[0],player2=p[1],player3=p[2],player4=p[3],player5=p[5],player6=p[6],player7=p[7],player8=p[8]})
   FireGameEvent('p_update',{pp1=pp[0],pp2=pp[1],pp3=pp[2],pp4=pp[3],pp5=pp[5],pp6=pp[6],pp7=pp[7],pp8=pp[8]})
 
-  print("done update ui")
 end
 

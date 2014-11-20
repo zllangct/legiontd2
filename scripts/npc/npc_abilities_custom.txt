@@ -980,6 +980,11 @@
     }
   }
 
+
+
+
+
+
     "majia"  //马甲的基本技能
   {
     "BaseClass"       "ability_datadriven"

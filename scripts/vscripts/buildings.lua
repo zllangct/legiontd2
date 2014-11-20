@@ -16,8 +16,6 @@ function getBuildingPoint(keys)
   local name = keys.UName
   local rk = keys.RenKou
   local gc = keys.GoldCost
-  print("wtf??")
-  print(pid)
   if PlayerS[pid][1]>=gc then
   
     
@@ -195,15 +193,26 @@ function hire(keys)                --¹ºÂòÓ¶±ø
        local pla=(Entities:FindByName(nil,born)):GetAbsOrigin()  --»ñµÃ¹ÍÓ¶±ø³öÉúÎ»ÖÃ
   
        PlayerS[25]=PlayerS[25]+1
-  
-       print("wohaocaia1")
+
 
        PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
-     
-       print("wohaocaia2")
-       
-       PlayerS[27]=RandomInt(5,8)
-       
+       PlayerS[28][PlayerS[25]]=name
+       local count;
+       count=0
+       gg={}
+       for i=5,8,1 do
+         if not(PlayerS[i][30]==0) then
+           count=count+1
+           gg[count]=i
+         end  
+       end
+      if count==0 then
+         PlayerS[27][PlayerS[25]]=5
+      else
+         PlayerS[27][PlayerS[25]]=rc(gg);
+      end
+      print("suiji")
+      print(PlayerS[27][PlayerS[25]])
      else
      
        born="team2_hirer"
@@ -214,7 +223,21 @@ function hire(keys)                --¹ºÂòÓ¶±ø
   
        PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
        
-       PlayerS[27]=RandomInt(1,4)
+       local count;
+       count=0
+       gg={}
+       for i=1,4,1 do
+         if not(PlayerS[i-1][30]==0) then
+           count=count+1
+           gg[count]=i
+         end  
+       end
+      if count==0 then
+         PlayerS[27][PlayerS[25]]=1
+      else
+         PlayerS[27][PlayerS[25]]=rc(gg);
+      end 
+  
     end
 
 
@@ -370,12 +393,25 @@ function lightkinghp(keys)
   local pid=tonumber(temp)
 
   if PlayerS[pid][2]>=100 then
-    if lwang[1]<15 then 
-      wang_1:CreatureLevelUp(1)    
-      lwang[1]=lwang[1]+1
-      PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä                
-      PlayerS[pid][12]=PlayerS[pid][12]+3              --¼ÓÊÕÈë
-      sendinfotoui()
+    if lwang[1]<15 then
+      if pid<4 then
+        wang_1:CreatureLevelUp(1)    
+        lwang[1]=lwang[1]+1
+        PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä                
+        PlayerS[pid][12]=PlayerS[pid][12]+3              --¼ÓÊÕÈë
+        sendinfotoui()
+      else
+        if dwang[1]<15 then
+          wang_2:CreatureLevelUp(1)    
+          dwang[1]=dwang[1]+1
+          PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä                
+          PlayerS[pid][12]=PlayerS[pid][12]+3              --¼ÓÊÕÈë
+          sendinfotoui()
+        else
+          Say(nil,"Already Max Level!",false)
+        end
+      end
+
     else
       Say(nil,"Already Max Level!",false)
     end
@@ -392,11 +428,27 @@ function lightkingheal(keys)
 
   if PlayerS[pid][2]>=100 then
     if lwang[2]<15 then
-      wang_1:SetBaseHealthRegen(50*lwang[2])
-      lwang[2]=lwang[2]+1
-      PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä 
-      PlayerS[pid][12]=PlayerS[pid][12]+3
-      sendinfotoui()
+      if pid<4 then
+        wang_1:SetBaseHealthRegen(50*lwang[2])
+        lwang[2]=lwang[2]+1
+        PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä 
+        PlayerS[pid][12]=PlayerS[pid][12]+3
+        sendinfotoui()
+      else
+        if dwang[2]<15 then
+          wang_2:SetBaseHealthRegen(50*dwang[2])  
+          dwang[2]=dwang[2]+1
+          PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä 
+          PlayerS[pid][12]=PlayerS[pid][12]+3
+          sendinfotoui()          
+        else
+          Say(nil,"Already Max Level!",false)
+        end
+      end
+
+
+
+
     else
       Say(nil,"Already Max Level!",false)
     end
@@ -412,11 +464,24 @@ function lightkingatk(keys)
 
   if PlayerS[pid][2]>=100 then
     if lwang[3]<15 then
-      wang_1:SetBaseDamageMax(100+lwang[3]*50)
-      lwang[3]=lwang[3]+1
-      PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä 
-      PlayerS[pid][12]=PlayerS[pid][12]+3
-      sendinfotoui()
+      if pid<4 then
+        wang_1:SetBaseDamageMax(100+lwang[3]*50)
+        lwang[3]=lwang[3]+1
+        PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä 
+        PlayerS[pid][12]=PlayerS[pid][12]+3
+        sendinfotoui()
+      else
+        if dwang[3]<15 then
+          wang_2:SetBaseDamageMax(100+dwang[3]*50) 
+          dwang[3]=dwang[3]+1
+          PlayerS[pid][2]=PlayerS[pid][2]-100              --¿ÛÄ¾²Ä 
+          PlayerS[pid][12]=PlayerS[pid][12]+3
+          sendinfotoui()
+        else
+          Say(nil,"Already Max Level!",false)
+        end
+      end
+      
     else
       Say(nil,"Already Max Level!",false)
     end

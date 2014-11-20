@@ -60,11 +60,13 @@ function CFRoundThinker:ThinkFighting()
 	-- 判断这一轮的怪物是否都被干掉了
 	if CFSpawner:IsWaveClear() then
         	
-        setherobac()
-        
-        clearallunit()
-	    rebuildunit()
-	    setunitstop()
+        setherobac()        --英雄找回技能
+        clearallunit()      --杀光所有兵
+	    rebuildunit()       --重建所有兵
+	    setunitstop()       --静止所有兵移动
+        jiesuan()           --为玩家结算收入
+
+
 
 		-- 如果每一轮的怪物都被干掉了
 		if self._nCurrRound > #self._tAllEnemies then
@@ -141,7 +143,6 @@ function CFRoundThinker:ReadAllEnemiesFromKv()
 		else
 			-- 读取刷怪点名字和第一个路径点
 			tSingleWaveData.spawner = {}
-			print('INITINT SPAWNER')
 			for sk,sv in pairs(v["spawner"]) do
 				local index = tonumber(sk)
 				tSingleWaveData.spawner[index] = {}
@@ -258,9 +259,12 @@ function setherosil()
        
        local j=0
       
-        for j = 0,5,1 do
+        for j = 0,15,1 do
+
           local temp1=yx[i]:GetAbilityByIndex(j) --获取技能实体
-          temp1:SetLevel(0)                     --设置技能等级
+          if temp1 then  
+            temp1:SetLevel(0)                     --设置技能等级
+          end  
         end
      end
 
@@ -297,13 +301,35 @@ function setunitstop()
 end
 
 function setunitmove()
-  print("setunitpre")
+
   for i=1,PlayerS[12] do
     PlayerS[13][i]:RemoveModifierByName("modifier_rooted")
     
-    print("b's owner")
-    print(PlayerS[14][i])
-    PlayerS[13][i]:SetControllableByPlayer(PlayerS[14][i],false)
+    giveUnitDataDrivenModifier(PlayerS[13][i], PlayerS[13][i], "modifier_zhandouzhong",-1)
+
   end
 
+end
+
+function jiesuan()
+   for i=0,8 do
+     if (not(i==4)) and (PlayerS[i][30]==1)then
+              
+     end
+
+   end
+
+
+end
+
+
+
+
+
+
+
+function giveUnitDataDrivenModifier(source, target, modifier,dur)
+    --source and target should be hscript-units. The same unit can be in both source and target
+    local item = CreateItem( "item_apply_modifiers", source, source)
+    item:ApplyDataDrivenModifier( source, target, modifier, {duration=dur} )
 end

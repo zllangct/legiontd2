@@ -304,7 +304,7 @@ function PrecacheEverythingFromTable( context, kvtable)
 				PrecacheResource( "particle",  value, context)
 				print("PRECACHE PARTICLE RESOURCE", value)
 			end
-			if string.find(value, "vmdl") then
+			if string.find(value, "vmdl") then 	
 				PrecacheResource( "model",  value, context)
 				print("PRECACHE MODEL RESOURCE", value)
 			end
@@ -318,48 +318,6 @@ function PrecacheEverythingFromTable( context, kvtable)
    
 end
 function Precache( context )
-	--[[
-		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
-
-	
-	PrecacheResource( "model", "models/courier/octopus/octopus.vmdl", context)
-	PrecacheResource( "model", "models/heroes/slark/slark.vmdl", context)
-	
-	PrecacheResource( "model", "models/heroes/lycan/lycan.vmdl", context)
-	PrecacheResource( "model", "models/heroes/lycan/lycan_wolf.vmdl", context)
-	PrecacheResource( "model", "models/items/beastmaster/boar/fotw_wolf/fotw_wolf.vmdl", context)
-	PrecacheResource( "model", "models/props_structures/bad_ancient_destruction.vmdl", context)
-	PrecacheResource( "model", "models/creeps/greevil_shopkeeper/greevil_shopkeeper.vmdl", context)
-	PrecacheResource( "model", "models/props_structures/good_ancient_fountain001.vmdl", context)
-	PrecacheResource( "model", "models/props_structures/good_ancient_fountain001.vmdl", context)
-	
---orc兵种模型载入	
-	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll_frost.vmdl", context)
-	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl", context)
-	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_beast/n_creep_beast.vmdl", context)
-	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_high_priest.vmdl", context)
-	PrecacheResource( "model", "models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl", context)
-	PrecacheResource( "model", "models/items/lone_druid/true_form/form_of_the_atniw/form_of_the_atniw.vmdl", context)
-	PrecacheResource( "model", "models/items/lone_druid/true_form/rabid_black_bear/rabid_black_bear.vmdl", context)
-	PrecacheResource( "model", "models/heroes/witchdoctor/witchdoctor.vmdl", context)
-	PrecacheResource( "model", "models/heroes/blood_seeker/blood_seeker.vmdl", context)
-	PrecacheResource( "model", "models/items/lycan/wolves/icewrack_pack/icewrack_pack.vmdl", context)
-	PrecacheResource( "model", "models/items/lycan/ultimate/sirius_curse/sirius_curse.vmdl", context)
-	PrecacheResource( "model", "models/heroes/magnataur/magnataur.vmdl", context)
-	PrecacheResource( "model", "models/heroes/beastmaster/beastmaster.vmdl", context)
-
-
-	
-	
-	PrecacheResource( "particle", "particles/drow/wave.vpcf", context )
-	
-	PrecacheItemByNameSync( "item_hirer1", context )
-  print("done precache")]]
-
   	print("BEGIN TO PRECACHE RESOURCE")
 	local time = GameRules:GetGameTime()
 	PrecacheEveryThingFromKV( context )
@@ -381,7 +339,7 @@ end
 
 --init
 function legiontdGameMode:InitGameMode()
-  print("start init")
+
   --准备时间
 	GameRules:SetPreGameTime(60)
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
@@ -443,10 +401,10 @@ end
 -- Evaluate the state of the game
 function legiontdGameMode:OnThink()
 	  if hulage==0 then
-      playerstats:init()
-      print("axb")
-      hulage=1
-    end
+        playerstats:init()
+
+        hulage=1
+      end
 
 
   

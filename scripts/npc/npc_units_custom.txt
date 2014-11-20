@@ -544,7 +544,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
 
     "BountyXP" "0"
@@ -601,7 +601,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
 
     "BountyXP" "0"
@@ -657,7 +657,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
 
     "BountyXP" "0"
@@ -713,7 +713,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
 
     "BountyXP" "0"
@@ -4095,7 +4095,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
     "ProjectileModel" ""
     "ProjectileSpeed" ""
@@ -7111,7 +7111,7 @@
     "AttackDamageMax" "111"                                                  //×î´ó¹¥»÷Á¦
     "AttackRate""0.75"                                            //¹¥ËÙ
     "AttackAnimationPoint" "1"                                  
-    "AttackAcquisitionRange" "90"                                  //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                  //¹¥»÷¾àÀë
     "AttackRange" "400"
     "ProjectileModel" ""
     "ProjectileSpeed" ""
@@ -8666,7 +8666,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "90"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
     "ProjectileModel" ""
     "ProjectileSpeed" ""
@@ -8908,7 +8908,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
     "ProjectileModel" ""
     "ProjectileSpeed" ""
@@ -8998,7 +8998,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
     "ProjectileModel" ""
     "ProjectileSpeed" ""
@@ -9629,7 +9629,7 @@
   //========================¿ñ±©¾ÞÄ§====================
   //===========================41=======================
 
-  "npc_beast_pastorss"
+  "npc_beast_41"
   {
     "MovementSpeed" "300"                                             //ÒÆËÙ
     "StatusHealth" "810"                                               //ÑªÁ¿
@@ -9849,7 +9849,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "180"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
 
     "BountyXP" "0"
@@ -10789,7 +10789,7 @@
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //½üÕ½orÔ¶³Ì
 
     "AttackAnimationPoint" "1"                                      //¹¥»÷Ç°Ò¡
-    "AttackAcquisitionRange" "90"                                    //¹¥»÷¾àÀë
+    "AttackAcquisitionRange" "500"                                    //¹¥»÷¾àÀë
     
 
     "BountyXP" "0"
