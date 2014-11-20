@@ -3,6 +3,7 @@ legiontd2
 dota2军团战争的全部代码   作者：空力使
 
 vscript 内文件作用：
+
    abilities.lua       作者：裸奔的代码             我有极小幅度修改   主要是玩家兵的技能调用
    
    addon_game_mode.lua 作者：空力使                 基本游戏文件 包含部分预载入credit to XavierCHN 英雄出生设定技能点数
