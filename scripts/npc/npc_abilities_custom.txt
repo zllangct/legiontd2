@@ -4,7 +4,24 @@
 	"Version"		"1"
 //reroll出6个技能
  
- 
+  "show"
+  {
+    "BaseClass" "ability_datadriven"
+    "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+    "AbilityManaCost" "0"
+    "AbilityTextureName" "axe_battle_hunger"
+
+    "AbilityCastPoint" "0"
+    "AbilityChannelTime" "0.1"
+    "OnChannelSucceeded"
+    {
+      "RunScript"
+      { "Target"          "Point"
+        "ScriptFile"      "scripts/vscripts/buildings.lua"
+        "Function"        "testgrid"
+      }
+    }
+  }
 
 
 

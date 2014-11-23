@@ -925,7 +925,7 @@
 	
 	"npc_player_base"
 	{
-    "BaseClass" "npc_dota_creature"
+    "BaseClass" "npc_dota_building"
     "Model" "models/props_structures/bad_ancient_destruction.vmdl"
     "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
@@ -933,11 +933,14 @@
     "MinimapIcon" ""
     "MinimapIconSize" "50"
     "HealthBarOffset" "-1"
+    "Abilitylayout" "5"
     "Ability1" "light_king_hp"
+
+
     "Ability2" "light_king_heal"
     "Ability3" "light_king_atk"
     "Ability4" "up_keji"
-//    "Ability5" "upgrade_king_atkspd"
+    "Ability5" "show"
     "Ability6" ""
     "Ability7" ""
     "Ability8" ""
@@ -964,7 +967,7 @@
     "StatusHealthRegen" "0"                                           //回血
     "StatusMana" "0"
     "StatusManaRegen" "0"
-    "TeamName" "DOTA_TEAM_NEUTRALS"                                   //阵营
+    "TeamName" "DOTA_TEAM_NEUTR     ALS"                                   //阵营
     "CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_PIERCE"             //攻击类型
     "CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_BASIC"              //护甲类型
     "UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
@@ -973,7 +976,7 @@
   
   "npc_renkou"
   {
-    "BaseClass" "npc_dota_creature"
+    "BaseClass" "npc_dota_building"
     "Model" "models/props_structures/bad_ancient_destruction.vmdl"
     "ModelScale" "0.2"
     "SoundSet" "Creep_Good_Melee"
@@ -1354,7 +1357,7 @@
     "BountyGoldMax" "5"
     "BaseClass" "npc_dota_creature"
     "Model" "models/items/beastmaster/hawk/fotw_eagle/fotw_eagle.vmdl"
-    "ModelScale" "0.4"
+    "ModelScale" "1"
     "SoundSet" "Creep_Good_Melee"
       
     "MinimapIcon" ""
@@ -1371,7 +1374,7 @@
     "MagicalResistance" "0"
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
 
-    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAnimationPoint" "0.9"                                      //攻击前摇
     "AttackAcquisitionRange" "600"                                    //攻击距离
     
     "ProjectileModel" ""
@@ -1400,8 +1403,8 @@
   	"AttackRate" "1.3"    	                                            //攻速
   	"AttackRange" "100"
   	"ArmorPhysical" "3"                                               //护甲
-  	"AttackDamageMin" "19"                                             //攻击力
-    "AttackDamageMax" "20"
+  	"AttackDamageMin" "14"                                             //攻击力
+    "AttackDamageMax" "17"
     "BountyGoldMin" "5"                                               //赏金
     "RingRadius" "20"                                                 //碰撞体积
     "BountyGoldMax" "5"
@@ -1424,7 +1427,7 @@
     "MagicalResistance" "0"
     "AttackCapabilities" "DOTA_UNIT_CAP_MELEE_ATTACK"                 //近战or远程
 
-    "AttackAnimationPoint" "0.4"                                      //攻击前摇
+    "AttackAnimationPoint" "0.9"                                      //攻击前摇
     "AttackAcquisitionRange" "600"                                    //攻击距离
     
     "ProjectileModel" ""

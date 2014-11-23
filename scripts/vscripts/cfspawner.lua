@@ -193,6 +193,17 @@ end
 function CFSpawner:OnEntityKilled(keys)
 	-- 获取被杀死的单位
 	local killedUnit = EntIndexToHScript( keys.entindex_killed )
+
+    if killedUnit==wang_1 then
+    	GameRules:SetGameWinner( DOTA_TEAM_BADGUYS )
+    end
+    
+    if killedUnit==wang_2 then
+    	GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+    end
+
+
+
 	if killedUnit then
 		-- 如果被杀死的单位是刷出来的单位，则移除
 		for i, unit in pairs( self._teEnemyUnitList ) do

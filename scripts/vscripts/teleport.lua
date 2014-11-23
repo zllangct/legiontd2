@@ -1,6 +1,8 @@
 require("playerstats")
 
 function OnStartTouch1(trigger)
+
+	print("coming~")
  
     local ent = Entities:FindByName(nil,	"mudi_"..tostring(1)) --西方军团的王前传送点
  

@@ -161,8 +161,7 @@ end
 
 function hire(keys)                --¹ºÂòÓ¶±ø
 
-  --math.randomseed(os.time())       --Ëæ»úÖÖ×Ó
-  
+         --Ëæ»úÖÖ×Ó
 
   
   local name=keys.Hire_Unit
@@ -199,7 +198,8 @@ function hire(keys)                --¹ºÂòÓ¶±ø
        PlayerS[28][PlayerS[25]]=name
        local count;
        count=0
-       gg={}
+       local gg={}
+
        for i=5,8,1 do
          if not(PlayerS[i][30]==0) then
            count=count+1
@@ -222,10 +222,10 @@ function hire(keys)                --¹ºÂòÓ¶±ø
        PlayerS[25]=PlayerS[25]+1
   
        PlayerS[26][PlayerS[25]]=CreateUnitByName(name, pla+ RandomVector(math.random(400)),true,nil,nil,DOTA_TEAM_NEUTRALS) 
-       
+       PlayerS[28][PlayerS[25]]=name  
        local count;
        count=0
-       gg={}
+       local gg={}
        for i=1,4,1 do
          if not(PlayerS[i-1][30]==0) then
            count=count+1
@@ -237,7 +237,8 @@ function hire(keys)                --¹ºÂòÓ¶±ø
       else
          PlayerS[27][PlayerS[25]]=rc(gg);
       end 
-  
+      print("axb")
+      print(PlayerS[27][PlayerS[25]])
     end
 
 
@@ -312,7 +313,7 @@ function keji(keys)
   end
 end
 
-function gegeda_1( keys )
+function gegeda_1( keys )  --¼¤»îÅ©Ãñ
 	local caster = keys.caster
   print("chufale")
   keys.ability:ApplyDataDrivenModifier(caster, caster, "gelaoshi", nil)
@@ -379,6 +380,9 @@ end
 
 
 function rc(mm)            --Ëæ»úº¯Êý
+
+  math.randomseed(math.ceil(Time()))
+
   local i=1;
   while not(mm[i]==nil) do
     i=i+1
@@ -425,7 +429,7 @@ function lightkingheal(keys)
   local caster=keys.caster
   local temp=caster:GetContext("name")
   local pid=tonumber(temp)
-
+  testgrid();
   if PlayerS[pid][2]>=100 then
     if lwang[2]<15 then
       if pid<4 then
@@ -481,7 +485,7 @@ function lightkingatk(keys)
           Say(nil,"Already Max Level!",false)
         end
       end
-      
+
     else
       Say(nil,"Already Max Level!",false)
     end
@@ -508,4 +512,26 @@ function PopupNumbers(target, pfx, color, lifetime, number, presymbol, postsymbo
     ParticleManager:SetParticleControl(pidx, 1, Vector(tonumber(presymbol), tonumber(number), tonumber(postsymbol)))
     ParticleManager:SetParticleControl(pidx, 2, Vector(lifetime, digits, 0))
     ParticleManager:SetParticleControl(pidx, 3, color)
+end
+
+
+function testgrid(keys)
+
+ print( '******* Displaying Building Grids ***************' )
+  local caster=keys.caster
+  local temp=caster:GetContext("name")
+  local pid=tonumber(temp)
+  local playerID = pid
+ 
+    if playerID ~= nil and playerID ~= -1 then
+      -- Do something here for the player who called this command
+    for i,v in ipairs(BUILDING_SQUARES) do
+      for i2,v2 in ipairs(v) do
+        BuildingHelper:PrintSquareFromCenterPoint(v2)
+      end
+    end
+    end
+
+  print( '*********************************************' )
+
 end

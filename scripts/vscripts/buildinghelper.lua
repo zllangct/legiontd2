@@ -478,7 +478,6 @@ function BuildingHelper:PrintSquareFromCenterPointShort(v)
 end
 
 --[[Put this line in InitGameMode to use this function: Convars:RegisterCommand( "buildings", Dynamic_Wrap(YourGameMode, 'DisplayBuildingGrids'), "blah", 0 )
-
 function YourGameMode:DisplayBuildingGrids()
   print( '******* Displaying Building Grids ***************' )
   local cmdPlayer = Convars:GetCommandClient()

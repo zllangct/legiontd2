@@ -318,6 +318,7 @@ function PrecacheEverythingFromTable( context, kvtable)
    
 end
 function Precache( context )
+
   	print("BEGIN TO PRECACHE RESOURCE")
 	local time = GameRules:GetGameTime()
 	PrecacheEveryThingFromKV( context )
@@ -350,7 +351,6 @@ function legiontdGameMode:InitGameMode()
   GameRules:GetGameModeEntity():SetRecommendedItemsDisabled(true)
   hulage=0
   CFRoundThinker:InitPara()
-
 
 
   ListenToGameEvent("npc_spawned", Dynamic_Wrap(legiontdGameMode, "OnNPCSpawned"), self)
@@ -402,7 +402,6 @@ end
 function legiontdGameMode:OnThink()
 	  if hulage==0 then
         playerstats:init()
-
         hulage=1
       end
 
@@ -421,5 +420,4 @@ function legiontdGameMode:OnThink()
 	end
 	return 1
 end
-
 
